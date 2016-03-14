@@ -23,14 +23,23 @@
 
 void system_init()
 {
-  CONTROL_DDR &= ~(CONTROL_MASK); // Configure as input pins
-  #ifdef DISABLE_CONTROL_PIN_PULL_UP
-    CONTROL_PORT &= ~(CONTROL_MASK); // Normal low operation. Requires external pull-down.
-  #else
-    CONTROL_PORT |= CONTROL_MASK;   // Enable internal pull-up resistors. Normal high operation.
-  #endif
-  CONTROL_PCMSK |= CONTROL_MASK;  // Enable specific pins of the Pin Change Interrupt
-  PCICR |= (1 << CONTROL_INT);   // Enable Pin Change Interrupt
+//  CONTROL_DDR &= ~(CONTROL_MASK); // Configure as input pins
+//  #ifdef DISABLE_CONTROL_PIN_PULL_UP
+//    CONTROL_PORT &= ~(CONTROL_MASK); // Normal low operation. Requires external pull-down.
+//  #else
+//    CONTROL_PORT |= CONTROL_MASK;   // Enable internal pull-up resistors. Normal high operation.
+//  #endif
+//  CONTROL_PCMSK |= CONTROL_MASK;  // Enable specific pins of the Pin Change Interrupt
+//  PCICR |= (1 << CONTROL_INT);   // Enable Pin Change Interrupt
+
+/* not tested
+	set_as_input(RESET_PIN);
+	set_as_input(FEED_HOLD_PIN);
+	set_as_input(CYCLE_START_PIN);
+	set_as_input(SAFETY_DOOR_PIN);
+
+*/
+
 }
 
 
@@ -39,20 +48,42 @@ void system_init()
 // defined by the CONTROL_PIN_INDEX in the header file.
 uint8_t system_control_get_state()
 {
-  uint8_t control_state = 0;
-  uint8_t pin = (CONTROL_PIN & CONTROL_MASK);
-  #ifndef INVERT_ALL_CONTROL_PINS
-    pin ^= CONTROL_INVERT_MASK;
-  #endif
-  if (pin) {
-    #ifdef ENABLE_SAFETY_DOOR_INPUT_PIN
-      if (bit_istrue(pin,(1<<SAFETY_DOOR_BIT))) { control_state |= CONTROL_PIN_INDEX_SAFETY_DOOR; }
-    #endif
-    if (bit_istrue(pin,(1<<RESET_BIT))) { control_state |= CONTROL_PIN_INDEX_RESET; }
-    if (bit_istrue(pin,(1<<FEED_HOLD_BIT))) { control_state |= CONTROL_PIN_INDEX_FEED_HOLD; }
-    if (bit_istrue(pin,(1<<CYCLE_START_BIT))) { control_state |= CONTROL_PIN_INDEX_CYCLE_START; }
-  }
-  return(control_state);
+//  uint8_t control_state = 0;
+//  uint8_t pin = (CONTROL_PIN & CONTROL_MASK);
+//  #ifndef INVERT_ALL_CONTROL_PINS
+//    pin ^= CONTROL_INVERT_MASK;
+//  #endif
+//  if (pin) {
+//    #ifdef ENABLE_SAFETY_DOOR_INPUT_PIN
+//      if (bit_istrue(pin,(1<<SAFETY_DOOR_BIT))) { control_state |= CONTROL_PIN_INDEX_SAFETY_DOOR; }
+//    #endif
+//    if (bit_istrue(pin,(1<<RESET_BIT))) { control_state |= CONTROL_PIN_INDEX_RESET; }
+//    if (bit_istrue(pin,(1<<FEED_HOLD_BIT))) { control_state |= CONTROL_PIN_INDEX_FEED_HOLD; }
+//    if (bit_istrue(pin,(1<<CYCLE_START_BIT))) { control_state |= CONTROL_PIN_INDEX_CYCLE_START; }
+//  }
+//  return(control_state);
+	uint8_t control_state = 0;
+	uint8_t pin           = 0;
+	/*
+  	  if (GPIO_ReadInputDataBit(SAFETY_DOOR_PIN)) { newbits |= (1<<SAFETY_DOOR_BIT); }
+  	  if (GPIO_ReadInputDataBit(RESET_PIN))       { newbits |= (1<<RESET_BIT);       }
+  	  if (GPIO_ReadInputDataBit(FEED_HOLD_PIN)))  { newbits |= (1<<FEED_HOLD_BIT);   }
+  	  if (GPIO_ReadInputDataBit(CYCLE_START_PIN))){ newbits |= (1<<CYCLE_START_BIT); }
+
+	  #ifndef INVERT_ALL_CONTROL_PINS
+	    pin ^= CONTROL_INVERT_MASK;
+	  #endif
+	  if (pin) {
+	    #ifdef ENABLE_SAFETY_DOOR_INPUT_PIN
+	      if (bit_istrue(pin,(1<<SAFETY_DOOR_BIT))) { control_state |= CONTROL_PIN_INDEX_SAFETY_DOOR; }
+	    #endif
+	    if (bit_istrue(pin,(1<<RESET_BIT))) { control_state |= CONTROL_PIN_INDEX_RESET; }
+	    if (bit_istrue(pin,(1<<FEED_HOLD_BIT))) { control_state |= CONTROL_PIN_INDEX_FEED_HOLD; }
+	    if (bit_istrue(pin,(1<<CYCLE_START_BIT))) { control_state |= CONTROL_PIN_INDEX_CYCLE_START; }
+	  }
+	*/
+	  return(control_state);
+
 }
 
 
@@ -61,23 +92,31 @@ uint8_t system_control_get_state()
 // its ready. This works exactly like the character-based realtime commands when picked off
 // directly from the incoming serial data stream.
 //ISR(CONTROL_INT_vect)
-void control_pin_interrupt()
+void control_pin_check()
 {
-  uint8_t pin = system_control_get_state();
-  if (pin) { 
-    if (bit_istrue(pin,CONTROL_PIN_INDEX_RESET)) {
-      mc_reset();
-    } else if (bit_istrue(pin,CONTROL_PIN_INDEX_CYCLE_START)) {
-      bit_true(sys_rt_exec_state, EXEC_CYCLE_START);
-    #ifndef ENABLE_SAFETY_DOOR_INPUT_PIN
-      } else if (bit_istrue(pin,CONTROL_PIN_INDEX_FEED_HOLD)) {
-        bit_true(sys_rt_exec_state, EXEC_FEED_HOLD); 
-    #else
-      } else if (bit_istrue(pin,CONTROL_PIN_INDEX_SAFETY_DOOR)) {
-        bit_true(sys_rt_exec_state, EXEC_SAFETY_DOOR);
-    #endif
-    } 
-  }
+	static  uint8_t oldpin = 0;
+	uint8_t pin =0;
+
+	pin = system_control_get_state();
+
+	if(pin != oldpin)
+	{
+		oldpin = pin;
+		if (pin) {
+			if (bit_istrue(pin,CONTROL_PIN_INDEX_RESET)) {
+				mc_reset();
+			} else if (bit_istrue(pin,CONTROL_PIN_INDEX_CYCLE_START)) {
+				bit_true(sys_rt_exec_state, EXEC_CYCLE_START);
+#ifndef ENABLE_SAFETY_DOOR_INPUT_PIN
+			} else if (bit_istrue(pin,CONTROL_PIN_INDEX_FEED_HOLD)) {
+				bit_true(sys_rt_exec_state, EXEC_FEED_HOLD);
+#else
+			} else if (bit_istrue(pin,CONTROL_PIN_INDEX_SAFETY_DOOR)) {
+				bit_true(sys_rt_exec_state, EXEC_SAFETY_DOOR);
+#endif
+			}
+		}
+	}
 }
 
 

@@ -230,6 +230,7 @@ void st_wake_up()
 ////   }
 
     enable_steppers();
+	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     enable_timerint();
 }
 
@@ -525,9 +526,12 @@ void st_reset()
   
   st_generate_step_dir_invert_masks();
       
-  // Initialize step and direction port pins.
-  STEP_PORT = (STEP_PORT & ~STEP_MASK) | step_port_invert_mask;
-  DIRECTION_PORT = (DIRECTION_PORT & ~DIRECTION_MASK) | dir_port_invert_mask;
+  set_dir_pins(dir_port_invert_mask);
+  set_step_pins(step_port_invert_mask);
+
+// Initialize step and direction port pins.
+//  STEP_PORT = (STEP_PORT & ~STEP_MASK) | step_port_invert_mask;
+//  DIRECTION_PORT = (DIRECTION_PORT & ~DIRECTION_MASK) | dir_port_invert_mask;
 }
 
 
@@ -1016,6 +1020,8 @@ void init_stepperpins()
 	set_as_output(STP_RST);
 	set_as_input(STP_FLG);
 
+	set_as_output(TESTP);
+
 	set_dir_pins(dir_port_invert_mask);
 	set_step_pins(step_port_invert_mask);
 	config_steppers();
@@ -1101,6 +1107,8 @@ void TIM2_IRQHandler(void)
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 		if(timerrunning)
 		{
+			//GPIO_SetBits(TESTP);
+
 			stepper_interrupt1();
 		}
 		NVIC_SetPendingIRQ(DMA1_Stream7_IRQn); // this is a hack to get to a lower priority so the CC1 interrupt can get through
@@ -1123,6 +1131,10 @@ void DMA1_Stream7_IRQHandler(void)
 	}
 
 	limitpin_check();
+	control_pin_check();
+
+	//GPIO_ResetBits(TESTP);
+
 }
 
 

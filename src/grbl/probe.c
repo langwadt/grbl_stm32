@@ -56,7 +56,7 @@ void probe_configure_invert_mask(uint8_t is_probe_away)
 
 uint8_t probe_get_state(void)
 {
-	uint32_t pin = GPIO_ReadInputDataBit(PROBE);
+	uint8_t pin = GPIO_ReadInputDataBit(PROBE);
 
 	if(probe_invert_mask) pin = !pin;
 

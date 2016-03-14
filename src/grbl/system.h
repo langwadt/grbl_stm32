@@ -139,5 +139,6 @@ void system_clear_exec_state_flag(uint8_t mask);
 void system_set_exec_alarm_flag(uint8_t mask);
 void system_clear_exec_alarm_flag(uint8_t mask);
 
+void control_pin_check();
 
 #endif

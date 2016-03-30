@@ -233,7 +233,10 @@ void protocol_exec_rt_system()
       report_alarm_message(ALARM_PROBE_FAIL);
     } else if (rt_exec & EXEC_ALARM_HOMING_FAIL) {
       report_alarm_message(ALARM_HOMING_FAIL);
+    } else if (rt_exec & EXEC_ALARM_STEPPER_FAIL) {
+    report_alarm_message(ALARM_STEPPER_FAIL);
     }
+
     // Halt everything upon a critical event flag. Currently hard and soft limits flag this.
     if (rt_exec & EXEC_CRITICAL_EVENT) {
       report_feedback_message(MESSAGE_CRITICAL_EVENT);

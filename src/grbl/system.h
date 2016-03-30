@@ -46,6 +46,7 @@
 #define EXEC_ALARM_ABORT_CYCLE  bit(3) // bitmask 00001000
 #define EXEC_ALARM_PROBE_FAIL   bit(4) // bitmask 00010000
 #define EXEC_ALARM_HOMING_FAIL  bit(5) // bitmask 00100000
+#define EXEC_ALARM_STEPPER_FAIL bit(6) // bitmask 00100000
 
 // Define system state bit map. The state variable primarily tracks the individual functions
 // of Grbl to manage each without overlapping. It is also used as a messaging flag for

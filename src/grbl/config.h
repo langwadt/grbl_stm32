@@ -377,7 +377,7 @@
 // that the switches don't bounce, we recommend enabling this option. This will help prevent
 // triggering a hard limit when the machine disengages from the switch.
 // NOTE: This option has no effect if SOFTWARE_DEBOUNCE is enabled.
-// #define HARD_LIMIT_FORCE_STATE_CHECK // Default disabled. Uncomment to enable.
+#define HARD_LIMIT_FORCE_STATE_CHECK // Default disabled. Uncomment to enable.
 
 // Adjusts homing cycle search and locate scalars. These are the multipliers used by Grbl's
 // homing cycle to ensure the limit switches are engaged and cleared through each phase of 
@@ -403,7 +403,7 @@
 // NOTE: Still a work-in-progress. Machine coordinates must be in all negative space and 
 // does not work with HOMING_FORCE_SET_ORIGIN enabled. Parking motion also moves only in 
 // positive direction.
-// #define PARKING_ENABLE  // Default disabled. Uncomment to enable
+ #define PARKING_ENABLE  // Default disabled. Uncomment to enable
 
 // Configure options for the parking motion, if enabled.
 #define PARKING_AXIS Z_AXIS // Define which axis that performs the parking motion

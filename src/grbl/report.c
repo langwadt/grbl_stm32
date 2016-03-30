@@ -110,6 +110,8 @@ void report_alarm_message(int8_t alarm_code)
       printPgmString(PSTR("Probe fail")); break;
       case ALARM_HOMING_FAIL:
       printPgmString(PSTR("Homing fail")); break;
+      case ALARM_STEPPER_FAIL:
+      printPgmString(PSTR("stepper driver fail")); break;
     }
   #endif
   printPgmString(PSTR("\r\n"));

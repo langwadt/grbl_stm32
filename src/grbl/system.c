@@ -32,13 +32,18 @@ void system_init()
 //  CONTROL_PCMSK |= CONTROL_MASK;  // Enable specific pins of the Pin Change Interrupt
 //  PCICR |= (1 << CONTROL_INT);   // Enable Pin Change Interrupt
 
-/* not tested
+#ifdef 	RESET_PIN
 	set_as_input(RESET_PIN);
+#endif
+#ifdef FEED_HOLD_PIN
 	set_as_input(FEED_HOLD_PIN);
+#endif
+#ifdef CYCLE_START_PIN
 	set_as_input(CYCLE_START_PIN);
+#endif
+#ifdef SAFETY_DOOR_PIN
 	set_as_input(SAFETY_DOOR_PIN);
-
-*/
+#endif
 
 }
 
@@ -64,12 +69,19 @@ uint8_t system_control_get_state()
 //  return(control_state);
 	uint8_t control_state = 0;
 	uint8_t pin           = 0;
-	/*
-  	  if (GPIO_ReadInputDataBit(SAFETY_DOOR_PIN)) { newbits |= (1<<SAFETY_DOOR_BIT); }
-  	  if (GPIO_ReadInputDataBit(RESET_PIN))       { newbits |= (1<<RESET_BIT);       }
-  	  if (GPIO_ReadInputDataBit(FEED_HOLD_PIN)))  { newbits |= (1<<FEED_HOLD_BIT);   }
-  	  if (GPIO_ReadInputDataBit(CYCLE_START_PIN))){ newbits |= (1<<CYCLE_START_BIT); }
 
+#ifdef 	RESET_PIN
+  	  if (GPIO_ReadInputDataBit(SAFETY_DOOR_PIN)) { pin |= (1<<SAFETY_DOOR_BIT); }
+#endif
+#ifdef FEED_HOLD_PIN
+  	  if (GPIO_ReadInputDataBit(RESET_PIN))       { pin |= (1<<RESET_BIT);       }
+#endif
+#ifdef CYCLE_START_PIN
+  	  if (GPIO_ReadInputDataBit(FEED_HOLD_PIN))  { pin |= (1<<FEED_HOLD_BIT);   }
+#endif
+#ifdef SAFETY_DOOR_PIN
+  	  if (GPIO_ReadInputDataBit(CYCLE_START_PIN)){ pin |= (1<<CYCLE_START_BIT); }
+#endif
 	  #ifndef INVERT_ALL_CONTROL_PINS
 	    pin ^= CONTROL_INVERT_MASK;
 	  #endif
@@ -81,7 +93,7 @@ uint8_t system_control_get_state()
 	    if (bit_istrue(pin,(1<<FEED_HOLD_BIT))) { control_state |= CONTROL_PIN_INDEX_FEED_HOLD; }
 	    if (bit_istrue(pin,(1<<CYCLE_START_BIT))) { control_state |= CONTROL_PIN_INDEX_CYCLE_START; }
 	  }
-	*/
+
 	  return(control_state);
 
 }

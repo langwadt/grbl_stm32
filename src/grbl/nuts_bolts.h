@@ -85,6 +85,9 @@ void delay_us(uint32_t us);
 // Computes hypotenuse, avoiding avr-gcc's bloated version and the extra error checking.
 float hypot_f(float x, float y);
 
+#define delay_ms(t) _delay_ms(t)
+#define delay_us(t) _delay_us(t)
+
 
 void set_as_output(GPIO_TypeDef* port, uint32_t pin);
 

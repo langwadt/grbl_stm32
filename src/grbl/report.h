@@ -61,6 +61,7 @@
 #define ALARM_ABORT_CYCLE 3
 #define ALARM_PROBE_FAIL 4
 #define ALARM_HOMING_FAIL 5
+#define ALARM_STEPPER_FAIL 6
 
 // Define Grbl feedback message codes.
 #define MESSAGE_CRITICAL_EVENT 1

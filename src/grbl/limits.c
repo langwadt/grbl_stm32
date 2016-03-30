@@ -98,6 +98,8 @@ uint8_t limits_get_state()
   if(GPIO_ReadInputDataBit(LIMX) != RESET) limit_state |= 1;
   if(GPIO_ReadInputDataBit(LIMY) != RESET) limit_state |= 2;
   if(GPIO_ReadInputDataBit(LIMZ) != RESET) limit_state |= 4;
+  if(GPIO_ReadInputDataBit(STP_FLG) == RESET) limit_state |= 8;
+
 
   if (bit_isfalse(settings.flags,BITFLAG_INVERT_LIMIT_PINS))
 	  limit_state ^= 0x7;
@@ -140,14 +142,14 @@ void limitpin_check(void)
       if (!(sys_rt_exec_alarm)) {
         #ifdef HARD_LIMIT_FORCE_STATE_CHECK
           // Check limit pin state. 
-          if (limits_get_state()) {
-            mc_reset(); // Initiate system kill.
-            system_set_exec_alarm_flag((EXEC_ALARM_HARD_LIMIT|EXEC_CRITICAL_EVENT)); // Indicate hard limit critical event
-          }
-        #else
+          if ( limits_get_state() == 0) return;
+	    #endif
           mc_reset(); // Initiate system kill.
-          system_set_exec_alarm_flag((EXEC_ALARM_HARD_LIMIT|EXEC_CRITICAL_EVENT)); // Indicate hard limit critical event
-        #endif
+          if(newlimit & 0x8)
+        	  system_set_exec_alarm_flag((EXEC_ALARM_STEPPER_FAIL|EXEC_CRITICAL_EVENT)); // Indicate hard limit critical event
+          else
+        	  system_set_exec_alarm_flag((EXEC_ALARM_HARD_LIMIT|EXEC_CRITICAL_EVENT)); // Indicate hard limit critical event
+
       }
     }
   }  

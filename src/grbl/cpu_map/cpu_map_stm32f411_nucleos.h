@@ -142,7 +142,8 @@
 #define CYCLE_START_BIT   2  // Uno Analog Pin 2
 #define SAFETY_DOOR_BIT   3  // Uno Analog Pin 1 NOTE: Safety door is shared with feed hold. Enabled by config define.
 #define CONTROL_MASK      ((1<<RESET_BIT)|(1<<FEED_HOLD_BIT)|(1<<CYCLE_START_BIT)|(1<<SAFETY_DOOR_BIT))
-#define CONTROL_INVERT_MASK   CONTROL_MASK // May be re-defined to only invert certain control pins.
+//#define CONTROL_INVERT_MASK   CONTROL_MASK // May be re-defined to only invert certain control pins.
+#define CONTROL_INVERT_MASK   0 // May be re-defined to only invert certain control pins.
 
 #define PROBE_BIT       0  // Uno Analog Pin 5
 #define PROBE_MASK      (1<<PROBE_BIT)

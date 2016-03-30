@@ -125,7 +125,7 @@ void delay_sec(float seconds, uint8_t mode)
 	}
 }
 
-
+#if 0
 // Delays variable defined milliseconds. Compiler compatibility fix for _delay_ms(),
 // which only accepts constants in future compiler releases.
 void delay_ms(uint16_t ms) 
@@ -155,7 +155,7 @@ void delay_us(uint32_t us)
     }
   }
 }
-
+#endif
 
 // Simple hypotenuse computation function.
 float hypot_f(float x, float y) { return(sqrt(x*x + y*y)); }

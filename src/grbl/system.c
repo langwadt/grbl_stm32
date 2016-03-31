@@ -70,16 +70,16 @@ uint8_t system_control_get_state()
 	uint8_t control_state = 0;
 	uint8_t pin           = 0;
 
-#ifdef 	RESET_PIN
+#ifdef 	SAFETY_DOOR_PIN
   	  if (GPIO_ReadInputDataBit(SAFETY_DOOR_PIN)) { pin |= (1<<SAFETY_DOOR_BIT); }
 #endif
-#ifdef FEED_HOLD_PIN
+#ifdef RESET_PIN
   	  if (GPIO_ReadInputDataBit(RESET_PIN))       { pin |= (1<<RESET_BIT);       }
 #endif
-#ifdef CYCLE_START_PIN
+#ifdef FEED_HOLD_PIN
   	  if (GPIO_ReadInputDataBit(FEED_HOLD_PIN))  { pin |= (1<<FEED_HOLD_BIT);   }
 #endif
-#ifdef SAFETY_DOOR_PIN
+#ifdef CYCLE_START_PIN
   	  if (GPIO_ReadInputDataBit(CYCLE_START_PIN)){ pin |= (1<<CYCLE_START_BIT); }
 #endif
 	  #ifndef INVERT_ALL_CONTROL_PINS

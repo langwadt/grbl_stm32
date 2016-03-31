@@ -29,12 +29,6 @@ system_t sys;
 int main(void)
 {
 
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
-	  set_as_output(GPIOB,GPIO_Pin_8);
-	  set_as_output(GPIOB,GPIO_Pin_9);
-
-	  GPIO_SetBits(GPIOB,GPIO_Pin_8);
-	  GPIO_SetBits(GPIOB,GPIO_Pin_9);
 
 
   // Initialize system upon power-up.

@@ -58,6 +58,35 @@ void spindle_init()
 
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
+#ifdef STANDARD_GRBL
+  GPIO_InitTypeDef GPIO_InitStructure;
+  GPIO_StructInit(&GPIO_InitStructure); //Reset init structure
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+  GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_TIM3);
+
+  TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+  TIM_TimeBaseStructInit( &TIM_TimeBaseStructure ); // Reset init structure
+
+  TIM_TimeBaseStructure.TIM_Prescaler = 100 - 1;  // 100 MHz / 100 = 1 MHz
+  TIM_TimeBaseStructure.TIM_Period = 20000 - 1;  // 1 MHz / 20000 = 50 Hz (20 ms)
+  TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+
+
+  TIM_OCInitTypeDef TIM_OCInitStructure;
+  TIM_OCStructInit( &TIM_OCInitStructure );
+
+
+  TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
+  TIM_OCInitStructure.TIM_Pulse = 1000;
+  TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+#else
   GPIO_InitTypeDef GPIO_InitStructure;
   GPIO_StructInit(&GPIO_InitStructure); //Reset init structure
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
@@ -85,6 +114,7 @@ void spindle_init()
   TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
   TIM_OCInitStructure.TIM_Pulse = 1000;
   TIM_OC3Init(TIM3, &TIM_OCInitStructure);
+#endif
 
   TIM_Cmd( TIM3, ENABLE );
 #else
@@ -117,7 +147,11 @@ void spindle_stop()
 //  #endif
 
 #ifdef VARIABLE_SPINDLE
+#ifdef STANDARD_GRBL
+	TIM_SetCompare1(TIM3,1000);  // 1ms pulsewidth
+#else
 	TIM_SetCompare3(TIM3,1000);  // 1ms pulsewidth
+#endif
 #else
   GPIO_ResetBits(SPINDLE_EN);
 #endif
@@ -199,10 +233,15 @@ void spindle_set_state(uint8_t state, float rpm)
   else
   {
 #ifdef VARIABLE_SPINDLE
+
 	  int i;
 	  for(i=500;i<=1500;i+=20)  // this is a bad hack, my ESC/MOTOR combo needs ramping to start
 	  {
+#ifdef STANDARD_GRBL
+		  TIM_SetCompare1(TIM3,i);
+#else
 		  TIM_SetCompare3(TIM3,i);
+#endif
 		  delay_ms(20);
 	  }
 

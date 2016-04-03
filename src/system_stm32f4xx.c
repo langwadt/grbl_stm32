@@ -351,10 +351,10 @@
      – SB54, SB55 OFF
      – R35 removed
      – SB16, SB50 ON */
-/* #define USE_HSE_BYPASS */
+//#define USE_HSE_BYPASS
 
 #if defined(USE_HSE_BYPASS)     
-#define HSE_BYPASS_INPUT_FREQUENCY   8000000
+#define HSE_BYPASS_INPUT_FREQUENCY   HSE_VALUE
 #endif /* USE_HSE_BYPASS */    
 #endif /* STM32F411xE */
     
@@ -819,7 +819,8 @@ static void SetSysClock(void)
   }
   else
   { /* If HSE fails to start-up, the application will have wrong clock
-         configuration. User can add here some code to deal with this error */
+        configuration. User can add here some code to deal with this error */
+	  while(1);
   }
 #else /* HSI will be used as PLL clock source */
   /* Select regulator voltage output Scale 1 mode */

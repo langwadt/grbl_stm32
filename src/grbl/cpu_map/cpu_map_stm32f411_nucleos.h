@@ -210,16 +210,21 @@
 
 	#define TESTP GPIOB,GPIO_Pin_8
 
-	#define LIMX GPIOA,GPIO_Pin_0
-	#define LIMY GPIOA,GPIO_Pin_1
+	#define LIMX GPIOC,GPIO_Pin_0
+	#define LIMY GPIOC,GPIO_Pin_1
 	#define LIMZ GPIOA,GPIO_Pin_4
 
-	#define PROBE GPIOC,GPIO_Pin_1
+	#define PROBE GPIOA,GPIO_Pin_1
 
 	#ifndef VARIABLE_SPINDLE
 	#define SPINDLE_EN   GPIOC,GPIO_Pin_1
 	#define SPINDLE_DIR  GPIOC,GPIO_Pin_1
+	#else
+		// GPIOB,GPIO_Pin_0 is used by spindle PWM controlled by timer
 	#endif
+
+
+
 	//#define FLOOD_COOLANT
 	//#define MIST_COOLANT
 

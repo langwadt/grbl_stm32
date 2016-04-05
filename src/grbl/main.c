@@ -29,6 +29,9 @@ system_t sys;
 int main(void)
 {
 
+	  GPIO_DeInit(GPIOA);
+	  GPIO_DeInit(GPIOB);
+	  GPIO_DeInit(GPIOC);
 
 
   // Initialize system upon power-up.
@@ -83,6 +86,7 @@ int main(void)
     sys_rt_exec_state = 0;
     sys_rt_exec_alarm = 0;
     sys.suspend = false;
+    sys.soft_limit= false;
           
     // Start Grbl main loop. Processes program inputs and executes them.
     protocol_main_loop();

@@ -44,26 +44,7 @@ void limits_enable()
 
 void limits_init() 
 {
-//  LIMIT_DDR &= ~(LIMIT_MASK); // Set as input pins
-//
-//  #ifdef DISABLE_LIMIT_PIN_PULL_UP
-//    LIMIT_PORT &= ~(LIMIT_MASK); // Normal low operation. Requires external pull-down.
-//  #else
-//    LIMIT_PORT |= (LIMIT_MASK);  // Enable internal pull-up resistors. Normal high operation.
-//  #endif
-//
-//  if (bit_istrue(settings.flags,BITFLAG_HARD_LIMIT_ENABLE)) {
-//    LIMIT_PCMSK |= LIMIT_MASK; // Enable specific pins of the Pin Change Interrupt
-//    PCICR |= (1 << LIMIT_INT); // Enable Pin Change Interrupt
-//  } else {
-//    limits_disable();
-//  }
-//
-//  #ifdef ENABLE_SOFTWARE_DEBOUNCE
-//    MCUSR &= ~(1<<WDRF);
-//    WDTCSR |= (1<<WDCE) | (1<<WDE);
-//    WDTCSR = (1<<WDP0); // Set time-out at ~32msec.
-//  #endif
+
 
 	set_as_input(LIMX);
 	set_as_input(LIMY);
@@ -83,15 +64,6 @@ void limits_init()
 // number in bit position, i.e. Z_AXIS is (1<<2) or bit 2, and Y_AXIS is (1<<1) or bit 1.
 uint8_t limits_get_state()
 {
-//  uint8_t limit_state = 0;
-//  uint8_t pin = (LIMIT_PIN & LIMIT_MASK);
-//  if (bit_isfalse(settings.flags,BITFLAG_INVERT_LIMIT_PINS)) { pin ^= LIMIT_MASK; }
-//  if (pin) {
-//    uint8_t idx;
-//    for (idx=0; idx<N_AXIS; idx++) {
-//      if (pin & get_limit_pin_mask(idx)) { limit_state |= (1 << idx); }
-//    }
-//  }
 
   uint8_t limit_state = 0;
 
@@ -108,7 +80,6 @@ uint8_t limits_get_state()
 
   return(limit_state);
 }
-
 
 // This is the Limit Pin Change Interrupt, which handles the hard limit feature. A bouncing 
 // limit switch can cause a lot of problems, like false readings and multiple interrupt calls.
@@ -155,23 +126,6 @@ void limitpin_check(void)
       }
     }
   }  
-//#else // OPTIONAL: Software debounce limit pin routine.
-//  // Upon limit pin change, enable watchdog timer to create a short delay.
-//  ISR(LIMIT_INT_vect) { if (!(WDTCSR & (1<<WDIE))) { WDTCSR |= (1<<WDIE); } }
-//  ISR(WDT_vect) // Watchdog timer ISR
-//  {
-//    WDTCSR &= ~(1<<WDIE); // Disable watchdog timer.
-//    if (sys.state != STATE_ALARM) {  // Ignore if already in alarm state.
-//      if (!(sys_rt_exec_alarm)) {
-//        // Check limit pin state.
-//        if (limits_get_state()) {
-//          mc_reset(); // Initiate system kill.
-//          system_set_exec_alarm_flag((EXEC_ALARM_HARD_LIMIT|EXEC_CRITICAL_EVENT)); // Indicate hard limit critical event
-//        }
-//      }
-//    }
-//  }
-//#endif
 
  
 // Homes the specified cycle axes, sets the machine position, and performs a pull-off motion after
@@ -354,23 +308,22 @@ void limits_go_home(uint8_t cycle_mask)
 void limits_soft_check(float *target)
 {
   uint8_t idx;
-  uint8_t soft_limit_error = false;
   for (idx=0; idx<N_AXIS; idx++) {
    
     #ifdef HOMING_FORCE_SET_ORIGIN
       // When homing forced set origin is enabled, soft limits checks need to account for directionality.
       // NOTE: max_travel is stored as negative
       if (bit_istrue(settings.homing_dir_mask,bit(idx))) {
-        if (target[idx] < 0 || target[idx] > -settings.max_travel[idx]) { soft_limit_error = true; }
+        if (target[idx] < 0 || target[idx] > -settings.max_travel[idx]) { sys.soft_limit = true; }
       } else {
-        if (target[idx] > 0 || target[idx] < settings.max_travel[idx]) { soft_limit_error = true; }
+        if (target[idx] > 0 || target[idx] < settings.max_travel[idx]) { sys.soft_limit = true; }
       }
     #else  
       // NOTE: max_travel is stored as negative
-      if (target[idx] > 0 || target[idx] < settings.max_travel[idx]) { soft_limit_error = true; }
+      if (target[idx] > 0 || target[idx] < settings.max_travel[idx]) { sys.soft_limit = true; }
     #endif
     
-    if (soft_limit_error) {
+    if (sys.soft_limit) {
       // Force feed hold if cycle is active. All buffered blocks are guaranteed to be within 
       // workspace volume so just come to a controlled stop so position is not lost. When complete
       // enter alarm mode.

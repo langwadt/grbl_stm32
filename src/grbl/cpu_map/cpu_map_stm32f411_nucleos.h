@@ -149,6 +149,8 @@
 #define PROBE_MASK      (1<<PROBE_BIT)
 
 #define STANDARD_GRBL
+#define PWM_SPINDLE			// standard 0-100% pwm, if not defined RC servo pwm: 1.0-1.5ms on, 20ms period
+#define PWM_MAX_VALUE 0xff	// resulting PWM freq will 100MHz/PWM_MAX_VALUE, 0xffff = ~1.5KHz, 0xff = ~390KHz
 
 #ifdef STANDARD_GRBL
 
@@ -161,14 +163,6 @@
 	#define STPZ     GPIOB,GPIO_Pin_5
 
 	#define STPEN    GPIOA,GPIO_Pin_9
-
-//	#define SPI1SCK  GPIOA,GPIO_Pin_5
-//	#define SPI1MOSI GPIOA,GPIO_Pin_7
-//	#define SPI1MISO GPIOA,GPIO_Pin_6
-//	#define SPI1NSS  GPIOB,GPIO_Pin_6
-
-//	#define STP_RST GPIOA,GPIO_Pin_9
-//	#define STP_FLG GPIOA,GPIO_Pin_10
 
 	#define TESTP GPIOB,GPIO_Pin_8
 
@@ -223,8 +217,6 @@
 		// GPIOB,GPIO_Pin_0 is used by spindle PWM controlled by timer
 	#endif
 
-
-
 	//#define FLOOD_COOLANT
 	//#define MIST_COOLANT
 
@@ -234,9 +226,9 @@
 	//#define SAFETY_DOOR_PIN
 
 
-	#define XCURRENT 1500
-	#define YCURRENT 1500
-	#define ZCURRENT  500
+	#define XCURRENT 1500 // stepper current in mA
+	#define YCURRENT 1500 // stepper current in mA
+	#define ZCURRENT  500 // stepper current in mA
 
 #endif
 

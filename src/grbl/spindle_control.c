@@ -63,7 +63,7 @@ void spindle_init()
   GPIO_StructInit(&GPIO_InitStructure); //Reset init structure
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 
   GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_TIM3);
@@ -71,10 +71,13 @@ void spindle_init()
   TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
   TIM_TimeBaseStructInit( &TIM_TimeBaseStructure ); // Reset init structure
 
+#ifdef PWM_SPINDLE
+  TIM_TimeBaseStructure.TIM_Prescaler = 0;  // 100 MHz 1 = 100 MHz
+  TIM_TimeBaseStructure.TIM_Period = PWM_MAX_VALUE;  // 1 MHz / 20000 = 50 Hz (20 ms)
+#else
   TIM_TimeBaseStructure.TIM_Prescaler = 100 - 1;  // 100 MHz / 100 = 1 MHz
   TIM_TimeBaseStructure.TIM_Period = 20000 - 1;  // 1 MHz / 20000 = 50 Hz (20 ms)
-  TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+#endif
   TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
 
 
@@ -91,7 +94,7 @@ void spindle_init()
   GPIO_StructInit(&GPIO_InitStructure); //Reset init structure
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
 
   GPIO_PinAFConfig(GPIOB, GPIO_PinSource0, GPIO_AF_TIM3);
@@ -99,8 +102,13 @@ void spindle_init()
   TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
   TIM_TimeBaseStructInit( &TIM_TimeBaseStructure ); // Reset init structure
 
+#ifdef PWM_SPINDLE
   TIM_TimeBaseStructure.TIM_Prescaler = 100 - 1;  // 100 MHz / 100 = 1 MHz
   TIM_TimeBaseStructure.TIM_Period = 20000 - 1;  // 1 MHz / 20000 = 50 Hz (20 ms)
+#else
+  TIM_TimeBaseStructure.TIM_Prescaler = 100 - 1;  // 100 MHz / 100 = 1 MHz
+  TIM_TimeBaseStructure.TIM_Period = 20000 - 1;  // 1 MHz / 20000 = 50 Hz (20 ms)
+#endif
   TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
   TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
@@ -147,10 +155,18 @@ void spindle_stop()
 //  #endif
 
 #ifdef VARIABLE_SPINDLE
-#ifdef STANDARD_GRBL
-	TIM_SetCompare1(TIM3,1000);  // 1ms pulsewidth
+#ifdef PWM_SPINDLE
+	uint16_t pwm = 0;
 #else
-	TIM_SetCompare3(TIM3,1000);  // 1ms pulsewidth
+	uint16_t pwm = 1000;
+#endif
+#endif
+
+#ifdef VARIABLE_SPINDLE
+#ifdef STANDARD_GRBL
+	TIM_SetCompare1(TIM3,pwm);  // 1ms pulsewidth
+#else
+	TIM_SetCompare3(TIM3,pwm);  // 1ms pulsewidth
 #endif
 #else
   GPIO_ResetBits(SPINDLE_EN);
@@ -226,6 +242,28 @@ void spindle_set_state(uint8_t state, float rpm)
 //
 //  }
 
+#ifdef PWM_SPINDLE
+
+          uint32_t current_pwm;
+
+        // Calculate PWM register value based on rpm max/min settings and programmed rpm.
+        if (settings.rpm_max <= settings.rpm_min) {
+          // No PWM range possible. Set simple on/off spindle control pin state.
+          current_pwm = PWM_MAX_VALUE;
+        } else {
+          if (rpm > settings.rpm_max) { rpm = settings.rpm_max; }
+          if (rpm < settings.rpm_min) { rpm = settings.rpm_min; }
+          #ifdef SPINDLE_MINIMUM_PWM
+            float pwm_gradient = (PWM_MAX_VALUE-SPINDLE_MINIMUM_PWM)/(settings.rpm_max-settings.rpm_min);
+            current_pwm = floor( (rpm-settings.rpm_min)*pwm_gradient + (SPINDLE_MINIMUM_PWM+0.5));
+          #else
+            float pwm_gradient = (PWM_MAX_VALUE)/(settings.rpm_max-settings.rpm_min);
+            current_pwm = floor( (rpm-settings.rpm_min)*pwm_gradient + 0.5);
+          #endif
+        }
+
+#endif
+
   if (state == SPINDLE_DISABLE)
   {
     spindle_stop();
@@ -233,7 +271,9 @@ void spindle_set_state(uint8_t state, float rpm)
   else
   {
 #ifdef VARIABLE_SPINDLE
-
+#ifdef PWM_SPINDLE
+	  TIM_SetCompare1(TIM3,current_pwm);
+#else
 	  int i;
 	  for(i=500;i<=1500;i+=20)  // this is a bad hack, my ESC/MOTOR combo needs ramping to start
 	  {
@@ -244,7 +284,7 @@ void spindle_set_state(uint8_t state, float rpm)
 #endif
 		  delay_ms(20);
 	  }
-
+#endif
 #else
 	  if (state == SPINDLE_ENABLE_CW)
 		  GPIO_ResetBits(SPINDLE_DIR);

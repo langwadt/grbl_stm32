@@ -22,7 +22,7 @@
 #include "grbl.h"
 
 void init_stepperpins(void);
-void  set_dir_pins(uint8_t);
+void  set_dir_pins(uint8_t,uint8_t);
 void set_step_pins(uint8_t);
 void enable_timerint(void);
 void disable_timerint(void);
@@ -343,7 +343,7 @@ void stepper_interrupt1(void)
 //  TCNT0 = st.step_pulse_time; // Reload Timer0 counter
 //  TCCR0B = (1<<CS01); // Begin Timer0. Full speed, 1/8 prescaler
 
-  set_dir_pins(st.dir_outbits);
+  set_dir_pins(st.dir_outbits,st.step_outbits);
 //  _delay_us(1);
   set_step_pins(st.step_outbits);
 
@@ -526,7 +526,7 @@ void st_reset()
   
   st_generate_step_dir_invert_masks();
       
-  set_dir_pins(dir_port_invert_mask);
+  set_dir_pins(dir_port_invert_mask,0);
   set_step_pins(step_port_invert_mask);
 
 // Initialize step and direction port pins.
@@ -1031,12 +1031,12 @@ void init_stepperpins()
 #endif
 }
 
-void  set_dir_pins(uint8_t outbits)
+void  set_dir_pins(uint8_t outbits,uint8_t stepbits)
 {
 
 	GPIO_WriteBit(DIRX, outbits&(1<<X_DIRECTION_BIT));
 	GPIO_WriteBit(DIRY, outbits&(1<<Y_DIRECTION_BIT));
-	GPIO_WriteBit(DIRZ, outbits&(1<<Z_DIRECTION_BIT));
+	if(stepbits&(1<<Z_STEP_BIT)) GPIO_WriteBit(DIRZ, outbits&(1<<Z_DIRECTION_BIT)); // leave dir bit alone if no step so it could be used as on penup/pendown
 }
 
 void set_step_pins(uint8_t outbits)

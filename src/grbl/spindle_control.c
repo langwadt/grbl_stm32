@@ -87,7 +87,7 @@ void spindle_init()
 
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
-  TIM_OCInitStructure.TIM_Pulse = 1000;
+  TIM_OCInitStructure.TIM_Pulse = 0;
   TIM_OC1Init(TIM3, &TIM_OCInitStructure);
 #else
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -104,7 +104,7 @@ void spindle_init()
 
 #ifdef PWM_SPINDLE
   TIM_TimeBaseStructure.TIM_Prescaler = 100 - 1;  // 100 MHz / 100 = 1 MHz
-  TIM_TimeBaseStructure.TIM_Period = 20000 - 1;  // 1 MHz / 20000 = 50 Hz (20 ms)
+  TIM_TimeBaseStructure.TIM_Period = PWM_MAX_VALUE;  // 1 MHz / 20000 = 50 Hz (20 ms)
 #else
   TIM_TimeBaseStructure.TIM_Prescaler = 100 - 1;  // 100 MHz / 100 = 1 MHz
   TIM_TimeBaseStructure.TIM_Period = 20000 - 1;  // 1 MHz / 20000 = 50 Hz (20 ms)
@@ -120,7 +120,7 @@ void spindle_init()
 
   TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
-  TIM_OCInitStructure.TIM_Pulse = 1000;
+  TIM_OCInitStructure.TIM_Pulse = 0;
   TIM_OC3Init(TIM3, &TIM_OCInitStructure);
 #endif
 
@@ -156,17 +156,17 @@ void spindle_stop()
 
 #ifdef VARIABLE_SPINDLE
 #ifdef PWM_SPINDLE
-	uint16_t pwm = 0;
+	uint16_t pwm = 0;  // 0% pwm
 #else
-	uint16_t pwm = 1000;
+	uint16_t pwm = 1000; // 1ms
 #endif
 #endif
 
 #ifdef VARIABLE_SPINDLE
 #ifdef STANDARD_GRBL
-	TIM_SetCompare1(TIM3,pwm);  // 1ms pulsewidth
+	TIM_SetCompare1(TIM3,pwm);
 #else
-	TIM_SetCompare3(TIM3,pwm);  // 1ms pulsewidth
+	TIM_SetCompare3(TIM3,pwm);
 #endif
 #else
   GPIO_ResetBits(SPINDLE_EN);
@@ -275,7 +275,8 @@ void spindle_set_state(uint8_t state, float rpm)
 	  TIM_SetCompare1(TIM3,current_pwm);
 #else
 	  int i;
-	  for(i=500;i<=1500;i+=20)  // this is a bad hack, my ESC/MOTOR combo needs ramping to start
+	  // 1500 = 1.5ms = full speed
+	  for(i=1000;i<=1500;i+=20)  // this is a bad hack, my ESC/MOTOR combo needs ramping to start
 	  {
 #ifdef STANDARD_GRBL
 		  TIM_SetCompare1(TIM3,i);

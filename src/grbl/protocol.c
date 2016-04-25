@@ -277,7 +277,7 @@ void protocol_exec_rt_system()
     // NOTE: The math involved to calculate the hold should be low enough for most, if not all, 
     // operational scenarios. Once hold is initiated, the system enters a suspend state to block
     // all main program processes until either reset or resumed.
-    if (rt_exec & (EXEC_MOTION_CANCEL | EXEC_FEED_HOLD | EXEC_SAFETY_DOOR) && !(sys.soft_limit)) {
+    if ((rt_exec & (EXEC_MOTION_CANCEL | EXEC_FEED_HOLD | EXEC_SAFETY_DOOR)) && !(sys.soft_limit)) {
   
       // TODO: CHECK MODE? How to handle this? Likely nothing, since it only works when IDLE and then resets Grbl.
             

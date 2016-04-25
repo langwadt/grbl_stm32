@@ -284,7 +284,9 @@ uint8_t system_execute_line(char *line)
             if (sys.state != STATE_IDLE) { return(STATUS_IDLE_ERROR); } // Store only when idle.
             helper_var = true;  // Set helper_var to flag storing method. 
             // No break. Continues into default: to read remaining command characters.
+
           }
+          /* no break */
         default :  // Storing setting methods [IDLE/ALARM]
           if(!read_float(line, &char_counter, &parameter)) { return(STATUS_BAD_NUMBER_FORMAT); }
           if(line[char_counter++] != '=') { return(STATUS_INVALID_STATEMENT); }

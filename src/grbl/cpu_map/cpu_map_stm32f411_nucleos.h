@@ -149,8 +149,9 @@
 #define PROBE_MASK      (1<<PROBE_BIT)
 
 #define STANDARD_GRBL
+
 #define PWM_SPINDLE			// standard 0-100% pwm, if not defined RC servo pwm: 1.0-1.5ms on, 20ms period
-#define PWM_MAX_VALUE 0xff	// resulting PWM freq will 100MHz/PWM_MAX_VALUE, 0xffff = ~1.5KHz, 0xff = ~390KHz
+#define PWM_MAX_VALUE 0xfff	// resulting PWM freq will 100MHz/PWM_MAX_VALUE, 0xffff = ~1.5KHz, 0xff = ~390KHz
 
 #ifdef STANDARD_GRBL
 

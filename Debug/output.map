@@ -511,8 +511,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/gcode.o
  .debug_macro   0x00000000       0xc4 src/grbl/gcode.o
  .debug_macro   0x00000000       0xee src/grbl/gcode.o
+ .debug_macro   0x00000000      0x120 src/grbl/gcode.o
  .debug_macro   0x00000000       0xca src/grbl/gcode.o
- .debug_macro   0x00000000      0x10b src/grbl/gcode.o
  .debug_macro   0x00000000      0x1b5 src/grbl/gcode.o
  .debug_macro   0x00000000       0x16 src/grbl/gcode.o
  .debug_macro   0x00000000       0x1c src/grbl/gcode.o
@@ -647,8 +647,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/limits.o
  .debug_macro   0x00000000       0xc4 src/grbl/limits.o
  .debug_macro   0x00000000       0xee src/grbl/limits.o
+ .debug_macro   0x00000000      0x120 src/grbl/limits.o
  .debug_macro   0x00000000       0xca src/grbl/limits.o
- .debug_macro   0x00000000      0x10b src/grbl/limits.o
  .debug_macro   0x00000000      0x1b5 src/grbl/limits.o
  .debug_macro   0x00000000       0x16 src/grbl/limits.o
  .debug_macro   0x00000000       0x1c src/grbl/limits.o
@@ -784,8 +784,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/main.o
  .debug_macro   0x00000000       0xc4 src/grbl/main.o
  .debug_macro   0x00000000       0xee src/grbl/main.o
+ .debug_macro   0x00000000      0x120 src/grbl/main.o
  .debug_macro   0x00000000       0xca src/grbl/main.o
- .debug_macro   0x00000000      0x10b src/grbl/main.o
  .debug_macro   0x00000000      0x1b5 src/grbl/main.o
  .debug_macro   0x00000000       0x16 src/grbl/main.o
  .debug_macro   0x00000000       0x1c src/grbl/main.o
@@ -921,8 +921,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/motion_control.o
  .debug_macro   0x00000000       0xc4 src/grbl/motion_control.o
  .debug_macro   0x00000000       0xee src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x120 src/grbl/motion_control.o
  .debug_macro   0x00000000       0xca src/grbl/motion_control.o
- .debug_macro   0x00000000      0x10b src/grbl/motion_control.o
  .debug_macro   0x00000000      0x1b5 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x16 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x1c src/grbl/motion_control.o
@@ -1058,8 +1058,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0xc4 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0xee src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x120 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0xca src/grbl/nuts_bolts.o
- .debug_macro   0x00000000      0x10b src/grbl/nuts_bolts.o
  .debug_macro   0x00000000      0x1b5 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x16 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x1c src/grbl/nuts_bolts.o
@@ -1194,8 +1194,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/planner.o
  .debug_macro   0x00000000       0xc4 src/grbl/planner.o
  .debug_macro   0x00000000       0xee src/grbl/planner.o
+ .debug_macro   0x00000000      0x120 src/grbl/planner.o
  .debug_macro   0x00000000       0xca src/grbl/planner.o
- .debug_macro   0x00000000      0x10b src/grbl/planner.o
  .debug_macro   0x00000000      0x1b5 src/grbl/planner.o
  .debug_macro   0x00000000       0x16 src/grbl/planner.o
  .debug_macro   0x00000000       0x1c src/grbl/planner.o
@@ -1335,8 +1335,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/print.o
  .debug_macro   0x00000000       0xc4 src/grbl/print.o
  .debug_macro   0x00000000       0xee src/grbl/print.o
+ .debug_macro   0x00000000      0x120 src/grbl/print.o
  .debug_macro   0x00000000       0xca src/grbl/print.o
- .debug_macro   0x00000000      0x10b src/grbl/print.o
  .debug_macro   0x00000000      0x1b5 src/grbl/print.o
  .debug_macro   0x00000000       0x16 src/grbl/print.o
  .debug_macro   0x00000000       0x1c src/grbl/print.o
@@ -1472,8 +1472,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/probe.o
  .debug_macro   0x00000000       0xc4 src/grbl/probe.o
  .debug_macro   0x00000000       0xee src/grbl/probe.o
+ .debug_macro   0x00000000      0x120 src/grbl/probe.o
  .debug_macro   0x00000000       0xca src/grbl/probe.o
- .debug_macro   0x00000000      0x10b src/grbl/probe.o
  .debug_macro   0x00000000      0x1b5 src/grbl/probe.o
  .debug_macro   0x00000000       0x16 src/grbl/probe.o
  .debug_macro   0x00000000       0x1c src/grbl/probe.o
@@ -1608,8 +1608,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/protocol.o
  .debug_macro   0x00000000       0xc4 src/grbl/protocol.o
  .debug_macro   0x00000000       0xee src/grbl/protocol.o
+ .debug_macro   0x00000000      0x120 src/grbl/protocol.o
  .debug_macro   0x00000000       0xca src/grbl/protocol.o
- .debug_macro   0x00000000      0x10b src/grbl/protocol.o
  .debug_macro   0x00000000      0x1b5 src/grbl/protocol.o
  .debug_macro   0x00000000       0x16 src/grbl/protocol.o
  .debug_macro   0x00000000       0x1c src/grbl/protocol.o
@@ -1747,8 +1747,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/report.o
  .debug_macro   0x00000000       0xc4 src/grbl/report.o
  .debug_macro   0x00000000       0xee src/grbl/report.o
+ .debug_macro   0x00000000      0x120 src/grbl/report.o
  .debug_macro   0x00000000       0xca src/grbl/report.o
- .debug_macro   0x00000000      0x10b src/grbl/report.o
  .debug_macro   0x00000000      0x1b5 src/grbl/report.o
  .debug_macro   0x00000000       0x16 src/grbl/report.o
  .debug_macro   0x00000000       0x1c src/grbl/report.o
@@ -1885,8 +1885,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/serial.o
  .debug_macro   0x00000000       0xc4 src/grbl/serial.o
  .debug_macro   0x00000000       0xee src/grbl/serial.o
+ .debug_macro   0x00000000      0x120 src/grbl/serial.o
  .debug_macro   0x00000000       0xca src/grbl/serial.o
- .debug_macro   0x00000000      0x10b src/grbl/serial.o
  .debug_macro   0x00000000      0x1b5 src/grbl/serial.o
  .debug_macro   0x00000000       0x16 src/grbl/serial.o
  .debug_macro   0x00000000       0x1c src/grbl/serial.o
@@ -2024,8 +2024,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/settings.o
  .debug_macro   0x00000000       0xc4 src/grbl/settings.o
  .debug_macro   0x00000000       0xee src/grbl/settings.o
+ .debug_macro   0x00000000      0x120 src/grbl/settings.o
  .debug_macro   0x00000000       0xca src/grbl/settings.o
- .debug_macro   0x00000000      0x10b src/grbl/settings.o
  .debug_macro   0x00000000      0x1b5 src/grbl/settings.o
  .debug_macro   0x00000000       0x16 src/grbl/settings.o
  .debug_macro   0x00000000       0x1c src/grbl/settings.o
@@ -2161,8 +2161,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/spindle_control.o
  .debug_macro   0x00000000       0xc4 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0xee src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x120 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0xca src/grbl/spindle_control.o
- .debug_macro   0x00000000      0x10b src/grbl/spindle_control.o
  .debug_macro   0x00000000      0x1b5 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x16 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x1c src/grbl/spindle_control.o
@@ -2299,8 +2299,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/stepper.o
  .debug_macro   0x00000000       0xc4 src/grbl/stepper.o
  .debug_macro   0x00000000       0xee src/grbl/stepper.o
+ .debug_macro   0x00000000      0x120 src/grbl/stepper.o
  .debug_macro   0x00000000       0xca src/grbl/stepper.o
- .debug_macro   0x00000000      0x10b src/grbl/stepper.o
  .debug_macro   0x00000000      0x1b5 src/grbl/stepper.o
  .debug_macro   0x00000000       0x16 src/grbl/stepper.o
  .debug_macro   0x00000000       0x1c src/grbl/stepper.o
@@ -2435,8 +2435,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xac src/grbl/system.o
  .debug_macro   0x00000000       0xc4 src/grbl/system.o
  .debug_macro   0x00000000       0xee src/grbl/system.o
+ .debug_macro   0x00000000      0x120 src/grbl/system.o
  .debug_macro   0x00000000       0xca src/grbl/system.o
- .debug_macro   0x00000000      0x10b src/grbl/system.o
  .debug_macro   0x00000000      0x1b5 src/grbl/system.o
  .debug_macro   0x00000000       0x16 src/grbl/system.o
  .debug_macro   0x00000000       0x1c src/grbl/system.o
@@ -7856,7 +7856,7 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_ranges  0x00000928      0x2e8 StdPeriph_Driver/src/stm32f4xx_tim.o
  .debug_ranges  0x00000c10       0xf0 StdPeriph_Driver/src/stm32f4xx_usart.o
 
-.debug_macro    0x00000000    0x13a36
+.debug_macro    0x00000000    0x13a4b
  .debug_macro   0x00000000       0x17 src/util/delay.o
  .debug_macro   0x00000017      0x89e src/util/delay.o
  .debug_macro   0x000008b5      0x194 src/system_stm32f4xx.o
@@ -7904,96 +7904,96 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_macro   0x0000d9e3       0xac src/grbl/coolant_control.o
  .debug_macro   0x0000da8f       0xc4 src/grbl/coolant_control.o
  .debug_macro   0x0000db53       0xee src/grbl/coolant_control.o
- .debug_macro   0x0000dc41       0xca src/grbl/coolant_control.o
- .debug_macro   0x0000dd0b      0x10b src/grbl/coolant_control.o
- .debug_macro   0x0000de16      0x1b5 src/grbl/coolant_control.o
- .debug_macro   0x0000dfcb       0x16 src/grbl/coolant_control.o
- .debug_macro   0x0000dfe1       0x1c src/grbl/coolant_control.o
- .debug_macro   0x0000dffd       0x16 src/grbl/coolant_control.o
- .debug_macro   0x0000e013       0x10 src/grbl/coolant_control.o
- .debug_macro   0x0000e023      0x11e src/grbl/coolant_control.o
- .debug_macro   0x0000e141       0x1c src/grbl/coolant_control.o
- .debug_macro   0x0000e15d       0x10 src/grbl/coolant_control.o
- .debug_macro   0x0000e16d      0x3a5 src/grbl/gcode.o
- .debug_macro   0x0000e512      0x38d src/grbl/limits.o
- .debug_macro   0x0000e89f      0x381 src/grbl/main.o
- .debug_macro   0x0000ec20      0x381 src/grbl/motion_control.o
- .debug_macro   0x0000efa1      0x387 src/grbl/nuts_bolts.o
- .debug_macro   0x0000f328      0x387 src/grbl/planner.o
- .debug_macro   0x0000f6af      0x381 src/grbl/print.o
- .debug_macro   0x0000fa30      0x381 src/grbl/probe.o
- .debug_macro   0x0000fdb1      0x393 src/grbl/protocol.o
- .debug_macro   0x00010144      0x381 src/grbl/report.o
- .debug_macro   0x000104c5      0x3f3 src/grbl/serial.o
- .debug_macro   0x000108b8      0x381 src/grbl/settings.o
- .debug_macro   0x00010c39      0x381 src/grbl/spindle_control.o
- .debug_macro   0x00010fba      0x3c9 src/grbl/stepper.o
- .debug_macro   0x00011383      0x381 src/grbl/system.o
- .debug_macro   0x00011704      0x246 src/avr/eeprom.o
- .debug_macro   0x0001194a       0x16 src/avr/eeprom.o
- .debug_macro   0x00011960      0x179 StdPeriph_Driver/src/misc.o
- .debug_macro   0x00011ad9       0x7c StdPeriph_Driver/src/misc.o
- .debug_macro   0x00011b55      0x179 StdPeriph_Driver/src/stm32f4xx_flash.o
- .debug_macro   0x00011cce      0x416 StdPeriph_Driver/src/stm32f4xx_flash.o
- .debug_macro   0x000120e4      0x177 StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_macro   0x0001225b      0x2e0 StdPeriph_Driver/src/stm32f4xx_gpio.o
- .debug_macro   0x0001253b      0x23d StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_macro   0x00012778      0x63c StdPeriph_Driver/src/stm32f4xx_rcc.o
- .debug_macro   0x00012db4      0x1a1 StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_macro   0x00012f55      0x735 StdPeriph_Driver/src/stm32f4xx_tim.o
- .debug_macro   0x0001368a      0x18f StdPeriph_Driver/src/stm32f4xx_usart.o
- .debug_macro   0x00013819      0x21d StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_macro   0x0000dc41      0x120 src/grbl/coolant_control.o
+ .debug_macro   0x0000dd61       0xca src/grbl/coolant_control.o
+ .debug_macro   0x0000de2b      0x1b5 src/grbl/coolant_control.o
+ .debug_macro   0x0000dfe0       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x0000dff6       0x1c src/grbl/coolant_control.o
+ .debug_macro   0x0000e012       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x0000e028       0x10 src/grbl/coolant_control.o
+ .debug_macro   0x0000e038      0x11e src/grbl/coolant_control.o
+ .debug_macro   0x0000e156       0x1c src/grbl/coolant_control.o
+ .debug_macro   0x0000e172       0x10 src/grbl/coolant_control.o
+ .debug_macro   0x0000e182      0x3a5 src/grbl/gcode.o
+ .debug_macro   0x0000e527      0x38d src/grbl/limits.o
+ .debug_macro   0x0000e8b4      0x381 src/grbl/main.o
+ .debug_macro   0x0000ec35      0x381 src/grbl/motion_control.o
+ .debug_macro   0x0000efb6      0x387 src/grbl/nuts_bolts.o
+ .debug_macro   0x0000f33d      0x387 src/grbl/planner.o
+ .debug_macro   0x0000f6c4      0x381 src/grbl/print.o
+ .debug_macro   0x0000fa45      0x381 src/grbl/probe.o
+ .debug_macro   0x0000fdc6      0x393 src/grbl/protocol.o
+ .debug_macro   0x00010159      0x381 src/grbl/report.o
+ .debug_macro   0x000104da      0x3f3 src/grbl/serial.o
+ .debug_macro   0x000108cd      0x381 src/grbl/settings.o
+ .debug_macro   0x00010c4e      0x381 src/grbl/spindle_control.o
+ .debug_macro   0x00010fcf      0x3c9 src/grbl/stepper.o
+ .debug_macro   0x00011398      0x381 src/grbl/system.o
+ .debug_macro   0x00011719      0x246 src/avr/eeprom.o
+ .debug_macro   0x0001195f       0x16 src/avr/eeprom.o
+ .debug_macro   0x00011975      0x179 StdPeriph_Driver/src/misc.o
+ .debug_macro   0x00011aee       0x7c StdPeriph_Driver/src/misc.o
+ .debug_macro   0x00011b6a      0x179 StdPeriph_Driver/src/stm32f4xx_flash.o
+ .debug_macro   0x00011ce3      0x416 StdPeriph_Driver/src/stm32f4xx_flash.o
+ .debug_macro   0x000120f9      0x177 StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_macro   0x00012270      0x2e0 StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_macro   0x00012550      0x23d StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_macro   0x0001278d      0x63c StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_macro   0x00012dc9      0x1a1 StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_macro   0x00012f6a      0x735 StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_macro   0x0001369f      0x18f StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_macro   0x0001382e      0x21d StdPeriph_Driver/src/stm32f4xx_usart.o
 
-.debug_str      0x00000000    0x5c250
+.debug_str      0x00000000    0x5c29b
  .debug_str     0x00000000     0x250c src/util/delay.o
                                0x251f (size before relaxing)
  .debug_str     0x0000250c    0x4ee44 src/system_stm32f4xx.o
                               0x514bc (size before relaxing)
- .debug_str     0x00051350     0x67dd src/grbl/coolant_control.o
-                              0x57ab0 (size before relaxing)
- .debug_str     0x00057b2d      0x2bb src/grbl/gcode.o
-                              0x57ce8 (size before relaxing)
- .debug_str     0x00057de8      0x25f src/grbl/limits.o
-                              0x57cd6 (size before relaxing)
- .debug_str     0x00058047       0x25 src/grbl/main.o
-                              0x57ba8 (size before relaxing)
- .debug_str     0x0005806c      0x158 src/grbl/motion_control.o
-                              0x57cde (size before relaxing)
- .debug_str     0x000581c4      0x1b0 src/grbl/nuts_bolts.o
-                              0x57c7f (size before relaxing)
- .debug_str     0x00058374      0x2b9 src/grbl/planner.o
-                              0x57e81 (size before relaxing)
- .debug_str     0x0005862d      0x10a src/grbl/print.o
-                              0x57beb (size before relaxing)
- .debug_str     0x00058737       0x71 src/grbl/probe.o
-                              0x57c02 (size before relaxing)
- .debug_str     0x000587a8      0x140 src/grbl/protocol.o
-                              0x57d6f (size before relaxing)
- .debug_str     0x000588e8      0x176 src/grbl/report.o
-                              0x57da4 (size before relaxing)
- .debug_str     0x00058a5e      0x8c0 src/grbl/serial.o
-                              0x58486 (size before relaxing)
- .debug_str     0x0005931e      0x17d src/grbl/settings.o
-                              0x57c96 (size before relaxing)
- .debug_str     0x0005949b      0x224 src/grbl/spindle_control.o
-                              0x57f58 (size before relaxing)
- .debug_str     0x000596bf      0x67c src/grbl/stepper.o
-                              0x588ab (size before relaxing)
- .debug_str     0x00059d3b      0x1ab src/grbl/system.o
-                              0x57d5b (size before relaxing)
- .debug_str     0x00059ee6      0x163 src/avr/eeprom.o
+ .debug_str     0x00051350     0x6828 src/grbl/coolant_control.o
+                              0x57afb (size before relaxing)
+ .debug_str     0x00057b78      0x2bb src/grbl/gcode.o
+                              0x57d33 (size before relaxing)
+ .debug_str     0x00057e33      0x25f src/grbl/limits.o
+                              0x57d21 (size before relaxing)
+ .debug_str     0x00058092       0x25 src/grbl/main.o
+                              0x57bf3 (size before relaxing)
+ .debug_str     0x000580b7      0x158 src/grbl/motion_control.o
+                              0x57d29 (size before relaxing)
+ .debug_str     0x0005820f      0x1b0 src/grbl/nuts_bolts.o
+                              0x57cca (size before relaxing)
+ .debug_str     0x000583bf      0x2b9 src/grbl/planner.o
+                              0x57ecc (size before relaxing)
+ .debug_str     0x00058678      0x10a src/grbl/print.o
+                              0x57c36 (size before relaxing)
+ .debug_str     0x00058782       0x71 src/grbl/probe.o
+                              0x57c4d (size before relaxing)
+ .debug_str     0x000587f3      0x140 src/grbl/protocol.o
+                              0x57dba (size before relaxing)
+ .debug_str     0x00058933      0x176 src/grbl/report.o
+                              0x57def (size before relaxing)
+ .debug_str     0x00058aa9      0x8c0 src/grbl/serial.o
+                              0x584d1 (size before relaxing)
+ .debug_str     0x00059369      0x17d src/grbl/settings.o
+                              0x57ce1 (size before relaxing)
+ .debug_str     0x000594e6      0x224 src/grbl/spindle_control.o
+                              0x57fa3 (size before relaxing)
+ .debug_str     0x0005970a      0x67c src/grbl/stepper.o
+                              0x588f6 (size before relaxing)
+ .debug_str     0x00059d86      0x1ab src/grbl/system.o
+                              0x57da6 (size before relaxing)
+ .debug_str     0x00059f31      0x163 src/avr/eeprom.o
                               0x54c44 (size before relaxing)
- .debug_str     0x0005a049      0x142 StdPeriph_Driver/src/misc.o
+ .debug_str     0x0005a094      0x142 StdPeriph_Driver/src/misc.o
                               0x5148d (size before relaxing)
- .debug_str     0x0005a18b      0x421 StdPeriph_Driver/src/stm32f4xx_flash.o
+ .debug_str     0x0005a1d6      0x421 StdPeriph_Driver/src/stm32f4xx_flash.o
                               0x51757 (size before relaxing)
- .debug_str     0x0005a5ac      0x182 StdPeriph_Driver/src/stm32f4xx_gpio.o
+ .debug_str     0x0005a5f7      0x182 StdPeriph_Driver/src/stm32f4xx_gpio.o
                               0x51535 (size before relaxing)
- .debug_str     0x0005a72e      0xc11 StdPeriph_Driver/src/stm32f4xx_rcc.o
+ .debug_str     0x0005a779      0xc11 StdPeriph_Driver/src/stm32f4xx_rcc.o
                               0x51fcc (size before relaxing)
- .debug_str     0x0005b33f      0xaa4 StdPeriph_Driver/src/stm32f4xx_tim.o
+ .debug_str     0x0005b38a      0xaa4 StdPeriph_Driver/src/stm32f4xx_tim.o
                               0x51f2c (size before relaxing)
- .debug_str     0x0005bde3      0x46d StdPeriph_Driver/src/stm32f4xx_usart.o
+ .debug_str     0x0005be2e      0x46d StdPeriph_Driver/src/stm32f4xx_usart.o
                               0x51848 (size before relaxing)
 
 .comment        0x00000000       0x70

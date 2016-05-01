@@ -153,6 +153,11 @@
 #define PWM_SPINDLE			// standard 0-100% pwm, if not defined RC servo pwm: 1.0-1.5ms on, 20ms period
 #define PWM_MAX_VALUE 0xfff	// resulting PWM freq will 100MHz/PWM_MAX_VALUE, 0xffff = ~1.5KHz, 0xff = ~390KHz
 
+// microstepping mode, will modify steps/mm in defaults (todo: check eeprom)
+#define XSTEPMODE 4 // 0=1/1,1=1/2,2=1/4,3=1/8,4=1/16
+#define YSTEPMODE 4 //
+#define ZSTEPMODE 4 //
+
 #ifdef STANDARD_GRBL
 
 	#define DIRX     GPIOB,GPIO_Pin_4
@@ -226,10 +231,11 @@
 	//#define CYCLE_START_PIN
 	//#define SAFETY_DOOR_PIN
 
-
 	#define XCURRENT 1500 // stepper current in mA
 	#define YCURRENT 1500 // stepper current in mA
 	#define ZCURRENT  500 // stepper current in mA
 
 #endif
+
+
 

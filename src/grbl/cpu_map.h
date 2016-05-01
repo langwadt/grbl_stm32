@@ -37,7 +37,7 @@
   #include "cpu_map/cpu_map_atmega2560.h"
 #endif
 
-#ifdef CPU_MAP_STM32F411_NUCLEOS // (Arduino Mega 2560) Working @EliteEng
+#ifdef CPU_MAP_STM32F411_NUCLEOS
   #include "cpu_map/cpu_map_stm32f411_nucleos.h"
 #endif
 

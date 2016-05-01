@@ -526,7 +526,7 @@ void st_reset()
   
   st_generate_step_dir_invert_masks();
       
-  set_dir_pins(dir_port_invert_mask,0);
+  set_dir_pins(dir_port_invert_mask,STEP_MASK);
   set_step_pins(step_port_invert_mask);
 
 // Initialize step and direction port pins.
@@ -1025,7 +1025,7 @@ void init_stepperpins()
 
 	set_as_output(TESTP);
 
-	set_dir_pins(dir_port_invert_mask);
+	set_dir_pins(dir_port_invert_mask,STEP_MASK);
 	set_step_pins(step_port_invert_mask);
 	config_steppers();
 #endif
@@ -1188,24 +1188,20 @@ void config_steppers()
 #else
 	GPIO_SetBits(STP_RST);
 
-	spibytes(0xa8,0xa8,0xa8);  // disable
+    spibytes(0xa8,0xa8,0xa8);  // disable : HiZ state;  configure L6474 while in HiZ mode
 
-	spibytes(0xd0,0xd0,0xd0);  // config
-	spibytes(0x00,0x00,0x00);
-	spibytes(0x00,0x00,0x00);
+    spibytes(0xd0,0xd0,0xd0);  // L6474_GET_STATUS=0xd0; dump two ret bytes for each board; this is to clear error flag
+    spibytes(0x00,0x00,0x00);  // flush out 1st status return byte for each board; drop result
+    spibytes(0x00,0x00,0x00);  // flush out 2nd status return byte for each board; drop result
 
-	spibytes(0x18,0x18,0x18);
-	spibytes(0x2c,0x2c,0x2c);
-	spibytes(0x88,0x88,0x88);
+    spibytes(0x16,0x16,0x16);  //  L6474_SET_PARAM | L6474_STEP_MODE
+    spibytes(0x88|ZSTEPMODE,0x88|XSTEPMODE,0x88|YSTEPMODE);  // 1/16 step  NO_SYNC=F8 (b7 tied up so =0x88); divider MODE is coded in 3 LSBs
 
-	spibytes(0x16,0x16,0x16);
-	spibytes(0x88|4,0x88|4,0x88|4);  // 1/16 step
+    spibytes(0x09,0x09,0x09);  // L6474_SET_PARAM | L6474_TVAL  ie max current
+    spibytes((ZCURRENT*32/1000),(XCURRENT*32/1000),(YCURRENT*32/1000));      // 31.25mA per bit
 
-	spibytes(0x09,0x09,0x9);
-	spibytes(floor(ZCURRENT/31),floor(XCURRENT/31),floor(YCURRENT/31));      // 31mA per
-
-	spibytes(0x13,0x13,0x13);  // overcurrent ~3.5A
-	spibytes(0xf,0xf,0xf);
+    spibytes(0x13,0x13,0x13);  // L6474_SET_PARAM | L6474_OCD_TH
+    spibytes(0xE,0xE,0xE);     // overcurrent threshold = L6474_OCD_TH_5625mA // def 0x8 = 3.375A
 #endif
 }
 

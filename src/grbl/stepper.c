@@ -26,7 +26,7 @@ void  set_dir_pins(uint8_t,uint8_t);
 void set_step_pins(uint8_t);
 void enable_timerint(void);
 void disable_timerint(void);
-void set_timerperiod(uint32_t);
+void set_timerperiod(uint16_t);
 void init_timer(void);
 
 void config_steppers(void);
@@ -344,11 +344,16 @@ void stepper_interrupt1(void)
 //  TCCR0B = (1<<CS01); // Begin Timer0. Full speed, 1/8 prescaler
 
   set_dir_pins(st.dir_outbits,st.step_outbits);
-//  _delay_us(1);
+
+  #ifdef STEP_PULSE_DELAY
+      st.step_bits = st.step_outbits; // Store out_bits to prevent overwriting.
+  #else
+  _delay_us(1);
   set_step_pins(st.step_outbits);
+ #endif
 
   busy = true;
-  sei(); // Re-enable interrupts to allow Stepper Port Reset Interrupt to fire on-time. 
+  sei(); // Re-enable interrupts to allow Stepper Port Reset Interrupt to fire on-time.
          // NOTE: The remaining code in this ISR will finish before returning to main program.
 }
 void stepper_interrupt2(void)
@@ -474,23 +479,17 @@ void stepper_pinclr_interrupt()
 //  STEP_PORT = (STEP_PORT & ~STEP_MASK) | (step_port_invert_mask & STEP_MASK);
 //  TCCR0B = 0; // Disable Timer0 to prevent re-entering this interrupt when it's not needed.
 
-  set_step_pins(0);
+  set_step_pins(step_port_invert_mask);
 }
 #ifdef STEP_PULSE_DELAY
 //  // This interrupt is used only when STEP_PULSE_DELAY is enabled. Here, the step pulse is
-//  // initiated after the STEP_PULSE_DELAY time period has elapsed. The ISR TIMER2_OVF interrupt
-//  // will then trigger after the appropriate settings.pulse_microseconds, as in normal operation.
-//  // The new timing between direction, step pulse, and step complete events are setup in the
-//  // st_wake_up() routine.
-//  ISR(TIMER0_COMPA_vect)
-//  {
-//    STEP_PORT = st.step_bits; // Begin step pulse.
-//  }
+//  // initiated after the STEP_PULSE_DELAY time period has elapsed.
 
-  void stepper_pinset_interrupt()
-  {
-	  set_step_pins(st.step_bits);
-  }
+void stepper_pinset_interrupt()
+{
+	set_step_pins(st.step_bits);
+	st.step_bits = step_port_invert_mask;
+}
 
 #endif
 
@@ -1015,10 +1014,16 @@ void init_stepperpins()
 #ifdef STANDARD_GRBL
 	set_as_output(STPEN);
 #else
+
+#ifndef HWSPI
 	set_as_output(SPI1SCK);
 	set_as_output(SPI1MOSI);
 	set_as_input(SPI1MISO);
+#else
+	init_SPI1();
+#endif
 	set_as_output(SPI1NSS);
+
 
 	set_as_output(STP_RST);
 	set_as_input(STP_FLG);
@@ -1057,10 +1062,11 @@ void enable_timerint()
 void disable_timerint()
 {
 	//TIM_ITConfig(TIM2, TIM_IT_Update, DISABLE);
+	set_timerperiod(0xffff);
 	timerrunning = 0;
 }
 
-void set_timerperiod(uint32_t period)
+void set_timerperiod(uint16_t period)
 {
 	TIM2->ARR = period;
 }
@@ -1079,24 +1085,36 @@ void init_timer(void)
 	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
 
-	TIM_SetCompare1(TIM2,(settings.pulse_microseconds)*TICKS_PER_MICROSECOND);
+	#ifdef STEP_PULSE_DELAY
+	TIM_SetCompare1(TIM2,STEP_PULSE_DELAY*TICKS_PER_MICROSECOND);
+	TIM_SetCompare2(TIM2,(settings.pulse_microseconds + STEP_PULSE_DELAY)*TICKS_PER_MICROSECOND);
+	#else
+	TIM_SetCompare2(TIM2,(settings.pulse_microseconds)*TICKS_PER_MICROSECOND);
+	#endif
 
 	TIM_ARRPreloadConfig(TIM2,DISABLE);
 
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	timerrunning=0;
-	TIM_ITConfig(TIM2, TIM_IT_Update| TIM_IT_CC1, ENABLE);
+
+#ifdef STEP_PULSE_DELAY
+	TIM_ITConfig(TIM2, TIM_IT_Update| TIM_IT_CC1 | TIM_IT_CC2, ENABLE);
+#else
+	TIM_ITConfig(TIM2, TIM_IT_Update| TIM_IT_CC2, ENABLE);
+#endif
 
 	TIM_Cmd(TIM2, ENABLE);
 
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+
 	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 
 	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream7_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
@@ -1110,23 +1128,37 @@ void TIM2_IRQHandler(void)
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 		if(timerrunning)
 		{
-			//GPIO_SetBits(TESTP);
-
 			stepper_interrupt1();
 		}
 		NVIC_SetPendingIRQ(DMA1_Stream7_IRQn); // this is a hack to get to a lower priority so the CC1 interrupt can get through
 
 	}
+
+#ifdef STEP_PULSE_DELAY
 	if(TIM_GetITStatus(TIM2,TIM_IT_CC1) != RESET)
 	{
 		TIM_ClearITPendingBit(TIM2,TIM_IT_CC1);
+		stepper_pinset_interrupt();
+	}
+#endif
+	if(TIM_GetITStatus(TIM2,TIM_IT_CC2) != RESET)
+	{
+		TIM_ClearITPendingBit(TIM2,TIM_IT_CC2);
 		stepper_pinclr_interrupt();
 	}
-
 }
+
+volatile uint16_t maxinttime;
+volatile uint16_t maxintload;
 
 void DMA1_Stream7_IRQHandler(void)
 {
+	uint16_t inttime;
+	uint16_t intperc;
+	uint16_t intperiod = TIM2->ARR;
+
+	GPIO_SetBits(TESTP);
+
 	NVIC_ClearPendingIRQ(DMA1_Stream7_IRQn);
 	if(timerrunning)
 	{
@@ -1136,8 +1168,19 @@ void DMA1_Stream7_IRQHandler(void)
 	limitpin_check();
 	control_pin_check();
 
-	//GPIO_ResetBits(TESTP);
+	_delay_us(20);
+	if(timerrunning) // needed to avoid false long time from stepper shutdown
+	{
+		inttime = (TIM2->CNT) / 25;//TICKS_PER_MICROSECOND;
 
+		if(inttime > maxinttime) maxinttime = inttime;
+
+		intperc = (inttime*100) / (intperiod/TICKS_PER_MICROSECOND);
+		if(intperc > maxintload) maxintload = intperc;
+
+	}
+
+	GPIO_ResetBits(TESTP);
 }
 
 #ifndef STANDARD_GRBL
@@ -1145,40 +1188,122 @@ void DMA1_Stream7_IRQHandler(void)
 uint32_t spibytes(uint8_t data0,uint8_t data1,uint8_t data2)
 {
 	uint32_t res=0;
-	int i;
 
-	GPIO_ResetBits(SPI1SCK);
+#ifdef HWSPI
+
 	GPIO_ResetBits(SPI1NSS);
+	_delay_us(1);
 
-	for(i=0;i<8;i++)
-	{
-		GPIO_ResetBits(SPI1SCK);
-		if(data0&(0x80>>i)) GPIO_SetBits(SPI1MOSI); else GPIO_ResetBits(SPI1MOSI);
-		GPIO_SetBits(SPI1SCK);
-		res = (res<<1) | (GPIO_ReadInputDataBit(SPI1MISO)==RESET ? 0:1 );
-	}
+    SPI_I2S_SendData(SPI1,data0);
+	while(SPI_I2S_GetFlagStatus(SPI1,SPI_I2S_FLAG_BSY)==SET);
+	res = SPI_I2S_ReceiveData(SPI1) & 0xff ;
 
-	for(i=0;i<8;i++)
-	{
-		GPIO_ResetBits(SPI1SCK);
-		if(data1&(0x80>>i)) GPIO_SetBits(SPI1MOSI); else GPIO_ResetBits(SPI1MOSI);
-		GPIO_SetBits(SPI1SCK);
-		res = (res<<1) | (GPIO_ReadInputDataBit(SPI1MISO)==RESET ? 0:1 );
-	}
-	for(i=0;i<8;i++)
-	{
-		GPIO_ResetBits(SPI1SCK);
-		if(data2&(0x80>>i)) GPIO_SetBits(SPI1MOSI); else GPIO_ResetBits(SPI1MOSI);
-		GPIO_SetBits(SPI1SCK);
-		res = (res<<1) | (GPIO_ReadInputDataBit(SPI1MISO)==RESET ? 0:1 );
-	}
+	SPI_I2S_SendData(SPI1,data1);
+	while(SPI_I2S_GetFlagStatus(SPI1,SPI_I2S_FLAG_BSY)==SET);
+	res = (res<<8) | (SPI_I2S_ReceiveData(SPI1)&0xff) ;
+
+	SPI_I2S_SendData(SPI1,data2);
+	while(SPI_I2S_GetFlagStatus(SPI1,SPI_I2S_FLAG_BSY)==SET);
+	res = (res<<8) | (SPI_I2S_ReceiveData(SPI1)&0xff) ;
 
 	GPIO_SetBits(SPI1NSS);
 
+
+#else
+	int i,ii;
+	uint32_t dat = (data2<<16) | (data1<<8) | data0;
+
+	GPIO_ResetBits(SPI1NSS);
+
+	_delay_us(1);
+
+	for(ii=0;ii<3;ii++)
+	{
+		for(i=0;i<8;i++)
+		{
+			GPIO_ResetBits(SPI1SCK);
+			if(dat&(0x80>>i)) GPIO_SetBits(SPI1MOSI); else GPIO_ResetBits(SPI1MOSI);
+			GPIO_SetBits(SPI1SCK);
+			res = (res<<1) | (GPIO_ReadInputDataBit(SPI1MISO)==RESET ? 0:1 );
+		}
+		_delay_us(1);
+		dat >>= 8;
+	}
+
+	GPIO_SetBits(SPI1NSS);
+#endif
 	return res;
 
 }
-#endif
+
+
+// L6474 defines
+#define TVAL       0x09
+#define T_FAST     0x0E
+#define TON_MIN    0x0F
+#define TOFF_MIN   0x10
+#define ADC_OUT    0x12
+#define OCD_TH     0x13
+#define STEP_MODE  0x16
+#define ALARM_EN   0x17
+#define CONFIG     0x18
+
+#define CMDNOP     0x00
+#define CMDENA     0xB8
+#define CMDDIS     0xA8
+#define CMDSTAT    0xD0
+
+
+void L6474_status(bool print)
+{
+
+	uint32_t stat[2];
+	uint16_t status[3];
+	uint16_t statuschk[3];
+
+	L6474_Cmd(CMDSTAT,CMDSTAT,CMDSTAT);
+	stat[0] = spibytes(0x00,0x00,0x00);
+	stat[1] = spibytes(0x00,0x00,0x00);
+
+	status[0] = ((stat[0]>>8)&0xff00) | ((stat[1]>>16)&0xff);
+	status[1] = ((stat[0]>>0)&0xff00) | ((stat[1]>>8 )&0xff);
+	status[2] = ((stat[0]<<8)&0xff00) | ((stat[1]>>0 )&0xff);
+
+	statuschk[0] = (status[0]&0xe06e)^0xe002;
+	statuschk[1] = (status[1]&0xe06e)^0xe002;
+	statuschk[2] = (status[2]&0xe06e)^0xe002;
+
+	if(statuschk[0] | statuschk[1] | statuschk[2])
+	{
+	    mc_reset();
+	    system_set_exec_alarm_flag((EXEC_ALARM_STEPPER_FAIL|EXEC_CRITICAL_EVENT));
+	}
+
+	if(print)
+	{
+		printString("stepper status: 0x"); print_uint16_base16(status[0]);
+		printString(",0x");print_uint16_base16(status[1]);
+		printString(",0x");print_uint16_base16(status[2]);
+		printString("\n\r");
+	}
+}
+
+void L6474_SetParam(uint8_t param, uint16_t dat0,uint16_t dat1,uint16_t dat2)
+{
+	spibytes(param,param,param);
+
+	if(param == CONFIG)
+		spibytes(dat0>>8,dat1>>8,dat2>>8);
+
+	spibytes(dat0,dat1,dat2);
+
+}
+
+
+void L6474_Cmd(uint8_t dat0,uint8_t dat1,uint8_t dat2)
+{
+	spibytes(dat0,dat1,dat2);
+}
 
 void config_steppers()
 {
@@ -1187,36 +1312,31 @@ void config_steppers()
 	;
 #else
 	GPIO_SetBits(STP_RST);
+	_delay_us(100);
 
-    spibytes(0xa8,0xa8,0xa8);  // disable : HiZ state;  configure L6474 while in HiZ mode
+    L6474_Cmd(CMDDIS,CMDDIS,CMDDIS);  // disable : HiZ state;  configure L6474 while in HiZ mode
+    L6474_status(false);	// clears errors
 
-    spibytes(0xd0,0xd0,0xd0);  // L6474_GET_STATUS=0xd0; dump two ret bytes for each board; this is to clear error flag
-    spibytes(0x00,0x00,0x00);  // flush out 1st status return byte for each board; drop result
-    spibytes(0x00,0x00,0x00);  // flush out 2nd status return byte for each board; drop result
 
-    spibytes(0x16,0x16,0x16);  //  L6474_SET_PARAM | L6474_STEP_MODE
-    spibytes(0x88|ZSTEPMODE,0x88|XSTEPMODE,0x88|YSTEPMODE);  // 1/16 step  NO_SYNC=F8 (b7 tied up so =0x88); divider MODE is coded in 3 LSBs
+    L6474_SetParam(CONFIG,0x1c80,0x1c80,0x1c80); // toff=28us,sr=260V/us,OC=en,intosc = 16MHz
+    L6474_SetParam(T_FAST,0x85,0x85,0x85); 		 // 16us, 10us
+    L6474_SetParam(TON_MIN,7,7,7); 				 // 4us
+	L6474_SetParam(TOFF_MIN,33,33,33);			 // 17us
+    L6474_SetParam(STEP_MODE,0x88|ZSTEPMODE,0x88|XSTEPMODE,0x88|YSTEPMODE);  // 1/16 step  NO_SYNC=F8 (b7 tied up so =0x88); divider MODE is coded in 3 LSBs
+    L6474_SetParam(TVAL,(ZCURRENT*32/1000),(XCURRENT*32/1000),(YCURRENT*32/1000));      // 31.25mA per bit
+    L6474_SetParam(OCD_TH,0xE,0xE,0xE);     // overcurrent threshold = L6474_OCD_TH_5625mA // def 0x8 = 3.375A
+    L6474_Cmd(CMDENA,CMDENA,CMDENA);  // enable Z,X,Y
 
-    spibytes(0x09,0x09,0x09);  // L6474_SET_PARAM | L6474_TVAL  ie max current
-    spibytes((ZCURRENT*32/1000),(XCURRENT*32/1000),(YCURRENT*32/1000));      // 31.25mA per bit
-
-    spibytes(0x13,0x13,0x13);  // L6474_SET_PARAM | L6474_OCD_TH
-    spibytes(0xE,0xE,0xE);     // overcurrent threshold = L6474_OCD_TH_5625mA // def 0x8 = 3.375A
 #endif
 }
-
+#endif
 void enable_steppers()
 {
 #ifdef STANDARD_GRBL
 	GPIO_ResetBits(STPEN); // active low
 #else
-	spibytes(0x09,0x09,0x9);
-	spibytes(floor(ZCURRENT/31),floor(XCURRENT/31),floor(YCURRENT/31));      // 31mA per
-
-	spibytes(0x13,0x13,0x13);  // overcurrent ~3.5A
-	spibytes(0xf,0xf,0xf);
-
-	spibytes(0xb8,0xb8,0xb8);  // enable Z,X,Y
+    L6474_SetParam(TVAL,(ZCURRENT*32/1000),(XCURRENT*32/1000),(YCURRENT*32/1000));      // 31.25mA per bit
+    L6474_status(true);
 #endif
 }
 
@@ -1225,10 +1345,57 @@ void disable_steppers()
 #ifdef STANDARD_GRBL
 	GPIO_SetBits(STPEN); // active low
 #else
-	spibytes(0x09,0x09,0x9);
-	spibytes(floor(ZCURRENT/31/4),floor(XCURRENT/31/4),floor(YCURRENT/31/4));      // 31mA per}
-
-	//spibytes(0xa8,0xa8,0xa8);  // disable Z,X,Y
+    L6474_SetParam(TVAL,(ZCURRENT*32/1000/4),(XCURRENT*32/1000/4),(YCURRENT*32/1000/4));      // 31.25mA per bit
 #endif
 }
 
+#ifndef STANDARD_GRBL
+void init_SPI1(void){
+
+    GPIO_InitTypeDef GPIO_InitStruct;
+    SPI_InitTypeDef SPI_InitStruct;
+
+    GPIO_StructInit(&GPIO_InitStruct);
+    SPI_StructInit(&SPI_InitStruct);
+
+    // enable clock for used IO pins
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+    /* configure pins used by SPI1
+     * PA5 = SCK
+     * PA6 = MISO
+     * PA7 = MOSI
+     */
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_7 | GPIO_Pin_6 | GPIO_Pin_5;
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+    GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    // connect SPI1 pins to SPI alternate function
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1);
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1);
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1);
+
+
+    // enable peripheral clock
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
+
+    /* configure SPI1 in Mode 0
+     * CPOL = 0 --> clock is low when idle
+     * CPHA = 0 --> data is sampled at the first edge
+     */
+    SPI_InitStruct.SPI_Direction = SPI_Direction_2Lines_FullDuplex;// set to full duplex mode, seperate MOSI and MISO lines
+    SPI_InitStruct.SPI_Mode = SPI_Mode_Master;     // transmit in master mode, NSS pin has to be always high
+    SPI_InitStruct.SPI_DataSize = SPI_DataSize_8b; // one packet of data is 8 bits wide
+    SPI_InitStruct.SPI_CPOL = SPI_CPOL_High;        // clock is low when idle
+    SPI_InitStruct.SPI_CPHA = SPI_CPHA_2Edge;      // data sampled at first edge
+    SPI_InitStruct.SPI_NSS = SPI_NSS_Soft; // set the NSS management to internal and pull internal NSS high
+    SPI_InitStruct.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_32; // SPI frequency is APB2 frequency / 32 = 3.125MHz
+    SPI_InitStruct.SPI_FirstBit = SPI_FirstBit_MSB;// data is transmitted MSB first
+
+    SPI_Init(SPI1, &SPI_InitStruct);
+    SPI_Cmd(SPI1, ENABLE); // enable SPI1
+}
+#endif

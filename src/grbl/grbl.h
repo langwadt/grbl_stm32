@@ -21,9 +21,6 @@
 #ifndef grbl_h
 #define grbl_h
 
-// Grbl versioning system
-#define GRBL_VERSION "1.0c-STM32"
-#define GRBL_VERSION_BUILD __DATE__
 
 #include "stm32f4xx.h"
 #define F_CPU 25000000 /* really is 100MHz timer runs at F_CPU/prescale */
@@ -60,5 +57,14 @@
 #include "serial.h"
 #include "spindle_control.h"
 #include "stepper.h"
+
+// Grbl versioning system
+#ifdef STANDARD_GRBL
+#define GRBL_VERSION "1.0c-STM32-STANDARDGRBL"
+#else
+#define GRBL_VERSION "1.0c-STM32-NUCLEOL6474"
+#endif
+
+#define GRBL_VERSION_BUILD __DATE__
 
 #endif

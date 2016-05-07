@@ -200,9 +200,12 @@
 	#define STPZ     GPIOB,GPIO_Pin_10
 	#define DIRZ     GPIOB,GPIO_Pin_4
 
+#define HWSPI
+#ifndef HWSPI
 	#define SPI1SCK  GPIOA,GPIO_Pin_5
 	#define SPI1MOSI GPIOA,GPIO_Pin_7
 	#define SPI1MISO GPIOA,GPIO_Pin_6
+#endif
 	#define SPI1NSS  GPIOB,GPIO_Pin_6
 
 	#define STP_RST GPIOA,GPIO_Pin_9

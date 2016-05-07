@@ -203,3 +203,20 @@ void printFloat_RPMValue(float n) { printFloat(n,N_DECIMAL_RPMVALUE); }
 //   printInteger((int32_t)free);
 //   printString(" ");
 // }
+
+
+void print_uint16_base16(uint16_t n)
+{
+	char str[5];
+	char num[16]="0123456789ABCDEF";
+
+	str[0] = num[((n>>12)&0xf)];
+	str[1] = num[((n>>8)&0xf)];
+	str[2] = num[((n>>4)&0xf)];
+	str[3] = num[((n>>0)&0xf)];
+	str[4] = 0;
+
+	printString(str);
+}
+
+

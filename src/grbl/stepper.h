@@ -26,8 +26,14 @@
   #define SEGMENT_BUFFER_SIZE 6
 #endif
 
+void init_SPI1(void);
 // Initialize and setup the stepper motor subsystem
 void stepper_init();
+
+void     L6474_status(bool);
+void 	 L6474_SetParam(uint8_t,uint16_t,uint16_t,uint16_t);
+void 	 L6474_Cmd(uint8_t,uint8_t,uint8_t);
+
 
 // Enable steppers, but cycle does not start unless called by motion control or realtime command.
 void st_wake_up();

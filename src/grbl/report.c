@@ -110,8 +110,10 @@ void report_alarm_message(int8_t alarm_code)
       printPgmString(PSTR("Probe fail")); break;
       case ALARM_HOMING_FAIL:
       printPgmString(PSTR("Homing fail")); break;
+#ifndef STANDARD_GRBL
       case ALARM_STEPPER_FAIL:
-      printPgmString(PSTR("stepper driver fail")); break;
+      printPgmString(PSTR("stepper driver fail: ")); L6474_status(true); break;
+#endif
     }
   #endif
   printPgmString(PSTR("\r\n"));
@@ -528,5 +530,11 @@ void report_realtime_status()
     }
   #endif
   
-  printPgmString(PSTR(">\r\n"));
+    extern volatile uint16_t maxinttime;
+    extern volatile uint16_t maxintload;
+  printPgmString(PSTR(",maxload:"));
+  print_uint8_base10(maxintload);
+  printPgmString(PSTR("%,maxint:"));
+  print_uint8_base10(maxinttime);
+  printPgmString(PSTR("us>\r\n"));
 }

@@ -54,12 +54,12 @@
 
 
 uint8_t serial_rx_buffer[RX_BUFFER_SIZE];
-uint8_t serial_rx_buffer_head = 0;
-volatile uint8_t serial_rx_buffer_tail = 0;
+uint16_t serial_rx_buffer_head = 0;
+volatile uint16_t serial_rx_buffer_tail = 0;
 
 uint8_t serial_tx_buffer[TX_BUFFER_SIZE];
-uint8_t serial_tx_buffer_head = 0;
-volatile uint8_t serial_tx_buffer_tail = 0;
+uint16_t serial_tx_buffer_head = 0;
+volatile uint16_t serial_tx_buffer_tail = 0;
 
 
 #ifdef ENABLE_XONXOFF
@@ -68,9 +68,9 @@ volatile uint8_t serial_tx_buffer_tail = 0;
   
 
 // Returns the number of bytes used in the RX serial buffer.
-uint8_t serial_get_rx_buffer_count()
+uint16_t serial_get_rx_buffer_count()
 {
-  uint8_t rtail = serial_rx_buffer_tail; // Copy to limit multiple calls to volatile
+  uint16_t rtail = serial_rx_buffer_tail; // Copy to limit multiple calls to volatile
   if (serial_rx_buffer_head >= rtail) { return(serial_rx_buffer_head-rtail); }
   return (RX_BUFFER_SIZE - (rtail-serial_rx_buffer_head));
 }
@@ -78,9 +78,9 @@ uint8_t serial_get_rx_buffer_count()
 
 // Returns the number of bytes used in the TX serial buffer.
 // NOTE: Not used except for debugging and ensuring no TX bottlenecks.
-uint8_t serial_get_tx_buffer_count()
+uint16_t serial_get_tx_buffer_count()
 {
-  uint8_t ttail = serial_tx_buffer_tail; // Copy to limit multiple calls to volatile
+  uint16_t ttail = serial_tx_buffer_tail; // Copy to limit multiple calls to volatile
   if (serial_tx_buffer_head >= ttail) { return(serial_tx_buffer_head-ttail); }
   return (TX_BUFFER_SIZE - (ttail-serial_tx_buffer_head));
 }
@@ -149,7 +149,7 @@ void serial_init(void)
 // TODO: Check if we can speed this up for writing strings, rather than single bytes.
 void serial_write(uint8_t data) {
   // Calculate next head
-  uint8_t next_head = serial_tx_buffer_head + 1;
+  uint16_t next_head = serial_tx_buffer_head + 1;
   if (next_head == TX_BUFFER_SIZE) { next_head = 0; }
 
   // Wait until there is space in the buffer
@@ -173,7 +173,7 @@ void serial_write(uint8_t data) {
 //ISR(SERIAL_TX)
 void serial_txint()
 {
-  uint8_t tail = serial_tx_buffer_tail; // Temporary serial_tx_buffer_tail (to optimize for volatile)
+  uint16_t tail = serial_tx_buffer_tail; // Temporary serial_tx_buffer_tail (to optimize for volatile)
 
 
   #ifdef ENABLE_XONXOFF
@@ -211,7 +211,7 @@ void serial_txint()
 // Fetches the first byte in the serial read buffer. Called by main program.
 uint8_t serial_read()
 {
-  uint8_t tail = serial_rx_buffer_tail; // Temporary serial_rx_buffer_tail (to optimize for volatile)
+  uint16_t tail = serial_rx_buffer_tail; // Temporary serial_rx_buffer_tail (to optimize for volatile)
   if (serial_rx_buffer_head == tail) {
     return SERIAL_NO_DATA;
   } else {
@@ -238,7 +238,7 @@ uint8_t serial_read()
 void serial_rxint()
 {
   uint8_t data = USART_ReceiveData(Open_USART);//UDR0;
-  uint8_t next_head;
+  uint16_t next_head;
 
   // Pick off realtime command characters directly from the serial stream. These characters are
   // not passed into the buffer, but these set system state flag bits for realtime execution.

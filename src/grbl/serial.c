@@ -131,7 +131,7 @@ void serial_init(void)
 
   //------------------------------------------------------------------------------------------
   NVIC_InitStructure.NVIC_IRQChannel = Open_USART_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;  //oder 0?
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;  //oder 0?
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;         //oder 1?
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);

@@ -272,11 +272,15 @@ void spindle_set_state(uint8_t state, float rpm)
   {
 #ifdef VARIABLE_SPINDLE
 #ifdef PWM_SPINDLE
-	  TIM_SetCompare1(TIM3,current_pwm);
+#ifdef STANDARD_GRBL
+		  TIM_SetCompare1(TIM3,current_pwm);
+#else
+		  TIM_SetCompare3(TIM3,current_pwm);
+#endif
 #else
 	  int i;
 	  // 1500 = 1.5ms = full speed
-	  for(i=1000;i<=1500;i+=20)  // this is a bad hack, my ESC/MOTOR combo needs ramping to start
+	  for(i=1000;i<=1400;i+=20)  // this is a bad hack, my ESC/MOTOR combo needs ramping to start
 	  {
 #ifdef STANDARD_GRBL
 		  TIM_SetCompare1(TIM3,i);

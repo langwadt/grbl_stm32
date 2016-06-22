@@ -234,8 +234,8 @@
 	//#define CYCLE_START_PIN
 	//#define SAFETY_DOOR_PIN
 
-	#define XCURRENT 1500 // stepper current in mA
-	#define YCURRENT 1500 // stepper current in mA
+	#define XCURRENT 1900 // stepper current in mA
+	#define YCURRENT 1900 // stepper current in mA
 	#define ZCURRENT  500 // stepper current in mA
 
 #endif

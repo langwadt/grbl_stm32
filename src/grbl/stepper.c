@@ -1336,7 +1336,7 @@ void enable_steppers()
 	GPIO_ResetBits(STPEN); // active low
 #else
     L6474_SetParam(TVAL,(ZCURRENT*32/1000),(XCURRENT*32/1000),(YCURRENT*32/1000));      // 31.25mA per bit
-    L6474_status(true);
+    L6474_status(false);
 #endif
 }
 

@@ -4093,16 +4093,14 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/coolant_control.o
  .group         0x00000000        0x8 src/grbl/coolant_control.o
  .group         0x00000000        0x8 src/grbl/coolant_control.o
+ .group         0x00000000        0x8 src/grbl/coolant_control.o
  .text          0x00000000        0x0 src/grbl/coolant_control.o
  .data          0x00000000        0x0 src/grbl/coolant_control.o
  .bss           0x00000000        0x0 src/grbl/coolant_control.o
- .debug_macro   0x00000000      0x89e src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x5e src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x3b src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x22 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x44 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x1c src/grbl/coolant_control.o
- .debug_macro   0x00000000      0x1f7 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x2d src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x26 src/grbl/coolant_control.o
  .debug_macro   0x00000000      0xd39 src/grbl/coolant_control.o
@@ -4127,21 +4125,13 @@ Discarded input sections
  .debug_macro   0x00000000       0x82 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x10 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x35 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x58 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x82 src/grbl/coolant_control.o
- .debug_macro   0x00000000      0x3f9 src/grbl/coolant_control.o
+ .debug_macro   0x00000000       0x35 src/grbl/coolant_control.o
  .debug_macro   0x00000000      0x311 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x10 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x35 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x9c src/grbl/coolant_control.o
- .debug_macro   0x00000000       0xf6 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x52 src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x16 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x43 src/grbl/coolant_control.o
- .debug_macro   0x00000000      0x180 src/grbl/coolant_control.o
- .debug_macro   0x00000000      0x29d src/grbl/coolant_control.o
  .debug_macro   0x00000000       0x10 src/grbl/coolant_control.o
- .debug_macro   0x00000000       0x35 src/grbl/coolant_control.o
+ .group         0x00000000        0x8 src/grbl/gcode.o
  .group         0x00000000        0x8 src/grbl/gcode.o
  .group         0x00000000        0x8 src/grbl/gcode.o
  .group         0x00000000        0x8 src/grbl/gcode.o
@@ -4212,13 +4202,14 @@ Discarded input sections
  .text          0x00000000        0x0 src/grbl/gcode.o
  .data          0x00000000        0x0 src/grbl/gcode.o
  .bss           0x00000000        0x0 src/grbl/gcode.o
- .debug_macro   0x00000000      0x89e src/grbl/gcode.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/gcode.o
  .debug_macro   0x00000000       0x5e src/grbl/gcode.o
  .debug_macro   0x00000000       0x3b src/grbl/gcode.o
  .debug_macro   0x00000000       0x22 src/grbl/gcode.o
  .debug_macro   0x00000000       0x44 src/grbl/gcode.o
- .debug_macro   0x00000000       0x1c src/grbl/gcode.o
- .debug_macro   0x00000000      0x1f7 src/grbl/gcode.o
+ .debug_macro   0x00000000       0xfd src/grbl/gcode.o
+ .debug_macro   0x00000000       0x22 src/grbl/gcode.o
+ .debug_macro   0x00000000      0x1df src/grbl/gcode.o
  .debug_macro   0x00000000       0x2d src/grbl/gcode.o
  .debug_macro   0x00000000       0x26 src/grbl/gcode.o
  .debug_macro   0x00000000      0xd39 src/grbl/gcode.o
@@ -4244,20 +4235,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/gcode.o
  .debug_macro   0x00000000       0x35 src/grbl/gcode.o
  .debug_macro   0x00000000       0x58 src/grbl/gcode.o
+ .debug_macro   0x00000000       0x35 src/grbl/gcode.o
  .debug_macro   0x00000000       0x82 src/grbl/gcode.o
- .debug_macro   0x00000000      0x3f9 src/grbl/gcode.o
+ .debug_macro   0x00000000      0x45d src/grbl/gcode.o
  .debug_macro   0x00000000      0x311 src/grbl/gcode.o
  .debug_macro   0x00000000       0x16 src/grbl/gcode.o
  .debug_macro   0x00000000       0x10 src/grbl/gcode.o
- .debug_macro   0x00000000       0x35 src/grbl/gcode.o
- .debug_macro   0x00000000       0x9c src/grbl/gcode.o
- .debug_macro   0x00000000       0xf6 src/grbl/gcode.o
+ .debug_macro   0x00000000       0xa2 src/grbl/gcode.o
+ .debug_macro   0x00000000      0x104 src/grbl/gcode.o
  .debug_macro   0x00000000       0x52 src/grbl/gcode.o
  .debug_macro   0x00000000       0x16 src/grbl/gcode.o
  .debug_macro   0x00000000       0x43 src/grbl/gcode.o
- .debug_macro   0x00000000      0x180 src/grbl/gcode.o
+ .debug_macro   0x00000000      0x187 src/grbl/gcode.o
  .debug_macro   0x00000000      0x1e1 src/grbl/gcode.o
- .debug_macro   0x00000000      0x29d src/grbl/gcode.o
+ .debug_macro   0x00000000      0x329 src/grbl/gcode.o
  .debug_macro   0x00000000       0x10 src/grbl/gcode.o
  .debug_macro   0x00000000       0x35 src/grbl/gcode.o
  .debug_macro   0x00000000       0x16 src/grbl/gcode.o
@@ -4346,15 +4337,17 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/limits.o
  .group         0x00000000        0x8 src/grbl/limits.o
  .group         0x00000000        0x8 src/grbl/limits.o
+ .group         0x00000000        0x8 src/grbl/limits.o
  .text          0x00000000        0x0 src/grbl/limits.o
  .data          0x00000000        0x0 src/grbl/limits.o
- .debug_macro   0x00000000      0x89e src/grbl/limits.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/limits.o
  .debug_macro   0x00000000       0x5e src/grbl/limits.o
  .debug_macro   0x00000000       0x3b src/grbl/limits.o
  .debug_macro   0x00000000       0x22 src/grbl/limits.o
  .debug_macro   0x00000000       0x44 src/grbl/limits.o
- .debug_macro   0x00000000       0x1c src/grbl/limits.o
- .debug_macro   0x00000000      0x1f7 src/grbl/limits.o
+ .debug_macro   0x00000000       0xfd src/grbl/limits.o
+ .debug_macro   0x00000000       0x22 src/grbl/limits.o
+ .debug_macro   0x00000000      0x1df src/grbl/limits.o
  .debug_macro   0x00000000       0x2d src/grbl/limits.o
  .debug_macro   0x00000000       0x26 src/grbl/limits.o
  .debug_macro   0x00000000      0xd39 src/grbl/limits.o
@@ -4380,20 +4373,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/limits.o
  .debug_macro   0x00000000       0x35 src/grbl/limits.o
  .debug_macro   0x00000000       0x58 src/grbl/limits.o
+ .debug_macro   0x00000000       0x35 src/grbl/limits.o
  .debug_macro   0x00000000       0x82 src/grbl/limits.o
- .debug_macro   0x00000000      0x3f9 src/grbl/limits.o
+ .debug_macro   0x00000000      0x45d src/grbl/limits.o
  .debug_macro   0x00000000      0x311 src/grbl/limits.o
  .debug_macro   0x00000000       0x16 src/grbl/limits.o
  .debug_macro   0x00000000       0x10 src/grbl/limits.o
- .debug_macro   0x00000000       0x35 src/grbl/limits.o
- .debug_macro   0x00000000       0x9c src/grbl/limits.o
- .debug_macro   0x00000000       0xf6 src/grbl/limits.o
+ .debug_macro   0x00000000       0xa2 src/grbl/limits.o
+ .debug_macro   0x00000000      0x104 src/grbl/limits.o
  .debug_macro   0x00000000       0x52 src/grbl/limits.o
  .debug_macro   0x00000000       0x16 src/grbl/limits.o
  .debug_macro   0x00000000       0x43 src/grbl/limits.o
- .debug_macro   0x00000000      0x180 src/grbl/limits.o
+ .debug_macro   0x00000000      0x187 src/grbl/limits.o
  .debug_macro   0x00000000      0x1e1 src/grbl/limits.o
- .debug_macro   0x00000000      0x29d src/grbl/limits.o
+ .debug_macro   0x00000000      0x329 src/grbl/limits.o
  .debug_macro   0x00000000       0x10 src/grbl/limits.o
  .debug_macro   0x00000000       0x35 src/grbl/limits.o
  .debug_macro   0x00000000       0x16 src/grbl/limits.o
@@ -4482,16 +4475,18 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/main.o
  .group         0x00000000        0x8 src/grbl/main.o
  .group         0x00000000        0x8 src/grbl/main.o
+ .group         0x00000000        0x8 src/grbl/main.o
  .text          0x00000000        0x0 src/grbl/main.o
  .data          0x00000000        0x0 src/grbl/main.o
  .bss           0x00000000        0x0 src/grbl/main.o
- .debug_macro   0x00000000      0x89e src/grbl/main.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/main.o
  .debug_macro   0x00000000       0x5e src/grbl/main.o
  .debug_macro   0x00000000       0x3b src/grbl/main.o
  .debug_macro   0x00000000       0x22 src/grbl/main.o
  .debug_macro   0x00000000       0x44 src/grbl/main.o
- .debug_macro   0x00000000       0x1c src/grbl/main.o
- .debug_macro   0x00000000      0x1f7 src/grbl/main.o
+ .debug_macro   0x00000000       0xfd src/grbl/main.o
+ .debug_macro   0x00000000       0x22 src/grbl/main.o
+ .debug_macro   0x00000000      0x1df src/grbl/main.o
  .debug_macro   0x00000000       0x2d src/grbl/main.o
  .debug_macro   0x00000000       0x26 src/grbl/main.o
  .debug_macro   0x00000000      0xd39 src/grbl/main.o
@@ -4517,20 +4512,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/main.o
  .debug_macro   0x00000000       0x35 src/grbl/main.o
  .debug_macro   0x00000000       0x58 src/grbl/main.o
+ .debug_macro   0x00000000       0x35 src/grbl/main.o
  .debug_macro   0x00000000       0x82 src/grbl/main.o
- .debug_macro   0x00000000      0x3f9 src/grbl/main.o
+ .debug_macro   0x00000000      0x45d src/grbl/main.o
  .debug_macro   0x00000000      0x311 src/grbl/main.o
  .debug_macro   0x00000000       0x16 src/grbl/main.o
  .debug_macro   0x00000000       0x10 src/grbl/main.o
- .debug_macro   0x00000000       0x35 src/grbl/main.o
- .debug_macro   0x00000000       0x9c src/grbl/main.o
- .debug_macro   0x00000000       0xf6 src/grbl/main.o
+ .debug_macro   0x00000000       0xa2 src/grbl/main.o
+ .debug_macro   0x00000000      0x104 src/grbl/main.o
  .debug_macro   0x00000000       0x52 src/grbl/main.o
  .debug_macro   0x00000000       0x16 src/grbl/main.o
  .debug_macro   0x00000000       0x43 src/grbl/main.o
- .debug_macro   0x00000000      0x180 src/grbl/main.o
+ .debug_macro   0x00000000      0x187 src/grbl/main.o
  .debug_macro   0x00000000      0x1e1 src/grbl/main.o
- .debug_macro   0x00000000      0x29d src/grbl/main.o
+ .debug_macro   0x00000000      0x329 src/grbl/main.o
  .debug_macro   0x00000000       0x10 src/grbl/main.o
  .debug_macro   0x00000000       0x35 src/grbl/main.o
  .debug_macro   0x00000000       0x16 src/grbl/main.o
@@ -4619,16 +4614,18 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/motion_control.o
  .group         0x00000000        0x8 src/grbl/motion_control.o
  .group         0x00000000        0x8 src/grbl/motion_control.o
+ .group         0x00000000        0x8 src/grbl/motion_control.o
  .text          0x00000000        0x0 src/grbl/motion_control.o
  .data          0x00000000        0x0 src/grbl/motion_control.o
  .bss           0x00000000        0x0 src/grbl/motion_control.o
- .debug_macro   0x00000000      0x89e src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x5e src/grbl/motion_control.o
  .debug_macro   0x00000000       0x3b src/grbl/motion_control.o
  .debug_macro   0x00000000       0x22 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x44 src/grbl/motion_control.o
- .debug_macro   0x00000000       0x1c src/grbl/motion_control.o
- .debug_macro   0x00000000      0x1f7 src/grbl/motion_control.o
+ .debug_macro   0x00000000       0xfd src/grbl/motion_control.o
+ .debug_macro   0x00000000       0x22 src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x1df src/grbl/motion_control.o
  .debug_macro   0x00000000       0x2d src/grbl/motion_control.o
  .debug_macro   0x00000000       0x26 src/grbl/motion_control.o
  .debug_macro   0x00000000      0xd39 src/grbl/motion_control.o
@@ -4654,20 +4651,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x35 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x58 src/grbl/motion_control.o
+ .debug_macro   0x00000000       0x35 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x82 src/grbl/motion_control.o
- .debug_macro   0x00000000      0x3f9 src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x45d src/grbl/motion_control.o
  .debug_macro   0x00000000      0x311 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x16 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x10 src/grbl/motion_control.o
- .debug_macro   0x00000000       0x35 src/grbl/motion_control.o
- .debug_macro   0x00000000       0x9c src/grbl/motion_control.o
- .debug_macro   0x00000000       0xf6 src/grbl/motion_control.o
+ .debug_macro   0x00000000       0xa2 src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x104 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x52 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x16 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x43 src/grbl/motion_control.o
- .debug_macro   0x00000000      0x180 src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x187 src/grbl/motion_control.o
  .debug_macro   0x00000000      0x1e1 src/grbl/motion_control.o
- .debug_macro   0x00000000      0x29d src/grbl/motion_control.o
+ .debug_macro   0x00000000      0x329 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x10 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x35 src/grbl/motion_control.o
  .debug_macro   0x00000000       0x16 src/grbl/motion_control.o
@@ -4756,16 +4753,18 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/nuts_bolts.o
  .group         0x00000000        0x8 src/grbl/nuts_bolts.o
  .group         0x00000000        0x8 src/grbl/nuts_bolts.o
+ .group         0x00000000        0x8 src/grbl/nuts_bolts.o
  .text          0x00000000        0x0 src/grbl/nuts_bolts.o
  .data          0x00000000        0x0 src/grbl/nuts_bolts.o
  .bss           0x00000000        0x0 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000      0x89e src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x5e src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x3b src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x22 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x44 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000       0x1c src/grbl/nuts_bolts.o
- .debug_macro   0x00000000      0x1f7 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000       0xfd src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000       0x22 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x1df src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x2d src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x26 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000      0xd39 src/grbl/nuts_bolts.o
@@ -4791,20 +4790,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x35 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x58 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000       0x35 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x82 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000      0x3f9 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x45d src/grbl/nuts_bolts.o
  .debug_macro   0x00000000      0x311 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x16 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x10 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000       0x35 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000       0x9c src/grbl/nuts_bolts.o
- .debug_macro   0x00000000       0xf6 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000       0xa2 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x104 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x52 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x16 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x43 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000      0x180 src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x187 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000      0x1e1 src/grbl/nuts_bolts.o
- .debug_macro   0x00000000      0x29d src/grbl/nuts_bolts.o
+ .debug_macro   0x00000000      0x329 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x10 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x35 src/grbl/nuts_bolts.o
  .debug_macro   0x00000000       0x16 src/grbl/nuts_bolts.o
@@ -4893,15 +4892,17 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/planner.o
  .group         0x00000000        0x8 src/grbl/planner.o
  .group         0x00000000        0x8 src/grbl/planner.o
+ .group         0x00000000        0x8 src/grbl/planner.o
  .text          0x00000000        0x0 src/grbl/planner.o
  .data          0x00000000        0x0 src/grbl/planner.o
- .debug_macro   0x00000000      0x89e src/grbl/planner.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/planner.o
  .debug_macro   0x00000000       0x5e src/grbl/planner.o
  .debug_macro   0x00000000       0x3b src/grbl/planner.o
  .debug_macro   0x00000000       0x22 src/grbl/planner.o
  .debug_macro   0x00000000       0x44 src/grbl/planner.o
- .debug_macro   0x00000000       0x1c src/grbl/planner.o
- .debug_macro   0x00000000      0x1f7 src/grbl/planner.o
+ .debug_macro   0x00000000       0xfd src/grbl/planner.o
+ .debug_macro   0x00000000       0x22 src/grbl/planner.o
+ .debug_macro   0x00000000      0x1df src/grbl/planner.o
  .debug_macro   0x00000000       0x2d src/grbl/planner.o
  .debug_macro   0x00000000       0x26 src/grbl/planner.o
  .debug_macro   0x00000000      0xd39 src/grbl/planner.o
@@ -4927,20 +4928,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/planner.o
  .debug_macro   0x00000000       0x35 src/grbl/planner.o
  .debug_macro   0x00000000       0x58 src/grbl/planner.o
+ .debug_macro   0x00000000       0x35 src/grbl/planner.o
  .debug_macro   0x00000000       0x82 src/grbl/planner.o
- .debug_macro   0x00000000      0x3f9 src/grbl/planner.o
+ .debug_macro   0x00000000      0x45d src/grbl/planner.o
  .debug_macro   0x00000000      0x311 src/grbl/planner.o
  .debug_macro   0x00000000       0x16 src/grbl/planner.o
  .debug_macro   0x00000000       0x10 src/grbl/planner.o
- .debug_macro   0x00000000       0x35 src/grbl/planner.o
- .debug_macro   0x00000000       0x9c src/grbl/planner.o
- .debug_macro   0x00000000       0xf6 src/grbl/planner.o
+ .debug_macro   0x00000000       0xa2 src/grbl/planner.o
+ .debug_macro   0x00000000      0x104 src/grbl/planner.o
  .debug_macro   0x00000000       0x52 src/grbl/planner.o
  .debug_macro   0x00000000       0x16 src/grbl/planner.o
  .debug_macro   0x00000000       0x43 src/grbl/planner.o
- .debug_macro   0x00000000      0x180 src/grbl/planner.o
+ .debug_macro   0x00000000      0x187 src/grbl/planner.o
  .debug_macro   0x00000000      0x1e1 src/grbl/planner.o
- .debug_macro   0x00000000      0x29d src/grbl/planner.o
+ .debug_macro   0x00000000      0x329 src/grbl/planner.o
  .debug_macro   0x00000000       0x10 src/grbl/planner.o
  .debug_macro   0x00000000       0x35 src/grbl/planner.o
  .debug_macro   0x00000000       0x16 src/grbl/planner.o
@@ -5029,6 +5030,7 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/print.o
  .group         0x00000000        0x8 src/grbl/print.o
  .group         0x00000000        0x8 src/grbl/print.o
+ .group         0x00000000        0x8 src/grbl/print.o
  .text          0x00000000        0x0 src/grbl/print.o
  .data          0x00000000        0x0 src/grbl/print.o
  .bss           0x00000000        0x0 src/grbl/print.o
@@ -5036,16 +5038,17 @@ Discarded input sections
                 0x00000000       0x88 src/grbl/print.o
  .text.printInteger
                 0x00000000       0x30 src/grbl/print.o
- .rodata        0x00000000       0x14 src/grbl/print.o
+ .rodata        0x00000000       0x11 src/grbl/print.o
  .text.print_uint16_base16
                 0x00000000       0x84 src/grbl/print.o
- .debug_macro   0x00000000      0x89e src/grbl/print.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/print.o
  .debug_macro   0x00000000       0x5e src/grbl/print.o
  .debug_macro   0x00000000       0x3b src/grbl/print.o
  .debug_macro   0x00000000       0x22 src/grbl/print.o
  .debug_macro   0x00000000       0x44 src/grbl/print.o
- .debug_macro   0x00000000       0x1c src/grbl/print.o
- .debug_macro   0x00000000      0x1f7 src/grbl/print.o
+ .debug_macro   0x00000000       0xfd src/grbl/print.o
+ .debug_macro   0x00000000       0x22 src/grbl/print.o
+ .debug_macro   0x00000000      0x1df src/grbl/print.o
  .debug_macro   0x00000000       0x2d src/grbl/print.o
  .debug_macro   0x00000000       0x26 src/grbl/print.o
  .debug_macro   0x00000000      0xd39 src/grbl/print.o
@@ -5071,20 +5074,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/print.o
  .debug_macro   0x00000000       0x35 src/grbl/print.o
  .debug_macro   0x00000000       0x58 src/grbl/print.o
+ .debug_macro   0x00000000       0x35 src/grbl/print.o
  .debug_macro   0x00000000       0x82 src/grbl/print.o
- .debug_macro   0x00000000      0x3f9 src/grbl/print.o
+ .debug_macro   0x00000000      0x45d src/grbl/print.o
  .debug_macro   0x00000000      0x311 src/grbl/print.o
  .debug_macro   0x00000000       0x16 src/grbl/print.o
  .debug_macro   0x00000000       0x10 src/grbl/print.o
- .debug_macro   0x00000000       0x35 src/grbl/print.o
- .debug_macro   0x00000000       0x9c src/grbl/print.o
- .debug_macro   0x00000000       0xf6 src/grbl/print.o
+ .debug_macro   0x00000000       0xa2 src/grbl/print.o
+ .debug_macro   0x00000000      0x104 src/grbl/print.o
  .debug_macro   0x00000000       0x52 src/grbl/print.o
  .debug_macro   0x00000000       0x16 src/grbl/print.o
  .debug_macro   0x00000000       0x43 src/grbl/print.o
- .debug_macro   0x00000000      0x180 src/grbl/print.o
+ .debug_macro   0x00000000      0x187 src/grbl/print.o
  .debug_macro   0x00000000      0x1e1 src/grbl/print.o
- .debug_macro   0x00000000      0x29d src/grbl/print.o
+ .debug_macro   0x00000000      0x329 src/grbl/print.o
  .debug_macro   0x00000000       0x10 src/grbl/print.o
  .debug_macro   0x00000000       0x35 src/grbl/print.o
  .debug_macro   0x00000000       0x16 src/grbl/print.o
@@ -5173,16 +5176,18 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/probe.o
  .group         0x00000000        0x8 src/grbl/probe.o
  .group         0x00000000        0x8 src/grbl/probe.o
+ .group         0x00000000        0x8 src/grbl/probe.o
  .text          0x00000000        0x0 src/grbl/probe.o
  .data          0x00000000        0x0 src/grbl/probe.o
  .bss           0x00000000        0x0 src/grbl/probe.o
- .debug_macro   0x00000000      0x89e src/grbl/probe.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/probe.o
  .debug_macro   0x00000000       0x5e src/grbl/probe.o
  .debug_macro   0x00000000       0x3b src/grbl/probe.o
  .debug_macro   0x00000000       0x22 src/grbl/probe.o
  .debug_macro   0x00000000       0x44 src/grbl/probe.o
- .debug_macro   0x00000000       0x1c src/grbl/probe.o
- .debug_macro   0x00000000      0x1f7 src/grbl/probe.o
+ .debug_macro   0x00000000       0xfd src/grbl/probe.o
+ .debug_macro   0x00000000       0x22 src/grbl/probe.o
+ .debug_macro   0x00000000      0x1df src/grbl/probe.o
  .debug_macro   0x00000000       0x2d src/grbl/probe.o
  .debug_macro   0x00000000       0x26 src/grbl/probe.o
  .debug_macro   0x00000000      0xd39 src/grbl/probe.o
@@ -5208,20 +5213,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/probe.o
  .debug_macro   0x00000000       0x35 src/grbl/probe.o
  .debug_macro   0x00000000       0x58 src/grbl/probe.o
+ .debug_macro   0x00000000       0x35 src/grbl/probe.o
  .debug_macro   0x00000000       0x82 src/grbl/probe.o
- .debug_macro   0x00000000      0x3f9 src/grbl/probe.o
+ .debug_macro   0x00000000      0x45d src/grbl/probe.o
  .debug_macro   0x00000000      0x311 src/grbl/probe.o
  .debug_macro   0x00000000       0x16 src/grbl/probe.o
  .debug_macro   0x00000000       0x10 src/grbl/probe.o
- .debug_macro   0x00000000       0x35 src/grbl/probe.o
- .debug_macro   0x00000000       0x9c src/grbl/probe.o
- .debug_macro   0x00000000       0xf6 src/grbl/probe.o
+ .debug_macro   0x00000000       0xa2 src/grbl/probe.o
+ .debug_macro   0x00000000      0x104 src/grbl/probe.o
  .debug_macro   0x00000000       0x52 src/grbl/probe.o
  .debug_macro   0x00000000       0x16 src/grbl/probe.o
  .debug_macro   0x00000000       0x43 src/grbl/probe.o
- .debug_macro   0x00000000      0x180 src/grbl/probe.o
+ .debug_macro   0x00000000      0x187 src/grbl/probe.o
  .debug_macro   0x00000000      0x1e1 src/grbl/probe.o
- .debug_macro   0x00000000      0x29d src/grbl/probe.o
+ .debug_macro   0x00000000      0x329 src/grbl/probe.o
  .debug_macro   0x00000000       0x10 src/grbl/probe.o
  .debug_macro   0x00000000       0x35 src/grbl/probe.o
  .debug_macro   0x00000000       0x16 src/grbl/probe.o
@@ -5310,15 +5315,17 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/protocol.o
  .group         0x00000000        0x8 src/grbl/protocol.o
  .group         0x00000000        0x8 src/grbl/protocol.o
+ .group         0x00000000        0x8 src/grbl/protocol.o
  .text          0x00000000        0x0 src/grbl/protocol.o
  .data          0x00000000        0x0 src/grbl/protocol.o
- .debug_macro   0x00000000      0x89e src/grbl/protocol.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/protocol.o
  .debug_macro   0x00000000       0x5e src/grbl/protocol.o
  .debug_macro   0x00000000       0x3b src/grbl/protocol.o
  .debug_macro   0x00000000       0x22 src/grbl/protocol.o
  .debug_macro   0x00000000       0x44 src/grbl/protocol.o
- .debug_macro   0x00000000       0x1c src/grbl/protocol.o
- .debug_macro   0x00000000      0x1f7 src/grbl/protocol.o
+ .debug_macro   0x00000000       0xfd src/grbl/protocol.o
+ .debug_macro   0x00000000       0x22 src/grbl/protocol.o
+ .debug_macro   0x00000000      0x1df src/grbl/protocol.o
  .debug_macro   0x00000000       0x2d src/grbl/protocol.o
  .debug_macro   0x00000000       0x26 src/grbl/protocol.o
  .debug_macro   0x00000000      0xd39 src/grbl/protocol.o
@@ -5344,20 +5351,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/protocol.o
  .debug_macro   0x00000000       0x35 src/grbl/protocol.o
  .debug_macro   0x00000000       0x58 src/grbl/protocol.o
+ .debug_macro   0x00000000       0x35 src/grbl/protocol.o
  .debug_macro   0x00000000       0x82 src/grbl/protocol.o
- .debug_macro   0x00000000      0x3f9 src/grbl/protocol.o
+ .debug_macro   0x00000000      0x45d src/grbl/protocol.o
  .debug_macro   0x00000000      0x311 src/grbl/protocol.o
  .debug_macro   0x00000000       0x16 src/grbl/protocol.o
  .debug_macro   0x00000000       0x10 src/grbl/protocol.o
- .debug_macro   0x00000000       0x35 src/grbl/protocol.o
- .debug_macro   0x00000000       0x9c src/grbl/protocol.o
- .debug_macro   0x00000000       0xf6 src/grbl/protocol.o
+ .debug_macro   0x00000000       0xa2 src/grbl/protocol.o
+ .debug_macro   0x00000000      0x104 src/grbl/protocol.o
  .debug_macro   0x00000000       0x52 src/grbl/protocol.o
  .debug_macro   0x00000000       0x16 src/grbl/protocol.o
  .debug_macro   0x00000000       0x43 src/grbl/protocol.o
- .debug_macro   0x00000000      0x180 src/grbl/protocol.o
+ .debug_macro   0x00000000      0x187 src/grbl/protocol.o
  .debug_macro   0x00000000      0x1e1 src/grbl/protocol.o
- .debug_macro   0x00000000      0x29d src/grbl/protocol.o
+ .debug_macro   0x00000000      0x329 src/grbl/protocol.o
  .debug_macro   0x00000000       0x10 src/grbl/protocol.o
  .debug_macro   0x00000000       0x35 src/grbl/protocol.o
  .debug_macro   0x00000000       0x16 src/grbl/protocol.o
@@ -5446,18 +5453,20 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/report.o
  .group         0x00000000        0x8 src/grbl/report.o
  .group         0x00000000        0x8 src/grbl/report.o
+ .group         0x00000000        0x8 src/grbl/report.o
  .text          0x00000000        0x0 src/grbl/report.o
  .data          0x00000000        0x0 src/grbl/report.o
  .bss           0x00000000        0x0 src/grbl/report.o
  .text.report_echo_line_received
-                0x00000000       0x28 src/grbl/report.o
- .debug_macro   0x00000000      0x89e src/grbl/report.o
+                0x00000000       0x2c src/grbl/report.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/report.o
  .debug_macro   0x00000000       0x5e src/grbl/report.o
  .debug_macro   0x00000000       0x3b src/grbl/report.o
  .debug_macro   0x00000000       0x22 src/grbl/report.o
  .debug_macro   0x00000000       0x44 src/grbl/report.o
- .debug_macro   0x00000000       0x1c src/grbl/report.o
- .debug_macro   0x00000000      0x1f7 src/grbl/report.o
+ .debug_macro   0x00000000       0xfd src/grbl/report.o
+ .debug_macro   0x00000000       0x22 src/grbl/report.o
+ .debug_macro   0x00000000      0x1df src/grbl/report.o
  .debug_macro   0x00000000       0x2d src/grbl/report.o
  .debug_macro   0x00000000       0x26 src/grbl/report.o
  .debug_macro   0x00000000      0xd39 src/grbl/report.o
@@ -5483,20 +5492,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/report.o
  .debug_macro   0x00000000       0x35 src/grbl/report.o
  .debug_macro   0x00000000       0x58 src/grbl/report.o
+ .debug_macro   0x00000000       0x35 src/grbl/report.o
  .debug_macro   0x00000000       0x82 src/grbl/report.o
- .debug_macro   0x00000000      0x3f9 src/grbl/report.o
+ .debug_macro   0x00000000      0x45d src/grbl/report.o
  .debug_macro   0x00000000      0x311 src/grbl/report.o
  .debug_macro   0x00000000       0x16 src/grbl/report.o
  .debug_macro   0x00000000       0x10 src/grbl/report.o
- .debug_macro   0x00000000       0x35 src/grbl/report.o
- .debug_macro   0x00000000       0x9c src/grbl/report.o
- .debug_macro   0x00000000       0xf6 src/grbl/report.o
+ .debug_macro   0x00000000       0xa2 src/grbl/report.o
+ .debug_macro   0x00000000      0x104 src/grbl/report.o
  .debug_macro   0x00000000       0x52 src/grbl/report.o
  .debug_macro   0x00000000       0x16 src/grbl/report.o
  .debug_macro   0x00000000       0x43 src/grbl/report.o
- .debug_macro   0x00000000      0x180 src/grbl/report.o
+ .debug_macro   0x00000000      0x187 src/grbl/report.o
  .debug_macro   0x00000000      0x1e1 src/grbl/report.o
- .debug_macro   0x00000000      0x29d src/grbl/report.o
+ .debug_macro   0x00000000      0x329 src/grbl/report.o
  .debug_macro   0x00000000       0x10 src/grbl/report.o
  .debug_macro   0x00000000       0x35 src/grbl/report.o
  .debug_macro   0x00000000       0x16 src/grbl/report.o
@@ -5590,10 +5599,14 @@ Discarded input sections
  .data          0x00000000        0x0 src/grbl/serial.o
  .text.serial_get_tx_buffer_count
                 0x00000000       0x44 src/grbl/serial.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/serial.o
  .debug_macro   0x00000000       0x5e src/grbl/serial.o
  .debug_macro   0x00000000       0x3b src/grbl/serial.o
  .debug_macro   0x00000000       0x22 src/grbl/serial.o
  .debug_macro   0x00000000       0x44 src/grbl/serial.o
+ .debug_macro   0x00000000       0xfd src/grbl/serial.o
+ .debug_macro   0x00000000       0x22 src/grbl/serial.o
+ .debug_macro   0x00000000      0x1df src/grbl/serial.o
  .debug_macro   0x00000000       0x2d src/grbl/serial.o
  .debug_macro   0x00000000       0x26 src/grbl/serial.o
  .debug_macro   0x00000000      0xd39 src/grbl/serial.o
@@ -5618,16 +5631,27 @@ Discarded input sections
  .debug_macro   0x00000000       0x82 src/grbl/serial.o
  .debug_macro   0x00000000       0x10 src/grbl/serial.o
  .debug_macro   0x00000000       0x35 src/grbl/serial.o
+ .debug_macro   0x00000000       0x58 src/grbl/serial.o
  .debug_macro   0x00000000       0x35 src/grbl/serial.o
+ .debug_macro   0x00000000       0x82 src/grbl/serial.o
+ .debug_macro   0x00000000      0x45d src/grbl/serial.o
  .debug_macro   0x00000000      0x311 src/grbl/serial.o
  .debug_macro   0x00000000       0x16 src/grbl/serial.o
  .debug_macro   0x00000000       0x10 src/grbl/serial.o
+ .debug_macro   0x00000000       0xa2 src/grbl/serial.o
+ .debug_macro   0x00000000      0x104 src/grbl/serial.o
  .debug_macro   0x00000000       0x52 src/grbl/serial.o
  .debug_macro   0x00000000       0x16 src/grbl/serial.o
+ .debug_macro   0x00000000       0x43 src/grbl/serial.o
+ .debug_macro   0x00000000      0x187 src/grbl/serial.o
  .debug_macro   0x00000000      0x1e1 src/grbl/serial.o
+ .debug_macro   0x00000000      0x329 src/grbl/serial.o
  .debug_macro   0x00000000       0x10 src/grbl/serial.o
+ .debug_macro   0x00000000       0x35 src/grbl/serial.o
  .debug_macro   0x00000000       0x16 src/grbl/serial.o
  .debug_macro   0x00000000       0x16 src/grbl/serial.o
+ .debug_macro   0x00000000       0x29 src/grbl/serial.o
+ .debug_macro   0x00000000       0x22 src/grbl/serial.o
  .debug_macro   0x00000000      0x102 src/grbl/serial.o
  .debug_macro   0x00000000       0xac src/grbl/serial.o
  .debug_macro   0x00000000       0xc4 src/grbl/serial.o
@@ -5710,18 +5734,20 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/settings.o
  .group         0x00000000        0x8 src/grbl/settings.o
  .group         0x00000000        0x8 src/grbl/settings.o
+ .group         0x00000000        0x8 src/grbl/settings.o
  .text          0x00000000        0x0 src/grbl/settings.o
  .data          0x00000000        0x0 src/grbl/settings.o
  .bss           0x00000000        0x0 src/grbl/settings.o
  .text.get_limit_pin_mask
                 0x00000000       0x2c src/grbl/settings.o
- .debug_macro   0x00000000      0x89e src/grbl/settings.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/settings.o
  .debug_macro   0x00000000       0x5e src/grbl/settings.o
  .debug_macro   0x00000000       0x3b src/grbl/settings.o
  .debug_macro   0x00000000       0x22 src/grbl/settings.o
  .debug_macro   0x00000000       0x44 src/grbl/settings.o
- .debug_macro   0x00000000       0x1c src/grbl/settings.o
- .debug_macro   0x00000000      0x1f7 src/grbl/settings.o
+ .debug_macro   0x00000000       0xfd src/grbl/settings.o
+ .debug_macro   0x00000000       0x22 src/grbl/settings.o
+ .debug_macro   0x00000000      0x1df src/grbl/settings.o
  .debug_macro   0x00000000       0x2d src/grbl/settings.o
  .debug_macro   0x00000000       0x26 src/grbl/settings.o
  .debug_macro   0x00000000      0xd39 src/grbl/settings.o
@@ -5747,20 +5773,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/settings.o
  .debug_macro   0x00000000       0x35 src/grbl/settings.o
  .debug_macro   0x00000000       0x58 src/grbl/settings.o
+ .debug_macro   0x00000000       0x35 src/grbl/settings.o
  .debug_macro   0x00000000       0x82 src/grbl/settings.o
- .debug_macro   0x00000000      0x3f9 src/grbl/settings.o
+ .debug_macro   0x00000000      0x45d src/grbl/settings.o
  .debug_macro   0x00000000      0x311 src/grbl/settings.o
  .debug_macro   0x00000000       0x16 src/grbl/settings.o
  .debug_macro   0x00000000       0x10 src/grbl/settings.o
- .debug_macro   0x00000000       0x35 src/grbl/settings.o
- .debug_macro   0x00000000       0x9c src/grbl/settings.o
- .debug_macro   0x00000000       0xf6 src/grbl/settings.o
+ .debug_macro   0x00000000       0xa2 src/grbl/settings.o
+ .debug_macro   0x00000000      0x104 src/grbl/settings.o
  .debug_macro   0x00000000       0x52 src/grbl/settings.o
  .debug_macro   0x00000000       0x16 src/grbl/settings.o
  .debug_macro   0x00000000       0x43 src/grbl/settings.o
- .debug_macro   0x00000000      0x180 src/grbl/settings.o
+ .debug_macro   0x00000000      0x187 src/grbl/settings.o
  .debug_macro   0x00000000      0x1e1 src/grbl/settings.o
- .debug_macro   0x00000000      0x29d src/grbl/settings.o
+ .debug_macro   0x00000000      0x329 src/grbl/settings.o
  .debug_macro   0x00000000       0x10 src/grbl/settings.o
  .debug_macro   0x00000000       0x35 src/grbl/settings.o
  .debug_macro   0x00000000       0x16 src/grbl/settings.o
@@ -5849,16 +5875,18 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/spindle_control.o
  .group         0x00000000        0x8 src/grbl/spindle_control.o
  .group         0x00000000        0x8 src/grbl/spindle_control.o
+ .group         0x00000000        0x8 src/grbl/spindle_control.o
  .text          0x00000000        0x0 src/grbl/spindle_control.o
  .data          0x00000000        0x0 src/grbl/spindle_control.o
  .bss           0x00000000        0x0 src/grbl/spindle_control.o
- .debug_macro   0x00000000      0x89e src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x5e src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x3b src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x22 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x44 src/grbl/spindle_control.o
- .debug_macro   0x00000000       0x1c src/grbl/spindle_control.o
- .debug_macro   0x00000000      0x1f7 src/grbl/spindle_control.o
+ .debug_macro   0x00000000       0xfd src/grbl/spindle_control.o
+ .debug_macro   0x00000000       0x22 src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x1df src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x2d src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x26 src/grbl/spindle_control.o
  .debug_macro   0x00000000      0xd39 src/grbl/spindle_control.o
@@ -5884,20 +5912,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x35 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x58 src/grbl/spindle_control.o
+ .debug_macro   0x00000000       0x35 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x82 src/grbl/spindle_control.o
- .debug_macro   0x00000000      0x3f9 src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x45d src/grbl/spindle_control.o
  .debug_macro   0x00000000      0x311 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x16 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x10 src/grbl/spindle_control.o
- .debug_macro   0x00000000       0x35 src/grbl/spindle_control.o
- .debug_macro   0x00000000       0x9c src/grbl/spindle_control.o
- .debug_macro   0x00000000       0xf6 src/grbl/spindle_control.o
+ .debug_macro   0x00000000       0xa2 src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x104 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x52 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x16 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x43 src/grbl/spindle_control.o
- .debug_macro   0x00000000      0x180 src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x187 src/grbl/spindle_control.o
  .debug_macro   0x00000000      0x1e1 src/grbl/spindle_control.o
- .debug_macro   0x00000000      0x29d src/grbl/spindle_control.o
+ .debug_macro   0x00000000      0x329 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x10 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x35 src/grbl/spindle_control.o
  .debug_macro   0x00000000       0x16 src/grbl/spindle_control.o
@@ -6124,15 +6152,17 @@ Discarded input sections
  .group         0x00000000        0x8 src/grbl/system.o
  .group         0x00000000        0x8 src/grbl/system.o
  .group         0x00000000        0x8 src/grbl/system.o
+ .group         0x00000000        0x8 src/grbl/system.o
  .text          0x00000000        0x0 src/grbl/system.o
  .data          0x00000000        0x0 src/grbl/system.o
- .debug_macro   0x00000000      0x89e src/grbl/system.o
+ .debug_macro   0x00000000      0x8b6 src/grbl/system.o
  .debug_macro   0x00000000       0x5e src/grbl/system.o
  .debug_macro   0x00000000       0x3b src/grbl/system.o
  .debug_macro   0x00000000       0x22 src/grbl/system.o
  .debug_macro   0x00000000       0x44 src/grbl/system.o
- .debug_macro   0x00000000       0x1c src/grbl/system.o
- .debug_macro   0x00000000      0x1f7 src/grbl/system.o
+ .debug_macro   0x00000000       0xfd src/grbl/system.o
+ .debug_macro   0x00000000       0x22 src/grbl/system.o
+ .debug_macro   0x00000000      0x1df src/grbl/system.o
  .debug_macro   0x00000000       0x2d src/grbl/system.o
  .debug_macro   0x00000000       0x26 src/grbl/system.o
  .debug_macro   0x00000000      0xd39 src/grbl/system.o
@@ -6158,20 +6188,20 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 src/grbl/system.o
  .debug_macro   0x00000000       0x35 src/grbl/system.o
  .debug_macro   0x00000000       0x58 src/grbl/system.o
+ .debug_macro   0x00000000       0x35 src/grbl/system.o
  .debug_macro   0x00000000       0x82 src/grbl/system.o
- .debug_macro   0x00000000      0x3f9 src/grbl/system.o
+ .debug_macro   0x00000000      0x45d src/grbl/system.o
  .debug_macro   0x00000000      0x311 src/grbl/system.o
  .debug_macro   0x00000000       0x16 src/grbl/system.o
  .debug_macro   0x00000000       0x10 src/grbl/system.o
- .debug_macro   0x00000000       0x35 src/grbl/system.o
- .debug_macro   0x00000000       0x9c src/grbl/system.o
- .debug_macro   0x00000000       0xf6 src/grbl/system.o
+ .debug_macro   0x00000000       0xa2 src/grbl/system.o
+ .debug_macro   0x00000000      0x104 src/grbl/system.o
  .debug_macro   0x00000000       0x52 src/grbl/system.o
  .debug_macro   0x00000000       0x16 src/grbl/system.o
  .debug_macro   0x00000000       0x43 src/grbl/system.o
- .debug_macro   0x00000000      0x180 src/grbl/system.o
+ .debug_macro   0x00000000      0x187 src/grbl/system.o
  .debug_macro   0x00000000      0x1e1 src/grbl/system.o
- .debug_macro   0x00000000      0x29d src/grbl/system.o
+ .debug_macro   0x00000000      0x329 src/grbl/system.o
  .debug_macro   0x00000000       0x10 src/grbl/system.o
  .debug_macro   0x00000000       0x35 src/grbl/system.o
  .debug_macro   0x00000000       0x16 src/grbl/system.o
@@ -6866,264 +6896,264 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.
  .text.coolant_run
                 0x0800dde8       0x2c src/grbl/coolant_control.o
                 0x0800dde8                coolant_run
- .text.gc_init  0x0800de14       0x30 src/grbl/gcode.o
+ .text.gc_init  0x0800de14       0x34 src/grbl/gcode.o
                 0x0800de14                gc_init
  .text.gc_sync_position
-                0x0800de44       0x18 src/grbl/gcode.o
-                0x0800de44                gc_sync_position
+                0x0800de48       0x18 src/grbl/gcode.o
+                0x0800de48                gc_sync_position
  .text.gc_check_same_position
-                0x0800de5c       0x50 src/grbl/gcode.o
- *fill*         0x0800deac        0x4 
+                0x0800de60       0x50 src/grbl/gcode.o
  .text.gc_execute_line
-                0x0800deb0     0x1a48 src/grbl/gcode.o
+                0x0800deb0     0x1a4c src/grbl/gcode.o
                 0x0800deb0                gc_execute_line
  .text.limits_disable
-                0x0800f8f8       0x18 src/grbl/limits.o
-                0x0800f8f8                limits_disable
+                0x0800f8fc       0x18 src/grbl/limits.o
+                0x0800f8fc                limits_disable
  .text.limits_enable
-                0x0800f910       0x18 src/grbl/limits.o
-                0x0800f910                limits_enable
+                0x0800f914       0x18 src/grbl/limits.o
+                0x0800f914                limits_enable
  .text.limits_init
-                0x0800f928       0x48 src/grbl/limits.o
-                0x0800f928                limits_init
+                0x0800f92c       0x48 src/grbl/limits.o
+                0x0800f92c                limits_init
  .text.limits_get_state
-                0x0800f970       0x7c src/grbl/limits.o
-                0x0800f970                limits_get_state
+                0x0800f974       0x7c src/grbl/limits.o
+                0x0800f974                limits_get_state
  .text.limitpin_check
-                0x0800f9ec       0x7c src/grbl/limits.o
-                0x0800f9ec                limitpin_check
+                0x0800f9f0       0x80 src/grbl/limits.o
+                0x0800f9f0                limitpin_check
  .text.limits_go_home
-                0x0800fa68      0x498 src/grbl/limits.o
-                0x0800fa68                limits_go_home
+                0x0800fa70      0x488 src/grbl/limits.o
+                0x0800fa70                limits_go_home
  .text.limits_soft_check
-                0x0800ff00       0xa4 src/grbl/limits.o
-                0x0800ff00                limits_soft_check
- .text.main     0x0800ffa4       0xb4 src/grbl/main.o
-                0x0800ffa4                main
- .text.mc_line  0x08010058       0x70 src/grbl/motion_control.o
-                0x08010058                mc_line
- .text.mc_arc   0x080100c8      0x568 src/grbl/motion_control.o
+                0x0800fef8       0xa8 src/grbl/limits.o
+                0x0800fef8                limits_soft_check
+ .text.main     0x0800ffa0       0xb4 src/grbl/main.o
+                0x0800ffa0                main
+ .text.mc_line  0x08010054       0x70 src/grbl/motion_control.o
+                0x08010054                mc_line
+ *fill*         0x080100c4        0x4 
+ .text.mc_arc   0x080100c8      0x528 src/grbl/motion_control.o
                 0x080100c8                mc_arc
  .text.mc_dwell
-                0x08010630       0x2c src/grbl/motion_control.o
-                0x08010630                mc_dwell
+                0x080105f0       0x30 src/grbl/motion_control.o
+                0x080105f0                mc_dwell
  .text.mc_homing_cycle
-                0x0801065c       0x30 src/grbl/motion_control.o
-                0x0801065c                mc_homing_cycle
+                0x08010620       0x34 src/grbl/motion_control.o
+                0x08010620                mc_homing_cycle
  .text.mc_probe_cycle
-                0x0801068c       0xf8 src/grbl/motion_control.o
-                0x0801068c                mc_probe_cycle
+                0x08010654      0x100 src/grbl/motion_control.o
+                0x08010654                mc_probe_cycle
  .text.mc_parking_motion
-                0x08010784       0x94 src/grbl/motion_control.o
-                0x08010784                mc_parking_motion
+                0x08010754       0x98 src/grbl/motion_control.o
+                0x08010754                mc_parking_motion
  .text.mc_reset
-                0x08010818       0x5c src/grbl/motion_control.o
-                0x08010818                mc_reset
- *fill*         0x08010874        0x4 
+                0x080107ec       0x60 src/grbl/motion_control.o
+                0x080107ec                mc_reset
+ *fill*         0x0801084c        0x4 
  .text.read_float
-                0x08010878      0x1f0 src/grbl/nuts_bolts.o
-                0x08010878                read_float
+                0x08010850      0x1e0 src/grbl/nuts_bolts.o
+                0x08010850                read_float
  .text.delay_sec
-                0x08010a68       0x84 src/grbl/nuts_bolts.o
-                0x08010a68                delay_sec
- .text.hypot_f  0x08010aec       0x5c src/grbl/nuts_bolts.o
-                0x08010aec                hypot_f
+                0x08010a30       0x88 src/grbl/nuts_bolts.o
+                0x08010a30                delay_sec
+ .text.hypot_f  0x08010ab8       0x5c src/grbl/nuts_bolts.o
+                0x08010ab8                hypot_f
  .text.set_as_output
-                0x08010b48       0x30 src/grbl/nuts_bolts.o
-                0x08010b48                set_as_output
+                0x08010b14       0x34 src/grbl/nuts_bolts.o
+                0x08010b14                set_as_output
  .text.set_as_input
-                0x08010b78       0x30 src/grbl/nuts_bolts.o
-                0x08010b78                set_as_input
+                0x08010b48       0x34 src/grbl/nuts_bolts.o
+                0x08010b48                set_as_input
  .text.plan_next_block_index
-                0x08010ba8       0x28 src/grbl/planner.o
-                0x08010ba8                plan_next_block_index
+                0x08010b7c       0x28 src/grbl/planner.o
+                0x08010b7c                plan_next_block_index
  .text.plan_prev_block_index
-                0x08010bd0       0x28 src/grbl/planner.o
+                0x08010ba4       0x28 src/grbl/planner.o
  .text.planner_recalculate
-                0x08010bf8      0x204 src/grbl/planner.o
+                0x08010bcc      0x204 src/grbl/planner.o
  .text.plan_reset
-                0x08010dfc       0x3c src/grbl/planner.o
-                0x08010dfc                plan_reset
+                0x08010dd0       0x40 src/grbl/planner.o
+                0x08010dd0                plan_reset
  .text.plan_discard_current_block
-                0x08010e38       0x4c src/grbl/planner.o
-                0x08010e38                plan_discard_current_block
+                0x08010e10       0x4c src/grbl/planner.o
+                0x08010e10                plan_discard_current_block
  .text.plan_get_parking_block
-                0x08010e84       0x28 src/grbl/planner.o
-                0x08010e84                plan_get_parking_block
+                0x08010e5c       0x28 src/grbl/planner.o
+                0x08010e5c                plan_get_parking_block
  .text.plan_get_current_block
-                0x08010eac       0x3c src/grbl/planner.o
-                0x08010eac                plan_get_current_block
+                0x08010e84       0x3c src/grbl/planner.o
+                0x08010e84                plan_get_current_block
  .text.plan_get_exec_block_exit_speed
-                0x08010ee8       0x70 src/grbl/planner.o
-                0x08010ee8                plan_get_exec_block_exit_speed
+                0x08010ec0       0x70 src/grbl/planner.o
+                0x08010ec0                plan_get_exec_block_exit_speed
  .text.plan_check_full_buffer
-                0x08010f58       0x28 src/grbl/planner.o
-                0x08010f58                plan_check_full_buffer
+                0x08010f30       0x28 src/grbl/planner.o
+                0x08010f30                plan_check_full_buffer
  .text.plan_buffer_line
-                0x08010f80      0x610 src/grbl/planner.o
-                0x08010f80                plan_buffer_line
+                0x08010f58      0x608 src/grbl/planner.o
+                0x08010f58                plan_buffer_line
  .text.plan_sync_position
-                0x08011590       0x3c src/grbl/planner.o
-                0x08011590                plan_sync_position
+                0x08011560       0x40 src/grbl/planner.o
+                0x08011560                plan_sync_position
  .text.plan_get_block_buffer_count
-                0x080115cc       0x40 src/grbl/planner.o
-                0x080115cc                plan_get_block_buffer_count
+                0x080115a0       0x40 src/grbl/planner.o
+                0x080115a0                plan_get_block_buffer_count
  .text.plan_cycle_reinitialize
-                0x0801160c       0x20 src/grbl/planner.o
-                0x0801160c                plan_cycle_reinitialize
+                0x080115e0       0x20 src/grbl/planner.o
+                0x080115e0                plan_cycle_reinitialize
  .text.printString
-                0x0801162c       0x28 src/grbl/print.o
-                0x0801162c                printString
+                0x08011600       0x28 src/grbl/print.o
+                0x08011600                printString
  .text.printPgmString
-                0x08011654       0x28 src/grbl/print.o
-                0x08011654                printPgmString
+                0x08011628       0x2c src/grbl/print.o
+                0x08011628                printPgmString
  .text.print_unsigned_int8
-                0x0801167c       0xb0 src/grbl/print.o
-                0x0801167c                print_unsigned_int8
+                0x08011654       0xb4 src/grbl/print.o
+                0x08011654                print_unsigned_int8
  .text.print_uint8_base2
-                0x0801172c       0x1c src/grbl/print.o
-                0x0801172c                print_uint8_base2
+                0x08011708       0x20 src/grbl/print.o
+                0x08011708                print_uint8_base2
  .text.print_uint8_base10
-                0x08011748       0x3c src/grbl/print.o
-                0x08011748                print_uint8_base10
+                0x08011728       0x3c src/grbl/print.o
+                0x08011728                print_uint8_base10
  .text.printFloat
-                0x08011784      0x150 src/grbl/print.o
-                0x08011784                printFloat
- *fill*         0x080118d4        0x4 
+                0x08011764      0x154 src/grbl/print.o
+                0x08011764                printFloat
  .text.printFloat_CoordValue
-                0x080118d8       0x70 src/grbl/print.o
-                0x080118d8                printFloat_CoordValue
+                0x080118b8       0x64 src/grbl/print.o
+                0x080118b8                printFloat_CoordValue
+ *fill*         0x0801191c        0x4 
  .text.printFloat_RateValue
-                0x08011948       0x70 src/grbl/print.o
-                0x08011948                printFloat_RateValue
+                0x08011920       0x64 src/grbl/print.o
+                0x08011920                printFloat_RateValue
  .text.printFloat_SettingValue
-                0x080119b8       0x1c src/grbl/print.o
-                0x080119b8                printFloat_SettingValue
+                0x08011984       0x1c src/grbl/print.o
+                0x08011984                printFloat_SettingValue
  .text.printFloat_RPMValue
-                0x080119d4       0x1c src/grbl/print.o
-                0x080119d4                printFloat_RPMValue
+                0x080119a0       0x1c src/grbl/print.o
+                0x080119a0                printFloat_RPMValue
  .text.probe_init
-                0x080119f0       0x18 src/grbl/probe.o
-                0x080119f0                probe_init
+                0x080119bc       0x1c src/grbl/probe.o
+                0x080119bc                probe_init
  .text.probe_configure_invert_mask
-                0x08011a08       0x54 src/grbl/probe.o
-                0x08011a08                probe_configure_invert_mask
+                0x080119d8       0x54 src/grbl/probe.o
+                0x080119d8                probe_configure_invert_mask
  .text.probe_get_state
-                0x08011a5c       0x3c src/grbl/probe.o
-                0x08011a5c                probe_get_state
+                0x08011a2c       0x3c src/grbl/probe.o
+                0x08011a2c                probe_get_state
  .text.probe_state_monitor
-                0x08011a98       0x4c src/grbl/probe.o
-                0x08011a98                probe_state_monitor
+                0x08011a68       0x4c src/grbl/probe.o
+                0x08011a68                probe_state_monitor
  .text.protocol_main_loop
-                0x08011ae4      0x194 src/grbl/protocol.o
-                0x08011ae4                protocol_main_loop
+                0x08011ab4      0x198 src/grbl/protocol.o
+                0x08011ab4                protocol_main_loop
  .text.protocol_buffer_synchronize
-                0x08011c78       0x30 src/grbl/protocol.o
-                0x08011c78                protocol_buffer_synchronize
+                0x08011c4c       0x30 src/grbl/protocol.o
+                0x08011c4c                protocol_buffer_synchronize
  .text.protocol_auto_cycle_start
-                0x08011ca8        0xc src/grbl/protocol.o
-                0x08011ca8                protocol_auto_cycle_start
+                0x08011c7c       0x10 src/grbl/protocol.o
+                0x08011c7c                protocol_auto_cycle_start
  .text.protocol_execute_realtime
-                0x08011cb4       0x1c src/grbl/protocol.o
-                0x08011cb4                protocol_execute_realtime
+                0x08011c8c       0x1c src/grbl/protocol.o
+                0x08011c8c                protocol_execute_realtime
  .text.protocol_exec_rt_system
-                0x08011cd0      0x334 src/grbl/protocol.o
-                0x08011cd0                protocol_exec_rt_system
+                0x08011ca8      0x334 src/grbl/protocol.o
+                0x08011ca8                protocol_exec_rt_system
  .text.protocol_exec_rt_suspend
-                0x08012004      0x244 src/grbl/protocol.o
+                0x08011fdc      0x248 src/grbl/protocol.o
  .text.report_status_message
-                0x08012248      0x164 src/grbl/report.o
-                0x08012248                report_status_message
+                0x08012224      0x164 src/grbl/report.o
+                0x08012224                report_status_message
  .text.report_alarm_message
-                0x080123ac       0x8c src/grbl/report.o
-                0x080123ac                report_alarm_message
+                0x08012388       0x8c src/grbl/report.o
+                0x08012388                report_alarm_message
  .text.report_feedback_message
-                0x08012438       0xb4 src/grbl/report.o
-                0x08012438                report_feedback_message
+                0x08012414       0xb4 src/grbl/report.o
+                0x08012414                report_feedback_message
  .text.report_init_message
-                0x080124ec       0x10 src/grbl/report.o
-                0x080124ec                report_init_message
+                0x080124c8       0x14 src/grbl/report.o
+                0x080124c8                report_init_message
  .text.report_grbl_help
-                0x080124fc       0x10 src/grbl/report.o
-                0x080124fc                report_grbl_help
+                0x080124dc       0x14 src/grbl/report.o
+                0x080124dc                report_grbl_help
  .text.report_grbl_settings
-                0x0801250c      0x420 src/grbl/report.o
-                0x0801250c                report_grbl_settings
+                0x080124f0      0x424 src/grbl/report.o
+                0x080124f0                report_grbl_settings
  .text.report_probe_parameters
-                0x0801292c       0x98 src/grbl/report.o
-                0x0801292c                report_probe_parameters
+                0x08012914       0x98 src/grbl/report.o
+                0x08012914                report_probe_parameters
  .text.report_ngc_parameters
-                0x080129c4      0x130 src/grbl/report.o
-                0x080129c4                report_ngc_parameters
+                0x080129ac      0x134 src/grbl/report.o
+                0x080129ac                report_ngc_parameters
  .text.report_gcode_modes
-                0x08012af4      0x220 src/grbl/report.o
-                0x08012af4                report_gcode_modes
+                0x08012ae0      0x220 src/grbl/report.o
+                0x08012ae0                report_gcode_modes
  .text.report_startup_line
-                0x08012d14       0x40 src/grbl/report.o
-                0x08012d14                report_startup_line
+                0x08012d00       0x40 src/grbl/report.o
+                0x08012d00                report_startup_line
  .text.report_build_info
-                0x08012d54       0x28 src/grbl/report.o
-                0x08012d54                report_build_info
+                0x08012d40       0x2c src/grbl/report.o
+                0x08012d40                report_build_info
  .text.report_realtime_status
-                0x08012d7c      0x3e8 src/grbl/report.o
-                0x08012d7c                report_realtime_status
+                0x08012d6c      0x3e8 src/grbl/report.o
+                0x08012d6c                report_realtime_status
  .text.serial_get_rx_buffer_count
-                0x08013164       0x44 src/grbl/serial.o
-                0x08013164                serial_get_rx_buffer_count
+                0x08013154       0x44 src/grbl/serial.o
+                0x08013154                serial_get_rx_buffer_count
  .text.serial_init
-                0x080131a8       0xfc src/grbl/serial.o
-                0x080131a8                serial_init
+                0x08013198       0xfc src/grbl/serial.o
+                0x08013198                serial_init
  .text.serial_write
-                0x080132a4       0x74 src/grbl/serial.o
-                0x080132a4                serial_write
+                0x08013294       0x74 src/grbl/serial.o
+                0x08013294                serial_write
  .text.serial_txint
-                0x08013318       0x6c src/grbl/serial.o
-                0x08013318                serial_txint
+                0x08013308       0x6c src/grbl/serial.o
+                0x08013308                serial_txint
  .text.serial_read
-                0x08013384       0x54 src/grbl/serial.o
-                0x08013384                serial_read
+                0x08013374       0x54 src/grbl/serial.o
+                0x08013374                serial_read
  .text.serial_rxint
-                0x080133d8       0xa0 src/grbl/serial.o
-                0x080133d8                serial_rxint
+                0x080133c8       0xa0 src/grbl/serial.o
+                0x080133c8                serial_rxint
  .text.serial_reset_read_buffer
-                0x08013478       0x20 src/grbl/serial.o
-                0x08013478                serial_reset_read_buffer
+                0x08013468       0x20 src/grbl/serial.o
+                0x08013468                serial_reset_read_buffer
  .text.USART2_IRQHandler
-                0x08013498       0x30 src/grbl/serial.o
-                0x08013498                USART2_IRQHandler
+                0x08013488       0x30 src/grbl/serial.o
+                0x08013488                USART2_IRQHandler
  .text.settings_store_startup_line
-                0x080134c8       0x30 src/grbl/settings.o
-                0x080134c8                settings_store_startup_line
+                0x080134b8       0x30 src/grbl/settings.o
+                0x080134b8                settings_store_startup_line
  .text.settings_store_build_info
-                0x080134f8       0x1c src/grbl/settings.o
-                0x080134f8                settings_store_build_info
+                0x080134e8       0x1c src/grbl/settings.o
+                0x080134e8                settings_store_build_info
  .text.settings_write_coord_data
-                0x08013514       0x30 src/grbl/settings.o
-                0x08013514                settings_write_coord_data
+                0x08013504       0x30 src/grbl/settings.o
+                0x08013504                settings_write_coord_data
  .text.write_global_settings
-                0x08013544       0x1c src/grbl/settings.o
-                0x08013544                write_global_settings
+                0x08013534       0x20 src/grbl/settings.o
+                0x08013534                write_global_settings
  .text.settings_restore
-                0x08013560      0x18c src/grbl/settings.o
-                0x08013560                settings_restore
+                0x08013554      0x18c src/grbl/settings.o
+                0x08013554                settings_restore
  .text.settings_read_startup_line
-                0x080136ec       0x4c src/grbl/settings.o
-                0x080136ec                settings_read_startup_line
+                0x080136e0       0x4c src/grbl/settings.o
+                0x080136e0                settings_read_startup_line
  .text.settings_read_build_info
-                0x08013738       0x34 src/grbl/settings.o
-                0x08013738                settings_read_build_info
+                0x0801372c       0x34 src/grbl/settings.o
+                0x0801372c                settings_read_build_info
  .text.settings_read_coord_data
-                0x0801376c       0x50 src/grbl/settings.o
-                0x0801376c                settings_read_coord_data
+                0x08013760       0x50 src/grbl/settings.o
+                0x08013760                settings_read_coord_data
  .text.read_global_settings
-                0x080137bc       0x3c src/grbl/settings.o
-                0x080137bc                read_global_settings
+                0x080137b0       0x3c src/grbl/settings.o
+                0x080137b0                read_global_settings
  .text.settings_store_global_setting
-                0x080137f8      0x3a4 src/grbl/settings.o
-                0x080137f8                settings_store_global_setting
+                0x080137ec      0x3ac src/grbl/settings.o
+                0x080137ec                settings_store_global_setting
  .text.settings_init
-                0x08013b9c       0x20 src/grbl/settings.o
-                0x08013b9c                settings_init
+                0x08013b98       0x24 src/grbl/settings.o
+                0x08013b98                settings_init
  .text.get_step_pin_mask
                 0x08013bbc       0x2c src/grbl/settings.o
                 0x08013bbc                get_step_pin_mask
@@ -7137,221 +7167,221 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.
                 0x08013cac       0x20 src/grbl/spindle_control.o
                 0x08013cac                spindle_stop
  .text.spindle_set_state
-                0x08013ccc      0x108 src/grbl/spindle_control.o
+                0x08013ccc      0x104 src/grbl/spindle_control.o
                 0x08013ccc                spindle_set_state
  .text.spindle_run
-                0x08013dd4       0x34 src/grbl/spindle_control.o
-                0x08013dd4                spindle_run
+                0x08013dd0       0x34 src/grbl/spindle_control.o
+                0x08013dd0                spindle_run
  .text.NVIC_SetPendingIRQ
-                0x08013e08       0x34 src/grbl/stepper.o
+                0x08013e04       0x34 src/grbl/stepper.o
  .text.NVIC_ClearPendingIRQ
-                0x08013e3c       0x34 src/grbl/stepper.o
+                0x08013e38       0x34 src/grbl/stepper.o
  .text.st_wake_up
-                0x08013e70       0x1c src/grbl/stepper.o
-                0x08013e70                st_wake_up
+                0x08013e6c       0x1c src/grbl/stepper.o
+                0x08013e6c                st_wake_up
  .text.st_go_idle
-                0x08013e8c       0x50 src/grbl/stepper.o
-                0x08013e8c                st_go_idle
+                0x08013e88       0x50 src/grbl/stepper.o
+                0x08013e88                st_go_idle
  .text.stepper_interrupt1
-                0x08013edc       0x44 src/grbl/stepper.o
-                0x08013edc                stepper_interrupt1
+                0x08013ed8       0x44 src/grbl/stepper.o
+                0x08013ed8                stepper_interrupt1
  .text.stepper_interrupt2
-                0x08013f20      0x29c src/grbl/stepper.o
-                0x08013f20                stepper_interrupt2
+                0x08013f1c      0x29c src/grbl/stepper.o
+                0x08013f1c                stepper_interrupt2
  .text.stepper_pinclr_interrupt
-                0x080141bc       0x18 src/grbl/stepper.o
-                0x080141bc                stepper_pinclr_interrupt
+                0x080141b8       0x18 src/grbl/stepper.o
+                0x080141b8                stepper_pinclr_interrupt
  .text.st_generate_step_dir_invert_masks
-                0x080141d4       0x94 src/grbl/stepper.o
-                0x080141d4                st_generate_step_dir_invert_masks
+                0x080141d0       0x94 src/grbl/stepper.o
+                0x080141d0                st_generate_step_dir_invert_masks
  .text.st_reset
-                0x08014268       0x84 src/grbl/stepper.o
-                0x08014268                st_reset
+                0x08014264       0x84 src/grbl/stepper.o
+                0x08014264                st_reset
  .text.stepper_init
-                0x080142ec       0x10 src/grbl/stepper.o
-                0x080142ec                stepper_init
+                0x080142e8       0x10 src/grbl/stepper.o
+                0x080142e8                stepper_init
  .text.st_update_plan_block_parameters
-                0x080142fc       0x4c src/grbl/stepper.o
-                0x080142fc                st_update_plan_block_parameters
+                0x080142f8       0x4c src/grbl/stepper.o
+                0x080142f8                st_update_plan_block_parameters
  .text.st_next_block_index
-                0x08014348       0x28 src/grbl/stepper.o
+                0x08014344       0x28 src/grbl/stepper.o
  .text.st_parking_setup_buffer
-                0x08014370       0x64 src/grbl/stepper.o
-                0x08014370                st_parking_setup_buffer
+                0x0801436c       0x64 src/grbl/stepper.o
+                0x0801436c                st_parking_setup_buffer
  .text.st_parking_restore_buffer
-                0x080143d4       0x88 src/grbl/stepper.o
-                0x080143d4                st_parking_restore_buffer
- *fill*         0x0801445c        0x4 
+                0x080143d0       0x88 src/grbl/stepper.o
+                0x080143d0                st_parking_restore_buffer
  .text.st_prep_buffer
-                0x08014460      0xaac src/grbl/stepper.o
-                0x08014460                st_prep_buffer
+                0x08014458      0xaac src/grbl/stepper.o
+                0x08014458                st_prep_buffer
  .text.init_stepperpins
-                0x08014f0c       0x68 src/grbl/stepper.o
-                0x08014f0c                init_stepperpins
+                0x08014f04       0x68 src/grbl/stepper.o
+                0x08014f04                init_stepperpins
  .text.set_dir_pins
-                0x08014f74       0x64 src/grbl/stepper.o
-                0x08014f74                set_dir_pins
+                0x08014f6c       0x64 src/grbl/stepper.o
+                0x08014f6c                set_dir_pins
  .text.set_step_pins
-                0x08014fd8       0x54 src/grbl/stepper.o
-                0x08014fd8                set_step_pins
+                0x08014fd0       0x54 src/grbl/stepper.o
+                0x08014fd0                set_step_pins
  .text.enable_timerint
-                0x0801502c       0x18 src/grbl/stepper.o
-                0x0801502c                enable_timerint
+                0x08015024       0x18 src/grbl/stepper.o
+                0x08015024                enable_timerint
  .text.disable_timerint
-                0x08015044       0x1c src/grbl/stepper.o
-                0x08015044                disable_timerint
+                0x0801503c       0x1c src/grbl/stepper.o
+                0x0801503c                disable_timerint
  .text.set_timerperiod
-                0x08015060       0x20 src/grbl/stepper.o
-                0x08015060                set_timerperiod
+                0x08015058       0x20 src/grbl/stepper.o
+                0x08015058                set_timerperiod
  .text.init_timer
-                0x08015080       0xc4 src/grbl/stepper.o
-                0x08015080                init_timer
+                0x08015078       0xc4 src/grbl/stepper.o
+                0x08015078                init_timer
  .text.TIM2_IRQHandler
-                0x08015144       0x58 src/grbl/stepper.o
-                0x08015144                TIM2_IRQHandler
+                0x0801513c       0x58 src/grbl/stepper.o
+                0x0801513c                TIM2_IRQHandler
  .text.DMA1_Stream7_IRQHandler
-                0x0801519c       0xb4 src/grbl/stepper.o
-                0x0801519c                DMA1_Stream7_IRQHandler
+                0x08015194       0xb4 src/grbl/stepper.o
+                0x08015194                DMA1_Stream7_IRQHandler
  .text.enable_steppers
-                0x08015250       0x18 src/grbl/stepper.o
-                0x08015250                enable_steppers
+                0x08015248       0x18 src/grbl/stepper.o
+                0x08015248                enable_steppers
  .text.disable_steppers
-                0x08015268       0x18 src/grbl/stepper.o
-                0x08015268                disable_steppers
+                0x08015260       0x18 src/grbl/stepper.o
+                0x08015260                disable_steppers
  .text.system_init
-                0x08015280       0x24 src/grbl/system.o
-                0x08015280                system_init
+                0x08015278       0x24 src/grbl/system.o
+                0x08015278                system_init
  .text.system_control_get_state
-                0x080152a4       0x9c src/grbl/system.o
-                0x080152a4                system_control_get_state
+                0x0801529c       0x9c src/grbl/system.o
+                0x0801529c                system_control_get_state
  .text.control_pin_check
-                0x08015340       0x7c src/grbl/system.o
-                0x08015340                control_pin_check
+                0x08015338       0x80 src/grbl/system.o
+                0x08015338                control_pin_check
  .text.system_check_safety_door_ajar
-                0x080153bc       0x10 src/grbl/system.o
-                0x080153bc                system_check_safety_door_ajar
+                0x080153b8       0x10 src/grbl/system.o
+                0x080153b8                system_check_safety_door_ajar
  .text.system_execute_startup
-                0x080153cc       0x54 src/grbl/system.o
-                0x080153cc                system_execute_startup
+                0x080153c8       0x58 src/grbl/system.o
+                0x080153c8                system_execute_startup
  .text.system_execute_line
-                0x08015420      0x4dc src/grbl/system.o
+                0x08015420      0x4d8 src/grbl/system.o
                 0x08015420                system_execute_line
  .text.system_convert_axis_steps_to_mpos
-                0x080158fc       0x4c src/grbl/system.o
-                0x080158fc                system_convert_axis_steps_to_mpos
+                0x080158f8       0x4c src/grbl/system.o
+                0x080158f8                system_convert_axis_steps_to_mpos
  .text.system_convert_array_steps_to_mpos
-                0x08015948       0x40 src/grbl/system.o
-                0x08015948                system_convert_array_steps_to_mpos
+                0x08015944       0x40 src/grbl/system.o
+                0x08015944                system_convert_array_steps_to_mpos
  .text.system_set_exec_state_flag
-                0x08015988       0x40 src/grbl/system.o
-                0x08015988                system_set_exec_state_flag
+                0x08015984       0x40 src/grbl/system.o
+                0x08015984                system_set_exec_state_flag
  .text.system_clear_exec_state_flag
-                0x080159c8       0x48 src/grbl/system.o
-                0x080159c8                system_clear_exec_state_flag
+                0x080159c4       0x48 src/grbl/system.o
+                0x080159c4                system_clear_exec_state_flag
  .text.system_set_exec_alarm_flag
-                0x08015a10       0x40 src/grbl/system.o
-                0x08015a10                system_set_exec_alarm_flag
+                0x08015a0c       0x40 src/grbl/system.o
+                0x08015a0c                system_set_exec_alarm_flag
  .text.system_clear_exec_alarm_flag
-                0x08015a50       0x48 src/grbl/system.o
-                0x08015a50                system_clear_exec_alarm_flag
+                0x08015a4c       0x48 src/grbl/system.o
+                0x08015a4c                system_clear_exec_alarm_flag
  .text.SystemInit
-                0x08015a98       0x68 src/system_stm32f4xx.o
-                0x08015a98                SystemInit
+                0x08015a94       0x68 src/system_stm32f4xx.o
+                0x08015a94                SystemInit
  .text.SetSysClock
-                0x08015b00       0xf4 src/system_stm32f4xx.o
+                0x08015afc       0xf4 src/system_stm32f4xx.o
  .text._delay_us
-                0x08015bf4       0x28 src/util/delay.o
-                0x08015bf4                _delay_us
+                0x08015bf0       0x28 src/util/delay.o
+                0x08015bf0                _delay_us
  .text._delay_ms
-                0x08015c1c       0x24 src/util/delay.o
-                0x08015c1c                _delay_ms
+                0x08015c18       0x24 src/util/delay.o
+                0x08015c18                _delay_ms
  .text.Reset_Handler
-                0x08015c40       0x50 startup/startup_stm32f411xe.o
-                0x08015c40                Reset_Handler
+                0x08015c3c       0x50 startup/startup_stm32f411xe.o
+                0x08015c3c                Reset_Handler
  .text.Default_Handler
-                0x08015c90        0x2 startup/startup_stm32f411xe.o
-                0x08015c90                RTC_Alarm_IRQHandler
-                0x08015c90                EXTI2_IRQHandler
-                0x08015c90                DebugMon_Handler
-                0x08015c90                SPI4_IRQHandler
-                0x08015c90                TIM1_CC_IRQHandler
-                0x08015c90                DMA2_Stream5_IRQHandler
-                0x08015c90                HardFault_Handler
-                0x08015c90                DMA1_Stream5_IRQHandler
-                0x08015c90                SysTick_Handler
-                0x08015c90                PVD_IRQHandler
-                0x08015c90                SDIO_IRQHandler
-                0x08015c90                TAMP_STAMP_IRQHandler
-                0x08015c90                PendSV_Handler
-                0x08015c90                NMI_Handler
-                0x08015c90                EXTI3_IRQHandler
-                0x08015c90                TIM1_UP_TIM10_IRQHandler
-                0x08015c90                I2C3_ER_IRQHandler
-                0x08015c90                EXTI0_IRQHandler
-                0x08015c90                I2C2_EV_IRQHandler
-                0x08015c90                DMA1_Stream2_IRQHandler
-                0x08015c90                FPU_IRQHandler
-                0x08015c90                UsageFault_Handler
-                0x08015c90                DMA2_Stream2_IRQHandler
-                0x08015c90                SPI1_IRQHandler
-                0x08015c90                TIM1_BRK_TIM9_IRQHandler
-                0x08015c90                DMA2_Stream3_IRQHandler
-                0x08015c90                USART6_IRQHandler
-                0x08015c90                DMA2_Stream0_IRQHandler
-                0x08015c90                TIM4_IRQHandler
-                0x08015c90                I2C1_EV_IRQHandler
-                0x08015c90                DMA1_Stream6_IRQHandler
-                0x08015c90                DMA1_Stream1_IRQHandler
-                0x08015c90                TIM3_IRQHandler
-                0x08015c90                RCC_IRQHandler
-                0x08015c90                Default_Handler
-                0x08015c90                EXTI15_10_IRQHandler
-                0x08015c90                ADC_IRQHandler
-                0x08015c90                SPI5_IRQHandler
-                0x08015c90                TIM5_IRQHandler
-                0x08015c90                DMA2_Stream7_IRQHandler
-                0x08015c90                I2C3_EV_IRQHandler
-                0x08015c90                EXTI9_5_IRQHandler
-                0x08015c90                RTC_WKUP_IRQHandler
-                0x08015c90                SPI2_IRQHandler
-                0x08015c90                MemManage_Handler
-                0x08015c90                DMA1_Stream0_IRQHandler
-                0x08015c90                SVC_Handler
-                0x08015c90                EXTI4_IRQHandler
-                0x08015c90                WWDG_IRQHandler
-                0x08015c90                OTG_FS_WKUP_IRQHandler
-                0x08015c90                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08015c90                EXTI1_IRQHandler
-                0x08015c90                I2C2_ER_IRQHandler
-                0x08015c90                DMA2_Stream1_IRQHandler
-                0x08015c90                FLASH_IRQHandler
-                0x08015c90                DMA2_Stream4_IRQHandler
-                0x08015c90                BusFault_Handler
-                0x08015c90                USART1_IRQHandler
-                0x08015c90                OTG_FS_IRQHandler
-                0x08015c90                SPI3_IRQHandler
-                0x08015c90                DMA1_Stream4_IRQHandler
-                0x08015c90                I2C1_ER_IRQHandler
-                0x08015c90                DMA2_Stream6_IRQHandler
-                0x08015c90                DMA1_Stream3_IRQHandler
- *fill*         0x08015c92        0x2 
- .text.__errno  0x08015c94        0xc c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-errno.o)
-                0x08015c94                __errno
+                0x08015c8c        0x2 startup/startup_stm32f411xe.o
+                0x08015c8c                RTC_Alarm_IRQHandler
+                0x08015c8c                EXTI2_IRQHandler
+                0x08015c8c                DebugMon_Handler
+                0x08015c8c                SPI4_IRQHandler
+                0x08015c8c                TIM1_CC_IRQHandler
+                0x08015c8c                DMA2_Stream5_IRQHandler
+                0x08015c8c                HardFault_Handler
+                0x08015c8c                DMA1_Stream5_IRQHandler
+                0x08015c8c                SysTick_Handler
+                0x08015c8c                PVD_IRQHandler
+                0x08015c8c                SDIO_IRQHandler
+                0x08015c8c                TAMP_STAMP_IRQHandler
+                0x08015c8c                PendSV_Handler
+                0x08015c8c                NMI_Handler
+                0x08015c8c                EXTI3_IRQHandler
+                0x08015c8c                TIM1_UP_TIM10_IRQHandler
+                0x08015c8c                I2C3_ER_IRQHandler
+                0x08015c8c                EXTI0_IRQHandler
+                0x08015c8c                I2C2_EV_IRQHandler
+                0x08015c8c                DMA1_Stream2_IRQHandler
+                0x08015c8c                FPU_IRQHandler
+                0x08015c8c                UsageFault_Handler
+                0x08015c8c                DMA2_Stream2_IRQHandler
+                0x08015c8c                SPI1_IRQHandler
+                0x08015c8c                TIM1_BRK_TIM9_IRQHandler
+                0x08015c8c                DMA2_Stream3_IRQHandler
+                0x08015c8c                USART6_IRQHandler
+                0x08015c8c                DMA2_Stream0_IRQHandler
+                0x08015c8c                TIM4_IRQHandler
+                0x08015c8c                I2C1_EV_IRQHandler
+                0x08015c8c                DMA1_Stream6_IRQHandler
+                0x08015c8c                DMA1_Stream1_IRQHandler
+                0x08015c8c                TIM3_IRQHandler
+                0x08015c8c                RCC_IRQHandler
+                0x08015c8c                Default_Handler
+                0x08015c8c                EXTI15_10_IRQHandler
+                0x08015c8c                ADC_IRQHandler
+                0x08015c8c                SPI5_IRQHandler
+                0x08015c8c                TIM5_IRQHandler
+                0x08015c8c                DMA2_Stream7_IRQHandler
+                0x08015c8c                I2C3_EV_IRQHandler
+                0x08015c8c                EXTI9_5_IRQHandler
+                0x08015c8c                RTC_WKUP_IRQHandler
+                0x08015c8c                SPI2_IRQHandler
+                0x08015c8c                MemManage_Handler
+                0x08015c8c                DMA1_Stream0_IRQHandler
+                0x08015c8c                SVC_Handler
+                0x08015c8c                EXTI4_IRQHandler
+                0x08015c8c                WWDG_IRQHandler
+                0x08015c8c                OTG_FS_WKUP_IRQHandler
+                0x08015c8c                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08015c8c                EXTI1_IRQHandler
+                0x08015c8c                I2C2_ER_IRQHandler
+                0x08015c8c                DMA2_Stream1_IRQHandler
+                0x08015c8c                FLASH_IRQHandler
+                0x08015c8c                DMA2_Stream4_IRQHandler
+                0x08015c8c                BusFault_Handler
+                0x08015c8c                USART1_IRQHandler
+                0x08015c8c                OTG_FS_IRQHandler
+                0x08015c8c                SPI3_IRQHandler
+                0x08015c8c                DMA1_Stream4_IRQHandler
+                0x08015c8c                I2C1_ER_IRQHandler
+                0x08015c8c                DMA2_Stream6_IRQHandler
+                0x08015c8c                DMA1_Stream3_IRQHandler
+ *fill*         0x08015c8e        0x2 
+ .text.__errno  0x08015c90        0xc c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-errno.o)
+                0x08015c90                __errno
  .text.__libc_init_array
-                0x08015ca0       0x50 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-init.o)
-                0x08015ca0                __libc_init_array
- .text.memset   0x08015cf0       0x9c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-memset.o)
-                0x08015cf0                memset
+                0x08015c9c       0x50 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-init.o)
+                0x08015c9c                __libc_init_array
+ .text.memset   0x08015cec       0x9c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-memset.o)
+                0x08015cec                memset
  .text.startup.register_fini
-                0x08015d8c       0x14 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x08015da0        0xc c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-atexit.o)
-                0x08015da0                atexit
+                0x08015d88       0x14 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08015d9c        0xc c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-atexit.o)
+                0x08015d9c                atexit
  .text.__libc_fini_array
-                0x08015dac       0x28 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fini.o)
-                0x08015dac                __libc_fini_array
+                0x08015da8       0x28 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fini.o)
+                0x08015da8                __libc_fini_array
  .text.__register_exitproc
-                0x08015dd4       0xa4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__atexit.o)
-                0x08015dd4                __register_exitproc
+                0x08015dd0       0xa4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__atexit.o)
+                0x08015dd0                __register_exitproc
+ *fill*         0x08015e74        0x4 
  .text.ceil     0x08015e78      0x120 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libm.a(lib_a-s_ceil.o)
                 0x08015e78                ceil
  .text.cos      0x08015f98       0xc0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libm.a(lib_a-s_cos.o)
@@ -7435,8 +7465,9 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.
 .rodata         0x08017e10      0xa00
                 0x08017e10                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08017e10      0x7d8 src/grbl/report.o
+ .rodata        0x08017e10      0x7d6 src/grbl/report.o
  *(.rodata*)
+ *fill*         0x080185e6        0x2 
  .rodata.str1.4
                 0x080185e8        0x2 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-impure.o)
  *fill*         0x080185ea        0x2 
@@ -7686,7 +7717,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.
                 0x000008c8       0x22 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/fpu/crtn.o
 OUTPUT(grbl_stm32.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xbdd4
+.debug_info     0x00000000     0xbe2c
  .debug_info    0x00000000      0x545 StdPeriph_Driver/src/misc.o
  .debug_info    0x00000545      0x938 StdPeriph_Driver/src/stm32f4xx_flash.o
  .debug_info    0x00000e7d      0x60d StdPeriph_Driver/src/stm32f4xx_gpio.o
@@ -7694,27 +7725,27 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_info    0x00002244     0x1c69 StdPeriph_Driver/src/stm32f4xx_tim.o
  .debug_info    0x00003ead      0x9ca StdPeriph_Driver/src/stm32f4xx_usart.o
  .debug_info    0x00004877      0x30c src/avr/eeprom.o
- .debug_info    0x00004b83      0x341 src/grbl/coolant_control.o
- .debug_info    0x00004ec4      0x5f6 src/grbl/gcode.o
- .debug_info    0x000054ba      0x5b2 src/grbl/limits.o
- .debug_info    0x00005a6c      0x422 src/grbl/main.o
- .debug_info    0x00005e8e      0x5f4 src/grbl/motion_control.o
- .debug_info    0x00006482      0x59c src/grbl/nuts_bolts.o
- .debug_info    0x00006a1e      0x70b src/grbl/planner.o
- .debug_info    0x00007129      0x569 src/grbl/print.o
- .debug_info    0x00007692      0x469 src/grbl/probe.o
- .debug_info    0x00007afb      0x52e src/grbl/protocol.o
- .debug_info    0x00008029      0x69d src/grbl/report.o
- .debug_info    0x000086c6      0x8d3 src/grbl/serial.o
- .debug_info    0x00008f99      0x577 src/grbl/settings.o
- .debug_info    0x00009510      0x88c src/grbl/spindle_control.o
- .debug_info    0x00009d9c     0x1179 src/grbl/stepper.o
- .debug_info    0x0000af15      0x7fe src/grbl/system.o
- .debug_info    0x0000b713      0x5de src/system_stm32f4xx.o
- .debug_info    0x0000bcf1       0x86 src/util/delay.o
- .debug_info    0x0000bd77       0x5d startup/startup_stm32f411xe.o
+ .debug_info    0x00004b83      0x345 src/grbl/coolant_control.o
+ .debug_info    0x00004ec8      0x5fa src/grbl/gcode.o
+ .debug_info    0x000054c2      0x5ba src/grbl/limits.o
+ .debug_info    0x00005a7c      0x426 src/grbl/main.o
+ .debug_info    0x00005ea2      0x5f4 src/grbl/motion_control.o
+ .debug_info    0x00006496      0x5b0 src/grbl/nuts_bolts.o
+ .debug_info    0x00006a46      0x70f src/grbl/planner.o
+ .debug_info    0x00007155      0x56d src/grbl/print.o
+ .debug_info    0x000076c2      0x46d src/grbl/probe.o
+ .debug_info    0x00007b2f      0x532 src/grbl/protocol.o
+ .debug_info    0x00008061      0x6a1 src/grbl/report.o
+ .debug_info    0x00008702      0x8d3 src/grbl/serial.o
+ .debug_info    0x00008fd5      0x577 src/grbl/settings.o
+ .debug_info    0x0000954c      0x8a4 src/grbl/spindle_control.o
+ .debug_info    0x00009df0     0x1179 src/grbl/stepper.o
+ .debug_info    0x0000af69      0x802 src/grbl/system.o
+ .debug_info    0x0000b76b      0x5de src/system_stm32f4xx.o
+ .debug_info    0x0000bd49       0x86 src/util/delay.o
+ .debug_info    0x0000bdcf       0x5d startup/startup_stm32f411xe.o
 
-.debug_abbrev   0x00000000     0x27c2
+.debug_abbrev   0x00000000     0x27de
  .debug_abbrev  0x00000000      0x14a StdPeriph_Driver/src/misc.o
  .debug_abbrev  0x0000014a      0x172 StdPeriph_Driver/src/stm32f4xx_flash.o
  .debug_abbrev  0x000002bc      0x1a8 StdPeriph_Driver/src/stm32f4xx_gpio.o
@@ -7722,25 +7753,25 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_abbrev  0x00000623      0x18c StdPeriph_Driver/src/stm32f4xx_tim.o
  .debug_abbrev  0x000007af      0x15a StdPeriph_Driver/src/stm32f4xx_usart.o
  .debug_abbrev  0x00000909      0x136 src/avr/eeprom.o
- .debug_abbrev  0x00000a3f      0x12f src/grbl/coolant_control.o
- .debug_abbrev  0x00000b6e      0x182 src/grbl/gcode.o
- .debug_abbrev  0x00000cf0      0x1f4 src/grbl/limits.o
- .debug_abbrev  0x00000ee4      0x13b src/grbl/main.o
- .debug_abbrev  0x0000101f      0x186 src/grbl/motion_control.o
- .debug_abbrev  0x000011a5      0x16b src/grbl/nuts_bolts.o
- .debug_abbrev  0x00001310      0x243 src/grbl/planner.o
- .debug_abbrev  0x00001553      0x127 src/grbl/print.o
- .debug_abbrev  0x0000167a      0x16b src/grbl/probe.o
- .debug_abbrev  0x000017e5      0x13a src/grbl/protocol.o
- .debug_abbrev  0x0000191f      0x1cb src/grbl/report.o
- .debug_abbrev  0x00001aea      0x1b4 src/grbl/serial.o
- .debug_abbrev  0x00001c9e      0x1a7 src/grbl/settings.o
- .debug_abbrev  0x00001e45      0x1cc src/grbl/spindle_control.o
- .debug_abbrev  0x00002011      0x2f7 src/grbl/stepper.o
- .debug_abbrev  0x00002308      0x2f0 src/grbl/system.o
- .debug_abbrev  0x000025f8      0x13b src/system_stm32f4xx.o
- .debug_abbrev  0x00002733       0x7d src/util/delay.o
- .debug_abbrev  0x000027b0       0x12 startup/startup_stm32f411xe.o
+ .debug_abbrev  0x00000a3f      0x131 src/grbl/coolant_control.o
+ .debug_abbrev  0x00000b70      0x184 src/grbl/gcode.o
+ .debug_abbrev  0x00000cf4      0x1f8 src/grbl/limits.o
+ .debug_abbrev  0x00000eec      0x13d src/grbl/main.o
+ .debug_abbrev  0x00001029      0x186 src/grbl/motion_control.o
+ .debug_abbrev  0x000011af      0x16d src/grbl/nuts_bolts.o
+ .debug_abbrev  0x0000131c      0x245 src/grbl/planner.o
+ .debug_abbrev  0x00001561      0x129 src/grbl/print.o
+ .debug_abbrev  0x0000168a      0x16d src/grbl/probe.o
+ .debug_abbrev  0x000017f7      0x13c src/grbl/protocol.o
+ .debug_abbrev  0x00001933      0x1cd src/grbl/report.o
+ .debug_abbrev  0x00001b00      0x1b4 src/grbl/serial.o
+ .debug_abbrev  0x00001cb4      0x1a7 src/grbl/settings.o
+ .debug_abbrev  0x00001e5b      0x1d0 src/grbl/spindle_control.o
+ .debug_abbrev  0x0000202b      0x2f7 src/grbl/stepper.o
+ .debug_abbrev  0x00002322      0x2f2 src/grbl/system.o
+ .debug_abbrev  0x00002614      0x13b src/system_stm32f4xx.o
+ .debug_abbrev  0x0000274f       0x7d src/util/delay.o
+ .debug_abbrev  0x000027cc       0x12 startup/startup_stm32f411xe.o
 
 .debug_aranges  0x00000000      0xe78
  .debug_aranges
@@ -7796,7 +7827,7 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_aranges
                 0x00000e50       0x28 startup/startup_stm32f411xe.o
 
-.debug_ranges   0x00000000      0xd30
+.debug_ranges   0x00000000      0xd60
  .debug_ranges  0x00000000       0x30 StdPeriph_Driver/src/misc.o
  .debug_ranges  0x00000030      0x148 StdPeriph_Driver/src/stm32f4xx_flash.o
  .debug_ranges  0x00000178       0x78 StdPeriph_Driver/src/stm32f4xx_gpio.o
@@ -7808,23 +7839,23 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_ranges  0x000007c0       0x48 src/grbl/gcode.o
  .debug_ranges  0x00000808       0x40 src/grbl/limits.o
  .debug_ranges  0x00000848       0x10 src/grbl/main.o
- .debug_ranges  0x00000858       0x40 src/grbl/motion_control.o
- .debug_ranges  0x00000898       0x30 src/grbl/nuts_bolts.o
- .debug_ranges  0x000008c8       0x70 src/grbl/planner.o
- .debug_ranges  0x00000938       0x70 src/grbl/print.o
- .debug_ranges  0x000009a8       0x28 src/grbl/probe.o
- .debug_ranges  0x000009d0       0x38 src/grbl/protocol.o
- .debug_ranges  0x00000a08       0x70 src/grbl/report.o
- .debug_ranges  0x00000a78       0x50 src/grbl/serial.o
- .debug_ranges  0x00000ac8       0x78 src/grbl/settings.o
- .debug_ranges  0x00000b40       0x28 src/grbl/spindle_control.o
- .debug_ranges  0x00000b68      0x108 src/grbl/stepper.o
- .debug_ranges  0x00000c70       0x68 src/grbl/system.o
- .debug_ranges  0x00000cd8       0x20 src/system_stm32f4xx.o
- .debug_ranges  0x00000cf8       0x18 src/util/delay.o
- .debug_ranges  0x00000d10       0x20 startup/startup_stm32f411xe.o
+ .debug_ranges  0x00000858       0x58 src/grbl/motion_control.o
+ .debug_ranges  0x000008b0       0x30 src/grbl/nuts_bolts.o
+ .debug_ranges  0x000008e0       0x70 src/grbl/planner.o
+ .debug_ranges  0x00000950       0x70 src/grbl/print.o
+ .debug_ranges  0x000009c0       0x28 src/grbl/probe.o
+ .debug_ranges  0x000009e8       0x38 src/grbl/protocol.o
+ .debug_ranges  0x00000a20       0x70 src/grbl/report.o
+ .debug_ranges  0x00000a90       0x50 src/grbl/serial.o
+ .debug_ranges  0x00000ae0       0x90 src/grbl/settings.o
+ .debug_ranges  0x00000b70       0x28 src/grbl/spindle_control.o
+ .debug_ranges  0x00000b98      0x108 src/grbl/stepper.o
+ .debug_ranges  0x00000ca0       0x68 src/grbl/system.o
+ .debug_ranges  0x00000d08       0x20 src/system_stm32f4xx.o
+ .debug_ranges  0x00000d28       0x18 src/util/delay.o
+ .debug_ranges  0x00000d40       0x20 startup/startup_stm32f411xe.o
 
-.debug_macro    0x00000000    0x15914
+.debug_macro    0x00000000    0x158f3
  .debug_macro   0x00000000      0x179 StdPeriph_Driver/src/misc.o
  .debug_macro   0x00000179      0x89e StdPeriph_Driver/src/misc.o
  .debug_macro   0x00000a17       0x5e StdPeriph_Driver/src/misc.o
@@ -7885,62 +7916,60 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_macro   0x0000f7e6      0x29d src/avr/eeprom.o
  .debug_macro   0x0000fa83       0x10 src/avr/eeprom.o
  .debug_macro   0x0000fa93       0x35 src/avr/eeprom.o
- .debug_macro   0x0000fac8      0x387 src/grbl/coolant_control.o
- .debug_macro   0x0000fe4f       0x16 src/grbl/coolant_control.o
- .debug_macro   0x0000fe65      0x1e1 src/grbl/coolant_control.o
- .debug_macro   0x00010046       0x16 src/grbl/coolant_control.o
- .debug_macro   0x0001005c       0x16 src/grbl/coolant_control.o
- .debug_macro   0x00010072       0x29 src/grbl/coolant_control.o
- .debug_macro   0x0001009b       0x22 src/grbl/coolant_control.o
- .debug_macro   0x000100bd      0x102 src/grbl/coolant_control.o
- .debug_macro   0x000101bf       0xac src/grbl/coolant_control.o
- .debug_macro   0x0001026b       0xc4 src/grbl/coolant_control.o
- .debug_macro   0x0001032f       0xee src/grbl/coolant_control.o
- .debug_macro   0x0001041d      0x120 src/grbl/coolant_control.o
- .debug_macro   0x0001053d       0xca src/grbl/coolant_control.o
- .debug_macro   0x00010607      0x1b5 src/grbl/coolant_control.o
- .debug_macro   0x000107bc       0x16 src/grbl/coolant_control.o
- .debug_macro   0x000107d2       0x1c src/grbl/coolant_control.o
- .debug_macro   0x000107ee       0x16 src/grbl/coolant_control.o
- .debug_macro   0x00010804       0x10 src/grbl/coolant_control.o
- .debug_macro   0x00010814      0x11e src/grbl/coolant_control.o
- .debug_macro   0x00010932       0x1c src/grbl/coolant_control.o
- .debug_macro   0x0001094e       0x10 src/grbl/coolant_control.o
- .debug_macro   0x0001095e       0x10 src/grbl/coolant_control.o
- .debug_macro   0x0001096e      0x3ab src/grbl/gcode.o
- .debug_macro   0x00010d19      0x393 src/grbl/limits.o
- .debug_macro   0x000110ac      0x387 src/grbl/main.o
- .debug_macro   0x00011433      0x387 src/grbl/motion_control.o
- .debug_macro   0x000117ba      0x38d src/grbl/nuts_bolts.o
- .debug_macro   0x00011b47      0x38d src/grbl/planner.o
- .debug_macro   0x00011ed4      0x387 src/grbl/print.o
- .debug_macro   0x0001225b      0x387 src/grbl/probe.o
- .debug_macro   0x000125e2      0x399 src/grbl/protocol.o
- .debug_macro   0x0001297b      0x387 src/grbl/report.o
- .debug_macro   0x00012d02      0x3fc src/grbl/serial.o
- .debug_macro   0x000130fe      0x8b6 src/grbl/serial.o
- .debug_macro   0x000139b4       0xfd src/grbl/serial.o
- .debug_macro   0x00013ab1       0x22 src/grbl/serial.o
- .debug_macro   0x00013ad3      0x1df src/grbl/serial.o
- .debug_macro   0x00013cb2       0x58 src/grbl/serial.o
- .debug_macro   0x00013d0a       0x82 src/grbl/serial.o
- .debug_macro   0x00013d8c      0x45d src/grbl/serial.o
- .debug_macro   0x000141e9       0xa2 src/grbl/serial.o
- .debug_macro   0x0001428b      0x104 src/grbl/serial.o
- .debug_macro   0x0001438f       0x43 src/grbl/serial.o
- .debug_macro   0x000143d2      0x187 src/grbl/serial.o
- .debug_macro   0x00014559      0x329 src/grbl/serial.o
- .debug_macro   0x00014882       0x35 src/grbl/serial.o
- .debug_macro   0x000148b7       0x29 src/grbl/serial.o
- .debug_macro   0x000148e0       0x22 src/grbl/serial.o
- .debug_macro   0x00014902      0x387 src/grbl/settings.o
- .debug_macro   0x00014c89      0x387 src/grbl/spindle_control.o
- .debug_macro   0x00015010      0x3d2 src/grbl/stepper.o
- .debug_macro   0x000153e2      0x387 src/grbl/system.o
- .debug_macro   0x00015769      0x194 src/system_stm32f4xx.o
- .debug_macro   0x000158fd       0x17 src/util/delay.o
+ .debug_macro   0x0000fac8      0x38a src/grbl/coolant_control.o
+ .debug_macro   0x0000fe52      0x8b6 src/grbl/coolant_control.o
+ .debug_macro   0x00010708       0xfd src/grbl/coolant_control.o
+ .debug_macro   0x00010805       0x22 src/grbl/coolant_control.o
+ .debug_macro   0x00010827      0x1df src/grbl/coolant_control.o
+ .debug_macro   0x00010a06       0x58 src/grbl/coolant_control.o
+ .debug_macro   0x00010a5e       0x82 src/grbl/coolant_control.o
+ .debug_macro   0x00010ae0      0x45d src/grbl/coolant_control.o
+ .debug_macro   0x00010f3d       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x00010f53       0xa2 src/grbl/coolant_control.o
+ .debug_macro   0x00010ff5      0x104 src/grbl/coolant_control.o
+ .debug_macro   0x000110f9       0x43 src/grbl/coolant_control.o
+ .debug_macro   0x0001113c      0x187 src/grbl/coolant_control.o
+ .debug_macro   0x000112c3      0x1e1 src/grbl/coolant_control.o
+ .debug_macro   0x000114a4      0x329 src/grbl/coolant_control.o
+ .debug_macro   0x000117cd       0x35 src/grbl/coolant_control.o
+ .debug_macro   0x00011802       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x00011818       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x0001182e       0x29 src/grbl/coolant_control.o
+ .debug_macro   0x00011857       0x22 src/grbl/coolant_control.o
+ .debug_macro   0x00011879      0x102 src/grbl/coolant_control.o
+ .debug_macro   0x0001197b       0xac src/grbl/coolant_control.o
+ .debug_macro   0x00011a27       0xc4 src/grbl/coolant_control.o
+ .debug_macro   0x00011aeb       0xee src/grbl/coolant_control.o
+ .debug_macro   0x00011bd9      0x120 src/grbl/coolant_control.o
+ .debug_macro   0x00011cf9       0xca src/grbl/coolant_control.o
+ .debug_macro   0x00011dc3      0x1b5 src/grbl/coolant_control.o
+ .debug_macro   0x00011f78       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x00011f8e       0x1c src/grbl/coolant_control.o
+ .debug_macro   0x00011faa       0x16 src/grbl/coolant_control.o
+ .debug_macro   0x00011fc0       0x10 src/grbl/coolant_control.o
+ .debug_macro   0x00011fd0      0x11e src/grbl/coolant_control.o
+ .debug_macro   0x000120ee       0x1c src/grbl/coolant_control.o
+ .debug_macro   0x0001210a       0x10 src/grbl/coolant_control.o
+ .debug_macro   0x0001211a       0x10 src/grbl/coolant_control.o
+ .debug_macro   0x0001212a      0x3ae src/grbl/gcode.o
+ .debug_macro   0x000124d8      0x396 src/grbl/limits.o
+ .debug_macro   0x0001286e      0x38a src/grbl/main.o
+ .debug_macro   0x00012bf8      0x38a src/grbl/motion_control.o
+ .debug_macro   0x00012f82      0x390 src/grbl/nuts_bolts.o
+ .debug_macro   0x00013312      0x390 src/grbl/planner.o
+ .debug_macro   0x000136a2      0x38a src/grbl/print.o
+ .debug_macro   0x00013a2c      0x38a src/grbl/probe.o
+ .debug_macro   0x00013db6      0x39c src/grbl/protocol.o
+ .debug_macro   0x00014152      0x38a src/grbl/report.o
+ .debug_macro   0x000144dc      0x3fc src/grbl/serial.o
+ .debug_macro   0x000148d8      0x38a src/grbl/settings.o
+ .debug_macro   0x00014c62      0x38a src/grbl/spindle_control.o
+ .debug_macro   0x00014fec      0x3d2 src/grbl/stepper.o
+ .debug_macro   0x000153be      0x38a src/grbl/system.o
+ .debug_macro   0x00015748      0x194 src/system_stm32f4xx.o
+ .debug_macro   0x000158dc       0x17 src/util/delay.o
 
-.debug_line     0x00000000     0xd755
+.debug_line     0x00000000     0xd83c
  .debug_line    0x00000000      0x572 StdPeriph_Driver/src/misc.o
  .debug_line    0x00000572      0x897 StdPeriph_Driver/src/stm32f4xx_flash.o
  .debug_line    0x00000e09      0x66c StdPeriph_Driver/src/stm32f4xx_gpio.o
@@ -7948,25 +7977,25 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_line    0x00001dbb      0xd8e StdPeriph_Driver/src/stm32f4xx_tim.o
  .debug_line    0x00002b49      0x7b7 StdPeriph_Driver/src/stm32f4xx_usart.o
  .debug_line    0x00003300      0x6b0 src/avr/eeprom.o
- .debug_line    0x000039b0      0x7f7 src/grbl/coolant_control.o
- .debug_line    0x000041a7      0xc1f src/grbl/gcode.o
- .debug_line    0x00004dc6      0x939 src/grbl/limits.o
- .debug_line    0x000056ff      0x821 src/grbl/main.o
- .debug_line    0x00005f20      0x911 src/grbl/motion_control.o
- .debug_line    0x00006831      0x868 src/grbl/nuts_bolts.o
- .debug_line    0x00007099      0xa5e src/grbl/planner.o
- .debug_line    0x00007af7      0x926 src/grbl/print.o
- .debug_line    0x0000841d      0x803 src/grbl/probe.o
- .debug_line    0x00008c20      0x958 src/grbl/protocol.o
- .debug_line    0x00009578      0xa27 src/grbl/report.o
- .debug_line    0x00009f9f      0x8d5 src/grbl/serial.o
- .debug_line    0x0000a874      0x9cf src/grbl/settings.o
- .debug_line    0x0000b243      0x829 src/grbl/spindle_control.o
- .debug_line    0x0000ba6c      0xbec src/grbl/stepper.o
- .debug_line    0x0000c658      0xa86 src/grbl/system.o
- .debug_line    0x0000d0de      0x595 src/system_stm32f4xx.o
- .debug_line    0x0000d673       0x63 src/util/delay.o
- .debug_line    0x0000d6d6       0x7f startup/startup_stm32f411xe.o
+ .debug_line    0x000039b0      0x80a src/grbl/coolant_control.o
+ .debug_line    0x000041ba      0xc33 src/grbl/gcode.o
+ .debug_line    0x00004ded      0x94c src/grbl/limits.o
+ .debug_line    0x00005739      0x82e src/grbl/main.o
+ .debug_line    0x00005f67      0x920 src/grbl/motion_control.o
+ .debug_line    0x00006887      0x86d src/grbl/nuts_bolts.o
+ .debug_line    0x000070f4      0xa6e src/grbl/planner.o
+ .debug_line    0x00007b62      0x937 src/grbl/print.o
+ .debug_line    0x00008499      0x810 src/grbl/probe.o
+ .debug_line    0x00008ca9      0x968 src/grbl/protocol.o
+ .debug_line    0x00009611      0xa39 src/grbl/report.o
+ .debug_line    0x0000a04a      0x8d5 src/grbl/serial.o
+ .debug_line    0x0000a91f      0x9e0 src/grbl/settings.o
+ .debug_line    0x0000b2ff      0x83c src/grbl/spindle_control.o
+ .debug_line    0x0000bb3b      0xbec src/grbl/stepper.o
+ .debug_line    0x0000c727      0xa9e src/grbl/system.o
+ .debug_line    0x0000d1c5      0x595 src/system_stm32f4xx.o
+ .debug_line    0x0000d75a       0x63 src/util/delay.o
+ .debug_line    0x0000d7bd       0x7f startup/startup_stm32f411xe.o
 
 .debug_str      0x00000000    0x5e2db
  .debug_str     0x00000000    0x51306 StdPeriph_Driver/src/misc.o
@@ -7983,38 +8012,38 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
                               0x51848 (size before relaxing)
  .debug_str     0x0005392a     0x38fb src/avr/eeprom.o
                               0x54c44 (size before relaxing)
- .debug_str     0x00057225     0x2fc9 src/grbl/coolant_control.o
-                              0x57b08 (size before relaxing)
- .debug_str     0x0005a1ee      0x2bb src/grbl/gcode.o
-                              0x57d40 (size before relaxing)
- .debug_str     0x0005a4a9      0x25f src/grbl/limits.o
-                              0x57d2e (size before relaxing)
- .debug_str     0x0005a708       0x25 src/grbl/main.o
-                              0x57c00 (size before relaxing)
- .debug_str     0x0005a72d      0x158 src/grbl/motion_control.o
-                              0x57d36 (size before relaxing)
- .debug_str     0x0005a885       0xb5 src/grbl/nuts_bolts.o
-                              0x57cd7 (size before relaxing)
- .debug_str     0x0005a93a      0x2b9 src/grbl/planner.o
-                              0x57ed9 (size before relaxing)
- .debug_str     0x0005abf3      0x11e src/grbl/print.o
-                              0x57c57 (size before relaxing)
- .debug_str     0x0005ad11       0x71 src/grbl/probe.o
-                              0x57c5a (size before relaxing)
- .debug_str     0x0005ad82      0x140 src/grbl/protocol.o
-                              0x57dc7 (size before relaxing)
- .debug_str     0x0005aec2      0x18c src/grbl/report.o
-                              0x57e12 (size before relaxing)
- .debug_str     0x0005b04e     0x276a src/grbl/serial.o
+ .debug_str     0x00057225     0x4fd0 src/grbl/coolant_control.o
+                              0x585a3 (size before relaxing)
+ .debug_str     0x0005c1f5      0x2bb src/grbl/gcode.o
+                              0x587db (size before relaxing)
+ .debug_str     0x0005c4b0      0x25f src/grbl/limits.o
+                              0x587c9 (size before relaxing)
+ .debug_str     0x0005c70f       0x25 src/grbl/main.o
+                              0x5869b (size before relaxing)
+ .debug_str     0x0005c734      0x158 src/grbl/motion_control.o
+                              0x587d1 (size before relaxing)
+ .debug_str     0x0005c88c       0xb5 src/grbl/nuts_bolts.o
+                              0x58772 (size before relaxing)
+ .debug_str     0x0005c941      0x2b9 src/grbl/planner.o
+                              0x58974 (size before relaxing)
+ .debug_str     0x0005cbfa      0x11e src/grbl/print.o
+                              0x586f2 (size before relaxing)
+ .debug_str     0x0005cd18       0x71 src/grbl/probe.o
+                              0x586f5 (size before relaxing)
+ .debug_str     0x0005cd89      0x140 src/grbl/protocol.o
+                              0x58862 (size before relaxing)
+ .debug_str     0x0005cec9      0x18c src/grbl/report.o
+                              0x588ad (size before relaxing)
+ .debug_str     0x0005d055      0x763 src/grbl/serial.o
                               0x58f79 (size before relaxing)
  .debug_str     0x0005d7b8      0x178 src/grbl/settings.o
-                              0x57cee (size before relaxing)
+                              0x58789 (size before relaxing)
  .debug_str     0x0005d930       0x99 src/grbl/spindle_control.o
-                              0x57fb0 (size before relaxing)
+                              0x58a4b (size before relaxing)
  .debug_str     0x0005d9c9      0x64d src/grbl/stepper.o
                               0x593be (size before relaxing)
  .debug_str     0x0005e016      0x1ab src/grbl/system.o
-                              0x57db3 (size before relaxing)
+                              0x5884e (size before relaxing)
  .debug_str     0x0005e1c1       0xd8 src/system_stm32f4xx.o
                               0x514bc (size before relaxing)
  .debug_str     0x0005e299       0x42 src/util/delay.o
@@ -8029,27 +8058,27 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .comment       0x00000070       0x71 StdPeriph_Driver/src/stm32f4xx_tim.o
  .comment       0x00000070       0x71 StdPeriph_Driver/src/stm32f4xx_usart.o
  .comment       0x00000070       0x71 src/avr/eeprom.o
- .comment       0x00000070       0x71 src/grbl/coolant_control.o
- .comment       0x00000070       0x71 src/grbl/gcode.o
- .comment       0x00000070       0x71 src/grbl/limits.o
- .comment       0x00000070       0x71 src/grbl/main.o
- .comment       0x00000070       0x71 src/grbl/motion_control.o
- .comment       0x00000070       0x71 src/grbl/nuts_bolts.o
- .comment       0x00000070       0x71 src/grbl/planner.o
- .comment       0x00000070       0x71 src/grbl/print.o
- .comment       0x00000070       0x71 src/grbl/probe.o
- .comment       0x00000070       0x71 src/grbl/protocol.o
- .comment       0x00000070       0x71 src/grbl/report.o
- .comment       0x00000070       0x6e src/grbl/serial.o
+ .comment       0x00000070       0x6e src/grbl/coolant_control.o
                                  0x6f (size before relaxing)
- .comment       0x000000de       0x71 src/grbl/settings.o
- .comment       0x000000de       0x71 src/grbl/spindle_control.o
+ .comment       0x000000de       0x6f src/grbl/gcode.o
+ .comment       0x000000de       0x6f src/grbl/limits.o
+ .comment       0x000000de       0x6f src/grbl/main.o
+ .comment       0x000000de       0x6f src/grbl/motion_control.o
+ .comment       0x000000de       0x6f src/grbl/nuts_bolts.o
+ .comment       0x000000de       0x6f src/grbl/planner.o
+ .comment       0x000000de       0x6f src/grbl/print.o
+ .comment       0x000000de       0x6f src/grbl/probe.o
+ .comment       0x000000de       0x6f src/grbl/protocol.o
+ .comment       0x000000de       0x6f src/grbl/report.o
+ .comment       0x000000de       0x6f src/grbl/serial.o
+ .comment       0x000000de       0x6f src/grbl/settings.o
+ .comment       0x000000de       0x6f src/grbl/spindle_control.o
  .comment       0x000000de       0x6f src/grbl/stepper.o
- .comment       0x000000de       0x71 src/grbl/system.o
+ .comment       0x000000de       0x6f src/grbl/system.o
  .comment       0x000000de       0x71 src/system_stm32f4xx.o
  .comment       0x000000de       0x71 src/util/delay.o
 
-.debug_frame    0x00000000     0x3afc
+.debug_frame    0x00000000     0x3b14
  .debug_frame   0x00000000       0xd8 StdPeriph_Driver/src/misc.o
  .debug_frame   0x000000d8      0x5b0 StdPeriph_Driver/src/stm32f4xx_flash.o
  .debug_frame   0x00000688      0x23c StdPeriph_Driver/src/stm32f4xx_gpio.o
@@ -8062,23 +8091,23 @@ OUTPUT(grbl_stm32.elf elf32-littlearm)
  .debug_frame   0x0000258c      0x104 src/grbl/limits.o
  .debug_frame   0x00002690       0x2c src/grbl/main.o
  .debug_frame   0x000026bc      0x108 src/grbl/motion_control.o
- .debug_frame   0x000027c4       0xc4 src/grbl/nuts_bolts.o
- .debug_frame   0x00002888      0x1d8 src/grbl/planner.o
- .debug_frame   0x00002a60      0x1f4 src/grbl/print.o
- .debug_frame   0x00002c54       0x94 src/grbl/probe.o
- .debug_frame   0x00002ce8       0xd8 src/grbl/protocol.o
- .debug_frame   0x00002dc0      0x1d8 src/grbl/report.o
- .debug_frame   0x00002f98      0x154 src/grbl/serial.o
- .debug_frame   0x000030ec      0x208 src/grbl/settings.o
- .debug_frame   0x000032f4       0xa0 src/grbl/spindle_control.o
- .debug_frame   0x00003394      0x368 src/grbl/stepper.o
- .debug_frame   0x000036fc      0x1d0 src/grbl/system.o
- .debug_frame   0x000038cc       0x7c src/system_stm32f4xx.o
- .debug_frame   0x00003948       0x5c src/util/delay.o
- .debug_frame   0x000039a4       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-errno.o)
- .debug_frame   0x000039c4       0x2c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-init.o)
- .debug_frame   0x000039f0       0x34 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-memset.o)
- .debug_frame   0x00003a24       0x50 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x00003a74       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-atexit.o)
- .debug_frame   0x00003a94       0x34 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fini.o)
- .debug_frame   0x00003ac8       0x34 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x000027c4       0xd0 src/grbl/nuts_bolts.o
+ .debug_frame   0x00002894      0x1dc src/grbl/planner.o
+ .debug_frame   0x00002a70      0x1f8 src/grbl/print.o
+ .debug_frame   0x00002c68       0x94 src/grbl/probe.o
+ .debug_frame   0x00002cfc       0xd8 src/grbl/protocol.o
+ .debug_frame   0x00002dd4      0x1d8 src/grbl/report.o
+ .debug_frame   0x00002fac      0x154 src/grbl/serial.o
+ .debug_frame   0x00003100      0x208 src/grbl/settings.o
+ .debug_frame   0x00003308       0xa4 src/grbl/spindle_control.o
+ .debug_frame   0x000033ac      0x368 src/grbl/stepper.o
+ .debug_frame   0x00003714      0x1d0 src/grbl/system.o
+ .debug_frame   0x000038e4       0x7c src/system_stm32f4xx.o
+ .debug_frame   0x00003960       0x5c src/util/delay.o
+ .debug_frame   0x000039bc       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-errno.o)
+ .debug_frame   0x000039dc       0x2c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-init.o)
+ .debug_frame   0x00003a08       0x34 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-memset.o)
+ .debug_frame   0x00003a3c       0x50 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00003a8c       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00003aac       0x34 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fini.o)
+ .debug_frame   0x00003ae0       0x34 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__atexit.o)
